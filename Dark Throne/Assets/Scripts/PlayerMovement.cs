@@ -18,10 +18,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vecotor2(dirX, rb.velocity.y)
+        rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
         if(Input.GetKeyDown("space")){
             if(canJump){
-                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 14f, 0);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 14f);
             }
             
         }
