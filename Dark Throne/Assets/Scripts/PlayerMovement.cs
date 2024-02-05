@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     bool canJump = true;
-
+    
+    public float movementSpeed = 7f; // Adjustable movement speed
+    public float jumpForce = 14f;    // Adjustable jump force
     
     // Start is called before the first frame update
     void Start()
@@ -18,12 +20,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
-        if(Input.GetKeyDown("space")){
-            if(canJump){
-                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 14f);
+        rb.velocity = new Vector2(dirX * movementSpeed, rb.velocity.y);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (canJump)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
-            
         }
     }
 }
