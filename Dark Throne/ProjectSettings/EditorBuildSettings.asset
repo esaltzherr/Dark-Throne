@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/JoseScene.unity
+    guid: 102d8de7578ec724fa6ce85c589e975c
+  - enabled: 1
     path: Assets/Scenes/ZhiBin_level_1.unity
     guid: f2476e03b4f5f864a9ee260436e721f4
   - enabled: 1
