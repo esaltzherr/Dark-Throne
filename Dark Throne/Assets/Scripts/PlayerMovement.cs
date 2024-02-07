@@ -21,12 +21,18 @@ public class PlayerMovement : MonoBehaviour
     {
         float dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * movementSpeed, rb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) // Probably set it so Space is the dash or another machanic. 
+        //                                      and then Use W for jumping. can use "Input.GetAxisRaw("Horizontal"); > 0" 
+        //                                       so that it also uses the arrow keys
         {
             if (canJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
+        }
+        if(Input.GetKeyDown(KeyCode.S)){ 
+            // movementSpeed *= 2;
+            // add a countdown or Cooruitine to reset back to base
         }
     }
 }

@@ -356,11 +356,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d90dfc08fd754e54dbbb8ee228b661c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9735867f48a04794884f8617d25b9ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 646608846}
-  inbetweenSpace: {x: 47, y: 20}
+  player: {fileID: 0}
+  inbetweenSpace: {x: 19.9, y: 6}
   destination: {x: 0, y: 0}
   speed: 10
   moving: 0
@@ -538,6 +538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5635eefb3634c49b388136144c9392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 7
+  jumpForce: 14
 --- !u!70 &646608850
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
