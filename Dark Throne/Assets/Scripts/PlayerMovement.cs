@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     bool canJump = true;
-    
+    public Animator animator;
     public float movementSpeed = 7f; // Adjustable movement speed
     public float jumpForce = 14f;    // Adjustable jump force
     
@@ -34,5 +34,6 @@ public class PlayerMovement : MonoBehaviour
             // movementSpeed *= 2;
             // add a countdown or Cooruitine to reset back to base
         }
+        animator.SetInteger("Speed", Mathf.Abs((int)rb.velocity.x));
     }
 }
