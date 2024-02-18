@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
          if(Input.GetKeyUp(KeyCode.S)){
             movementSpeed = basemovementSpeed;
          } 
-        animator.SetInteger("Speed", Mathf.Abs((int)rb.velocity.x));
+        // animator.SetInteger("Speed", Mathf.Abs((int)rb.velocity.x));
     }
 
     public void SetMovement(bool canMove) {

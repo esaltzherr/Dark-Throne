@@ -12,11 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/ZhiBin_level_1.unity
     guid: f2476e03b4f5f864a9ee260436e721f4
   - enabled: 1
-    path: Assets/Scenes/ZhiBin_level_2.unity
-    guid: 589fe2f41347b08469c876db48a2420d
-  - enabled: 1
-    path: Assets/Scenes/ZhiBin_level_3.unity
-    guid: 827603845d7e75a41a70e5261da29369
+    path: Assets/Scenes/ElroyScene.unity
+    guid: 559b4248aeb7bbb4693a1980aee21420
   - enabled: 1
     path: Assets/Scenes/NickPScene.unity
     guid: 5e7adb95e1d31ce409b0c2d026201f64

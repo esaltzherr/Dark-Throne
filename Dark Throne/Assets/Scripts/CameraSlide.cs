@@ -1,14 +1,9 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraSlide : MonoBehaviour
 {
-    // Start is called before the first frame update
     public SpriteRenderer player;
     public Vector2 inbetweenSpace = new Vector2(19.9f, 6f);
     public Vector2 destination;
@@ -17,39 +12,26 @@ public class CameraSlide : MonoBehaviour
     public Bounds cameraBounds;
 
     private PlayerMovement playerMovementScript;
-
     public GameManager gameManager;
 
     void Start()
     {
-        cameraBounds = this.GetComponent<Collider2D>().bounds;
+        cameraBounds = GetComponent<Collider2D>().bounds;
         playerMovementScript = player.GetComponent<PlayerMovement>();
-
-        AdjustCameraToColliderSize(); // Adjust the BoxCollider2D to match the camera's view
-        // player = GetComponent<SpriteRenderer>();
-        // Debug.Log(player.size);
+        AdjustCameraToColliderSize(); 
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-
     }
-
 
     private void AdjustCameraToColliderSize()
     {
         BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
         if (boxCollider != null)
         {
-            // Calculate the desired orthographic size based on the collider's size
-            float desiredHeight = boxCollider.size.y / 2; // Divide by 2 because orthographic size is half the height
+            float desiredHeight = boxCollider.size.y / 2; 
             Camera.main.orthographicSize = desiredHeight;
-
-            // Optionally, adjust the camera width by setting the aspect ratio, but usually, you would leave this to automatically adjust based on the device's screen
-            // float desiredAspectRatio = boxCollider.size.x / boxCollider.size.y;
-            // Camera.main.aspect = desiredAspectRatio; // Only set this if you want a fixed aspect ratio
         }
         else
         {
@@ -57,18 +39,14 @@ public class CameraSlide : MonoBehaviour
         }
     }
 
-
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            cameraBounds = GetComponent<Collider2D>().bounds;
+            Vector2 sizeOfScreen = new Vector2(Mathf.Abs(cameraBounds.max.x - cameraBounds.min.x), Mathf.Abs(cameraBounds.max.y - cameraBounds.min.y));
+            Vector3 movementDirection = Vector3.zero; 
 
-            Debug.Log("Moving Camera");
-            cameraBounds = this.GetComponent<Collider2D>().bounds;
-            Vector2 sizeOfScreen = new Vector2(MathF.Abs(cameraBounds.max.x - cameraBounds.min.x), MathF.Abs(cameraBounds.max.y - cameraBounds.min.y));
-            Vector3 movementDirection = Vector3.zero; // Initialize as zero vector for 3D movement
-
-            // Determine the direction for the movement
             if (other.bounds.min.x >= cameraBounds.max.x)
             {
                 movementDirection = Vector3.right * sizeOfScreen.x;
@@ -86,47 +64,37 @@ public class CameraSlide : MonoBehaviour
                 movementDirection = Vector3.up * sizeOfScreen.y;
             }
 
-            // Ensure the Z-axis remains unchanged
             float currentZ = transform.position.z;
-
-            // Calculate the actual target position by adding the movement direction to the current position
             Vector3 targetPosition = transform.position + movementDirection;
-
-            // Preserve the original Z-axis value
             targetPosition.z = currentZ;
 
-
-
-            // playerRB.playerDisabled = false; ------------------------------
-
-
-            gameManager.Pause();
-            // Start the coroutine to move the camera smoothly to the new position
-            StartCoroutine(MoveCameraSmoothly(targetPosition, 1f)); // Adjust the duration as needed
-
+            // gameManager.Pause();
+            // gameManager.Unpause();
+            StartCoroutine(MoveCameraSmoothly(targetPosition, 1f)); 
         }
     }
-
 
     private IEnumerator MoveCameraSmoothly(Vector3 targetPosition, float duration)
     {
-        float elapsedTime = 0;
-        Vector3 startPosition = transform.position;
-
-        while (elapsedTime < duration)
+        if (Camera.main != null && Camera.main.gameObject.activeInHierarchy)
         {
-            // Use Time.unscaledDeltaTime instead of Time.deltaTime
-            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
-            elapsedTime += Time.unscaledDeltaTime; // This is the key change
-            yield return null; // Wait for the next frame
-        }
+            float elapsedTime = 0;
+            Vector3 startPosition = transform.position;
 
-        transform.position = targetPosition; // Ensure the camera is exactly at the target position at the end
+            while (elapsedTime < duration)
+            {
+                transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
+                elapsedTime += Time.unscaledDeltaTime;
+                yield return null;
+            }
+
+            transform.position = targetPosition; 
+        }
+        else
+        {
+            Debug.LogWarning("Main camera is inactive or not found. Coroutine cannot be started.");
+        }
 
         gameManager.Unpause();
     }
-
-
-
-
 }
