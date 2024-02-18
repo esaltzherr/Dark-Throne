@@ -15,9 +15,17 @@ public class CameraSlide : MonoBehaviour
     public float speed = 10;
     public bool moving = false;
     public Bounds cameraBounds;
+
+    private PlayerMovement playerMovementScript;
+
+    public GameManager gameManager;
+
     void Start()
     {
         cameraBounds = this.GetComponent<Collider2D>().bounds;
+        playerMovementScript = player.GetComponent<PlayerMovement>();
+
+        AdjustCameraToColliderSize(); // Adjust the BoxCollider2D to match the camera's view
         // player = GetComponent<SpriteRenderer>();
         // Debug.Log(player.size);
     }
@@ -29,71 +37,32 @@ public class CameraSlide : MonoBehaviour
 
     }
 
-    // void OnCollisionExit2D(Collision2D other) {
-    //     Debug.Log(other.transform.name);
-    //     // if other == player 
-    // }
-    // private void OnTriggerExit2D(Collider2D other)
-    // {
 
-    //     Debug.Log(other.transform.tag);
-    //     cameraBounds = this.GetComponent<Collider2D>().bounds;
-    //     if (other.CompareTag("Player"))
-    //     {
-    //         Debug.Log("Moving Camera");
+    private void AdjustCameraToColliderSize()
+    {
+        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+        if (boxCollider != null)
+        {
+            // Calculate the desired orthographic size based on the collider's size
+            float desiredHeight = boxCollider.size.y / 2; // Divide by 2 because orthographic size is half the height
+            Camera.main.orthographicSize = desiredHeight;
 
-    //         moving = true;
-    //         Vector2 sizeOfScreen = new Vector2(MathF.Abs(cameraBounds.max.x - cameraBounds.min.x), MathF.Abs(cameraBounds.max.y - cameraBounds.min.y));
-    //         // Move off the right
-    //         if (other.bounds.min.x >= cameraBounds.max.x)
-    //         {
-    //             destination = Vector2.right * sizeOfScreen.x;
-    //             // transform.Translate(Vector2.right * sizeOfScreen.x);
-    //             // move the player a LITTLE bit extra to make sure they dont keep overlapping with the collider
-    //             other.transform.Translate(Vector2.right * .1f);
-
-    //         }
-    //         // Move off the left
-    //         else if (other.bounds.max.x <= cameraBounds.min.x)
-    //         {
-    //             destination = Vector2.right * -sizeOfScreen.x;
-
-    //             transform.Translate(Vector2.right * -sizeOfScreen.x);
-    //             // move the player a LITTLE bit extra to make sure they dont keep overlapping with the collider
-    //             other.transform.Translate(Vector2.right * -.1f);
-    //         }
-    //         // Move off the up
-    //         else if (other.bounds.max.y <= cameraBounds.min.y)
-    //         {
-    //             destination = Vector2.up * -sizeOfScreen.y;
-    //             // transform.Translate(Vector2.up * -sizeOfScreen.y);
-    //             // move the player a LITTLE bit extra to make sure they dont keep overlapping with the collider
-    //             other.transform.Translate(Vector2.up * -.1f);
-    //         }
-    //         // Move off the down
-    //         else if (other.bounds.min.y >= cameraBounds.max.y)
-    //         {
-    //             destination = Vector2.up * sizeOfScreen.y;
-    //             // transform.Translate(Vector2.up * sizeOfScreen.y);
-    //             // move the player a LITTLE bit extra to make sure they dont keep overlapping with the collider
-    //             other.transform.Translate(Vector2.up * .1f);
-    //         }
-
-
-    //         Debug.Log(destination);
-
-
-    //         // Probably Pause the game so enemies arent moving and you dont keep moving, maybe not for more seemless.
-
-    //     }
-
-    // }
+            // Optionally, adjust the camera width by setting the aspect ratio, but usually, you would leave this to automatically adjust based on the device's screen
+            // float desiredAspectRatio = boxCollider.size.x / boxCollider.size.y;
+            // Camera.main.aspect = desiredAspectRatio; // Only set this if you want a fixed aspect ratio
+        }
+        else
+        {
+            Debug.LogWarning("BoxCollider2D component not found on the GameObject.");
+        }
+    }
 
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+
             Debug.Log("Moving Camera");
             cameraBounds = this.GetComponent<Collider2D>().bounds;
             Vector2 sizeOfScreen = new Vector2(MathF.Abs(cameraBounds.max.x - cameraBounds.min.x), MathF.Abs(cameraBounds.max.y - cameraBounds.min.y));
@@ -126,8 +95,15 @@ public class CameraSlide : MonoBehaviour
             // Preserve the original Z-axis value
             targetPosition.z = currentZ;
 
+
+
+            // playerRB.playerDisabled = false; ------------------------------
+
+
+            gameManager.Pause();
             // Start the coroutine to move the camera smoothly to the new position
             StartCoroutine(MoveCameraSmoothly(targetPosition, 1f)); // Adjust the duration as needed
+
         }
     }
 
@@ -139,13 +115,17 @@ public class CameraSlide : MonoBehaviour
 
         while (elapsedTime < duration)
         {
+            // Use Time.unscaledDeltaTime instead of Time.deltaTime
             transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.unscaledDeltaTime; // This is the key change
             yield return null; // Wait for the next frame
         }
 
         transform.position = targetPosition; // Ensure the camera is exactly at the target position at the end
+
+        gameManager.Unpause();
     }
+
 
 
 
