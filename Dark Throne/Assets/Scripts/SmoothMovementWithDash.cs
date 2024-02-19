@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SmoothMovementWithDash : MonoBehaviour
 {
+    public GameObject powerUp;
+    public Canvas powerUpCanvas;
+
     Rigidbody2D rb;
     bool canJump = false; // Start with false as we need to be grounded first
     public Animator animator;
@@ -22,10 +26,16 @@ public class SmoothMovementWithDash : MonoBehaviour
     private bool isDashing = false;  // Flag to check if player is currently dashing
     private bool isDashCooldown = false; // Flag to check if player is on dash cooldown
 
+    private bool doubleJump;    // Check to see if double jump is available
+    private bool powerUp_DJ;    // Power Up Checker
+    private bool touchingPDJ;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        powerUpCanvas = GameObject.FindGameObjectWithTag("PowerUpTag").GetComponent<Canvas>();
+        powerUpCanvas.enabled = false;
     }
 
     // Update is called once per frame
@@ -47,10 +57,31 @@ public class SmoothMovementWithDash : MonoBehaviour
 
         rb.velocity = new Vector2(currentSpeed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.W) && canJump) // Changed to 'W' key for jumping and added check for canJump
+        if(touchingPDJ && Input.GetKeyDown(KeyCode.E))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            canJump = false; // Prevent double jumping
+            touchingPDJ = false;
+            powerUp_DJ = true;
+            powerUp.SetActive(false);
+        }
+
+
+
+        if (Input.GetKeyDown(KeyCode.W)) // Changed to 'W' key for jumping and added check for canJump
+        {
+            if (canJump || doubleJump)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                canJump = false; // Prevent double jumping
+                if (powerUp_DJ)
+                {
+                    doubleJump = !doubleJump;
+                }
+            }
+        }
+
+        if(canJump && Input.GetKey(KeyCode.W)) 
+        {
+            doubleJump = false;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && !isDashCooldown) // Check for dashing input and not already dashing or on cooldown
@@ -58,7 +89,7 @@ public class SmoothMovementWithDash : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        animator.SetInteger("Speed", Mathf.Abs((int)rb.velocity.x));
+        //animator.SetInteger("Speed", Mathf.Abs((int)rb.velocity.x));
     }
 
     IEnumerator Dash()
@@ -99,6 +130,11 @@ public class SmoothMovementWithDash : MonoBehaviour
         {
             canJump = true;
         }
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            touchingPDJ = true;
+            powerUpCanvas.enabled = true;
+        }
     }
 
     // Check for leaving ground to disable jumping
@@ -107,6 +143,12 @@ public class SmoothMovementWithDash : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = false;
+        }
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            touchingPDJ = false;
+            powerUpCanvas.enabled = false;
+
         }
     }
 }

@@ -299,6 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7619145a38b1da41aedc3e6a75f2d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUp: {fileID: 2803203405196669467, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+  powerUpCanvas: {fileID: 0}
   animator: {fileID: 0}
   movementSpeed: 7
   acceleration: 35
