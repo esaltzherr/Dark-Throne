@@ -10,6 +10,7 @@ public class TransitionPrototypeOne : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 3f;
     public Button button;
+    
 
     // Start is called before the first frame update
 
@@ -44,6 +45,6 @@ public class TransitionPrototypeOne : MonoBehaviour
 
     public void OnPointerClick()
     {
-        StartCoroutine(FadeRoutine("ZhiBin_level_1"));
+        StartCoroutine(FadeRoutine("PrototypeLevel1"));
     }
 }

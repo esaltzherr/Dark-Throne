@@ -18,7 +18,7 @@ public class CameraSlide : MonoBehaviour
     {
         cameraBounds = GetComponent<Collider2D>().bounds;
         playerMovementScript = player.GetComponent<PlayerMovement>();
-        AdjustCameraToColliderSize(); 
+        // AdjustCameraToColliderSize(); 
     }
 
     void Update()
@@ -69,8 +69,7 @@ public class CameraSlide : MonoBehaviour
             targetPosition.z = currentZ;
 
             // gameManager.Pause();
-            // gameManager.Unpause();
-            StartCoroutine(MoveCameraSmoothly(targetPosition, 1f)); 
+            StartCoroutine(MoveCameraSmoothly(targetPosition, 0.5f)); 
         }
     }
 
@@ -95,6 +94,6 @@ public class CameraSlide : MonoBehaviour
             Debug.LogWarning("Main camera is inactive or not found. Coroutine cannot be started.");
         }
 
-        gameManager.Unpause();
+        // gameManager.Unpause();
     }
 }
