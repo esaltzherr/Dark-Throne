@@ -69,7 +69,8 @@ public class CameraSlide : MonoBehaviour
             targetPosition.z = currentZ;
 
             // gameManager.Pause();
-            StartCoroutine(MoveCameraSmoothly(targetPosition, 0.5f)); 
+            StartCoroutine(MoveCameraSmoothly(targetPosition, 0.5f));
+            gameManager.Unpause();
         }
     }
 
