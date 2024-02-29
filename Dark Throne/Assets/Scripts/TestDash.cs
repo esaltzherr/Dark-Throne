@@ -14,7 +14,7 @@ public class TestDash : MonoBehaviour
     public float dashCD = 2f;
 
     bool isDashing = false;
-    private bool canDash;
+    // private bool canDash;
 
     [SerializeField] private TrailRenderer tr;
     // Start is called before the first frame update
@@ -64,7 +64,7 @@ public class TestDash : MonoBehaviour
     }
     private IEnumerator Dash()
     {
-        canDash = false;
+        // canDash = false;
         isDashing = true;
         float startGrav = rb.gravityScale;
         rb.gravityScale = 0f;
@@ -75,11 +75,11 @@ public class TestDash : MonoBehaviour
         rb.gravityScale = startGrav;
         isDashing = false;
         yield return new WaitForSeconds(dashCD);
-        canDash = true;
+        // canDash = true;
     }
     private IEnumerator DashLeft()
     {
-        canDash = false;
+        // canDash = false;
         isDashing = true;
         float startGrav = rb.gravityScale;
         rb.gravityScale = 0f;
@@ -90,6 +90,6 @@ public class TestDash : MonoBehaviour
         rb.gravityScale = startGrav;
         isDashing = false;
         yield return new WaitForSeconds(dashCD);
-        canDash = true;
+        // canDash = true;
     }
 }

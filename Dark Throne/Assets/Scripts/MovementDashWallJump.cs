@@ -76,12 +76,41 @@ public class MovementDashWallJump : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        // return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.3f);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Ground"))
+            {
+                // Print debug information
+                // Debug.Log("Collider Name: " + collider.gameObject.name);
+                // Debug.Log("Collider Tag: " + collider.tag);
+                return true;
+            }
+
+
+        }
+        return false;
     }
 
     private bool IsWalled()
     {
-        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        // return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(wallCheck.position, 0.3f);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Ground"))
+            {
+                // Print debug information
+                // Debug.Log("Collider Name: " + collider.gameObject.name);
+                // Debug.Log("Collider Tag: " + collider.tag);
+                return true;
+            }
+
+
+        }
+        return false;
+        // return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
 
     private void WallSlide()
@@ -89,6 +118,7 @@ public class MovementDashWallJump : MonoBehaviour
         if (IsWalled() && !IsGrounded() && horizontal != 0f)
         {
             isWallSliding = true;
+            Debug.Log("WallSliding + "+ rb.velocity.y + " + " + -wallSlidingSpeed + " + " + float.MaxValue);
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
         else
@@ -151,8 +181,12 @@ public class MovementDashWallJump : MonoBehaviour
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        rb.gravityScale = 0f;  
+
+        horizontal = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(Mathf.Sign(horizontal) * Mathf.Abs(transform.localScale.x) * dashingPower, 0f);
+
+        // rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
@@ -161,5 +195,7 @@ public class MovementDashWallJump : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+
+
 
 }

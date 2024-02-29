@@ -13,25 +13,45 @@ public class CameraSlide : MonoBehaviour
 
     private PlayerMovement playerMovementScript;
     public GameManager gameManager;
+    public float cameraMargin = 1.0f;
 
     void Start()
     {
+
+        AdjustCameraColliderSize();
         cameraBounds = GetComponent<Collider2D>().bounds;
-        playerMovementScript = player.GetComponent<PlayerMovement>();
-        // AdjustCameraToColliderSize(); 
+        // playerMovementScript = player.GetComponent<PlayerMovement>();
+
     }
 
     void Update()
     {
     }
 
-    private void AdjustCameraToColliderSize()
+    private void AdjustCameraColliderSize()
     {
         BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
         if (boxCollider != null)
         {
-            float desiredHeight = boxCollider.size.y / 2; 
-            Camera.main.orthographicSize = desiredHeight;
+            Camera mainCamera = Camera.main;
+
+            if (mainCamera != null)
+            {
+                float aspectRatio = mainCamera.aspect;
+                float verticalSize = mainCamera.orthographicSize;
+                float horizontalSize = aspectRatio * verticalSize;
+
+                // Add margin
+                float marginHorizontal = cameraMargin * 15;
+                float marginVertical = cameraMargin * 8;
+
+                // Set collider size
+                boxCollider.size = new Vector2(horizontalSize + marginHorizontal, verticalSize + marginVertical);
+            }
+            else
+            {
+                Debug.LogWarning("Main camera not found.");
+            }
         }
         else
         {
@@ -41,11 +61,11 @@ public class CameraSlide : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && Application.isPlaying)
         {
             cameraBounds = GetComponent<Collider2D>().bounds;
             Vector2 sizeOfScreen = new Vector2(Mathf.Abs(cameraBounds.max.x - cameraBounds.min.x), Mathf.Abs(cameraBounds.max.y - cameraBounds.min.y));
-            Vector3 movementDirection = Vector3.zero; 
+            Vector3 movementDirection = Vector3.zero;
 
             if (other.bounds.min.x >= cameraBounds.max.x)
             {
@@ -68,15 +88,20 @@ public class CameraSlide : MonoBehaviour
             Vector3 targetPosition = transform.position + movementDirection;
             targetPosition.z = currentZ;
 
-            // gameManager.Pause();
-            StartCoroutine(MoveCameraSmoothly(targetPosition, 0.5f));
-            gameManager.Unpause();
+            gameManager.Pause();
+            if (Camera.main.gameObject.activeSelf){
+                StartCoroutine(MoveCameraSmoothly(targetPosition, 0.5f));
+            }
+            
+            // gameManager.Unpause()
+
         }
     }
 
     private IEnumerator MoveCameraSmoothly(Vector3 targetPosition, float duration)
     {
-        if (Camera.main != null && Camera.main.gameObject.activeInHierarchy)
+        Camera mainCamera = Camera.main;
+        if (mainCamera != null && mainCamera.gameObject.activeSelf)
         {
             float elapsedTime = 0;
             Vector3 startPosition = transform.position;
@@ -88,13 +113,14 @@ public class CameraSlide : MonoBehaviour
                 yield return null;
             }
 
-            transform.position = targetPosition; 
+            transform.position = targetPosition;
         }
         else
         {
             Debug.LogWarning("Main camera is inactive or not found. Coroutine cannot be started.");
         }
 
-        // gameManager.Unpause();
+        gameManager.Unpause();
     }
+
 }
