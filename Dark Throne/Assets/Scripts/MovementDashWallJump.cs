@@ -184,6 +184,10 @@ public class MovementDashWallJump : MonoBehaviour
         rb.gravityScale = 0f;  
 
         horizontal = Input.GetAxisRaw("Horizontal");
+        if (horizontal == 0){
+            horizontal = Mathf.Sign(transform.localScale.x) * 1;
+            
+        }
         rb.velocity = new Vector2(Mathf.Sign(horizontal) * Mathf.Abs(transform.localScale.x) * dashingPower, 0f);
 
         // rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
