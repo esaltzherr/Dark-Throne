@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
     private bool isPaused = false;
 
     // Update is called once per frame
+    void Start(){
+        Unpause();
+
+    }
     void Update()
     {
         // Check for the pause button (Escape key in this case)
