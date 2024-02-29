@@ -5528,6 +5528,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &905575347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905575348}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905575348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905575347}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.74, y: 0.2, z: -0.31054667}
+  m_LocalScale: {x: 1.6806723, y: 1.6806723, z: 1.6806723}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1047980520}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &960735607
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,6 +6125,7 @@ GameObject:
   - component: {fileID: 1047980516}
   - component: {fileID: 1047980521}
   - component: {fileID: 1047980522}
+  - component: {fileID: 1047980523}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6262,12 +6294,13 @@ Transform:
   m_GameObject: {fileID: 1047980514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.79, y: -3.37, z: 0}
+  m_LocalPosition: {x: -16.67, y: -3.37, z: 0}
   m_LocalScale: {x: 0.595, y: 0.595, z: 0.595}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 398869399}
   - {fileID: 1977068908}
+  - {fileID: 905575348}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1047980521
@@ -6405,6 +6438,24 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1047980523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047980514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e946381bec1f3b34f89b90f2ab11c2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  hitBox: {fileID: 905575348}
+  attackRange: 0.44
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1061540310
 GameObject:
   m_ObjectHideFlags: 0
