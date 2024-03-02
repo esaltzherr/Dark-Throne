@@ -6,7 +6,7 @@ using System.Collections;
 public class SceneTransition : MonoBehaviour
 {
     public Image fadeImage;
-    public float fadeDuration = 1f; 
+    public float fadeDuration = 5f; 
 
     void Start()
     {

@@ -9,6 +9,7 @@ TagManager:
   - PowerUp
   - PowerUpTag
   - Enemy
+  - GameOver
   layers:
   - Default
   - TransparentFX

@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class MovementDashWallJump : MonoBehaviour
 {
+    public string GameOver;
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 20f;
     private bool isFacingRight = true;
-
+    private int currentHealth = 100;
+    
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
 
@@ -37,6 +40,7 @@ public class MovementDashWallJump : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+    [SerializeField] Slider health;
 
     void Update()
     {
@@ -75,6 +79,21 @@ public class MovementDashWallJump : MonoBehaviour
         if (!isWallJumping)
         {
             Flip();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) || currentHealth == 0)
+        {
+            SceneManager.LoadScene(GameOver);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ChangeHealth(25);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            ChangeHealth(-25);
         }
     }
 
@@ -209,5 +228,12 @@ public class MovementDashWallJump : MonoBehaviour
         {
             canJump = true; // Enable jumping when colliding with ground
         }
+    }
+
+    private void ChangeHealth(int num)
+    {
+        currentHealth -= num;
+        health.value = currentHealth;
+        
     }
 }
