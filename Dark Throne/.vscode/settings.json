@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Dark Throne.sln"
+    "dotnet.defaultSolution": "Dark Throne.sln",
+    "FSharp.suggestGitignore": false
 }
