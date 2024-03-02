@@ -2529,6 +2529,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &363698936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2803203405196669467, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+  m_PrefabInstance: {fileID: 805737399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &392090440
 GameObject:
   m_ObjectHideFlags: 0
@@ -5092,6 +5097,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &805737399
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2803203405196669467, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_Name
+      value: DoubleJumpPowerUP
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710312423283293556, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_TagString
+      value: PowerUpTag
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 31.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
 --- !u!1 &806404739
 GameObject:
   m_ObjectHideFlags: 0
@@ -6646,6 +6712,7 @@ GameObject:
   - component: {fileID: 1047980521}
   - component: {fileID: 1047980522}
   - component: {fileID: 1047980523}
+  - component: {fileID: 1047980524}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6848,6 +6915,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   health: {fileID: 730299684}
+  powerUpCanvas: {fileID: 0}
+  powerUp: {fileID: 363698936}
 --- !u!96 &1047980522
 TrailRenderer:
   serializedVersion: 3
@@ -6979,6 +7048,21 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
+  attackDamage: 40
+--- !u!114 &1047980524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047980514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933d70b272b234249b6385a44cf20fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvulnerable: 0
+  invulnerabilityDuration: 2
 --- !u!1 &1061540310
 GameObject:
   m_ObjectHideFlags: 0
@@ -14127,3 +14211,4 @@ SceneRoots:
   - {fileID: 109418225}
   - {fileID: 849060885}
   - {fileID: 2064203005}
+  - {fileID: 805737399}

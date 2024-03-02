@@ -8,6 +8,7 @@ public class MeleeCombat : MonoBehaviour
     public Transform hitBox;
     public float attackRange = 0.5f;
     public LayerMask enemyLayer;
+    public int attackDamage = 40;
     // Update is called once per frame
     void Update()
     {
@@ -23,7 +24,9 @@ public class MeleeCombat : MonoBehaviour
 
         foreach(Collider2D enemy in enemiesHit)
         {
+
             Debug.Log("Enemy Hit: " + enemy.name);
+            enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
     }
     private void OnDrawGizmosSelected()

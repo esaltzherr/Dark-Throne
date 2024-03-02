@@ -430,6 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa857429de0a4e644b3c4c871033c4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: 
   rb: {fileID: 250031004}
   groundCheck: {fileID: 529842780}
   groundLayer:
@@ -440,6 +441,9 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
+  health: {fileID: 0}
+  powerUpCanvas: {fileID: 0}
+  powerUp: {fileID: 0}
 --- !u!1 &378085352
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +475,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1543853396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &393087304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2803203405196669467, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+  m_PrefabInstance: {fileID: 1683988929}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa857429de0a4e644b3c4c871033c4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: 
   rb: {fileID: 1543853393}
   groundCheck: {fileID: 529842780}
   groundLayer:
@@ -898,6 +908,9 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
+  health: {fileID: 0}
+  powerUpCanvas: {fileID: 0}
+  powerUp: {fileID: 393087304}
 --- !u!50 &1543853393
 Rigidbody2D:
   serializedVersion: 4
@@ -1164,36 +1177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97dd3275f0724dbd9123de66a83eb7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 0
-  speed: 8
-  jumpingPower: 20
-  isFacingRight: 1
-  isWallSliding: 0
-  wallSlidingSpeed: 2
-  isWallJumping: 0
-  wallJumpingDirection: 0
-  wallJumpingTime: 0.2
-  wallJumpingCounter: 0
-  wallJumpingDuration: 0.4
-  wallJumpingPower: {x: 8, y: 16}
-  canDash: 1
-  isDashing: 0
-  dashingPower: 24
-  dashingTime: 0.2
-  dashingCooldown: 1
-  doubleJumpAvailable: 0
-  jumpInputDetected: 0
-  canJump: 1
-  jumpInputDelay: 0.1
-  jumpCooldown: 0.2
-  rb: {fileID: 1543853393}
-  groundCheck: {fileID: 529842780}
-  groundLayer:
-    m_Bits: 128
-  tr: {fileID: 1543853397}
-  wallCheck: {fileID: 378085353}
-  wallLayer:
-    m_Bits: 64
 --- !u!1 &1551935239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,6 +1318,10 @@ PrefabInstance:
     - target: {fileID: 2803203405196669467, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
       propertyPath: m_Name
       value: DoubleJumpPowerUP
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710312423283293556, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
+      propertyPath: m_TagString
+      value: PowerUpTag
       objectReference: {fileID: 0}
     - target: {fileID: 7554539460723363827, guid: f6fb81e4c1e6eae4a970e25f8f84bd7c, type: 3}
       propertyPath: m_LocalPosition.x

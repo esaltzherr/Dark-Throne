@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,6 +34,10 @@ public class MovementDashWallJump : MonoBehaviour
     private bool canJump = true; // Added variable to track if the player can jump
     private float jumpInputDelay = 0.1f; // Adjustable delay after landing before allowing jump input
     private float jumpCooldown = 0.2f; // Adjustable cooldown after landing before allowing jump input again
+    private bool doubleJumpPowerUp = false;
+    private bool touchingDoubleJump = false;
+    private bool collidingEnemy = false;
+
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -41,9 +46,32 @@ public class MovementDashWallJump : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] Slider health;
+    [SerializeField] private Canvas powerUpCanvas;
+    [SerializeField] private GameObject powerUp;
+
+    private void Start()
+    {
+        powerUpCanvas = GameObject.FindGameObjectWithTag("PowerUpTag").GetComponent<Canvas>();
+        powerUpCanvas.enabled = false;
+    }
 
     void Update()
     {
+        if(collidingEnemy)
+        {
+            if (!(GetComponent<PlayerInvulnerability>().isInvulnerable))
+            {
+                ChangeHealth(50);
+                IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
+                StartCoroutine(invuln);
+            }
+        }
+        if (touchingDoubleJump && Input.GetKeyDown(KeyCode.E))
+        {
+            touchingDoubleJump = false;
+            doubleJumpAvailable = true;
+            powerUp.SetActive(false);
+        }
         // Detect jump input
         if (Input.GetKeyDown(KeyCode.W) && canJump)
         {
@@ -58,8 +86,10 @@ public class MovementDashWallJump : MonoBehaviour
             if (IsGrounded() || doubleJumpAvailable)
             {
                 Jump();
-                if (!IsGrounded() && doubleJumpAvailable)
+
+                if (doubleJumpPowerUp)
                 {
+                    doubleJumpAvailable = !doubleJumpAvailable;
                     // doubleJumped = true;
                 }
                 jumpInputDetected = false; // Reset jump input
@@ -216,8 +246,21 @@ public class MovementDashWallJump : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PowerUp"))
         {
+            touchingDoubleJump = true;
+            doubleJumpPowerUp = true;
             doubleJumpAvailable = true; // Enable double jump when colliding with power-up
-            Destroy(collision.gameObject); // Destroy the power-up object
+            powerUpCanvas.enabled = true;
+            //Destroy(collision.gameObject); // Destroy the power-up object
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collidingEnemy = true;
+            /*if (!(GetComponent<PlayerInvulnerability>().isInvulnerable))
+            {
+                ChangeHealth(50);
+                IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
+                StartCoroutine(invuln);
+            }*/
         }
     }
 
@@ -227,6 +270,15 @@ public class MovementDashWallJump : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = true; // Enable jumping when colliding with ground
+        }
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            touchingDoubleJump = false;
+            powerUpCanvas.enabled = false;
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collidingEnemy = false;
         }
     }
 
