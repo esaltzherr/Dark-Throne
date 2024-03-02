@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ContinueScene: PrototypeLevel1
-  GiveUpScene: JoseScene
+  GiveUpScene: MainMenu
 --- !u!114 &348713016
 MonoBehaviour:
   m_ObjectHideFlags: 0
