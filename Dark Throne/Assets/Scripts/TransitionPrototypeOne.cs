@@ -10,16 +10,18 @@ public class TransitionPrototypeOne : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 3f;
     public Button button;
-    
+    private float timer;
 
     // Start is called before the first frame update
 
-
+    void Start()
+    {
+        timer = 0f;
+    }
     IEnumerator FadeRoutine(string sceneName)
     {
         fadeImage.gameObject.SetActive(true);
         Color color = fadeImage.color;
-        float timer = 0f;
         while (timer < fadeDuration)
         {
             timer += Time.deltaTime;

@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.93962264, g: 0.31025267, b: 0.31025267, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4793,7 +4793,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1270443951}
   m_HandleRect: {fileID: 0}
-  m_Direction: 1
+  m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
@@ -5533,7 +5533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 5, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &870168808
@@ -6836,6 +6836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa857429de0a4e644b3c4c871033c4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: GameOver
   rb: {fileID: 1047980519}
   groundCheck: {fileID: 398869399}
   groundLayer:
@@ -6846,6 +6847,7 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
+  health: {fileID: 730299684}
 --- !u!96 &1047980522
 TrailRenderer:
   serializedVersion: 3
@@ -7603,7 +7605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd39e3b0e20660a4484326c592023804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 5
+  sceneBuildIndex: 6
 --- !u!61 &1116603627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8546,7 +8548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.33225343, g: 0.9622642, b: 0.42767707, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

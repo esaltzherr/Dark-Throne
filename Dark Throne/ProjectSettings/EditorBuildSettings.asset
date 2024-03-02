@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/JoseScene.unity
     guid: 102d8de7578ec724fa6ce85c589e975c
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4135ba3db98c46546a7bd3336c768d91
+  - enabled: 1
     path: Assets/Scenes/ZhiBin_level_1.unity
     guid: f2476e03b4f5f864a9ee260436e721f4
   - enabled: 1
@@ -16,7 +19,7 @@ EditorBuildSettings:
     guid: 559b4248aeb7bbb4693a1980aee21420
   - enabled: 1
     path: Assets/Scenes/NickPScene.unity
-    guid: 5e7adb95e1d31ce409b0c2d026201f64
+    guid: 19046039cbcb24ffaac4e6e22753bf9c
   - enabled: 1
     path: Assets/Scenes/PrototypeLevel1.unity
     guid: 2439757150c0bf747b2388e284ff74ea
