@@ -147,12 +147,41 @@ public class MovementDashWallJump : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        // return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.3f);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Ground"))
+            {
+                // Print debug information
+                // Debug.Log("Collider Name: " + collider.gameObject.name);
+                // Debug.Log("Collider Tag: " + collider.tag);
+                return true;
+            }
+
+
+        }
+        return false;
     }
 
     private bool IsWalled()
     {
-        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        // return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(wallCheck.position, 0.3f);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Ground"))
+            {
+                // Print debug information
+                // Debug.Log("Collider Name: " + collider.gameObject.name);
+                // Debug.Log("Collider Tag: " + collider.tag);
+                return true;
+            }
+
+
+        }
+        return false;
+        // return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
 
     private void WallSlide()
