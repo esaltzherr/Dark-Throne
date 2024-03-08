@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: c63fcd544d40f5843abee6d7f2b8599e
+  productGUID: 890c46eb68ad74602b8d245739ba6078
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Dark Throne
+  productName: Dark Throne Local
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -629,14 +629,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Dark Throne
+  metroPackageName: Dark Throne Local
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Dark Throne
+  metroApplicationDescription: Dark Throne Local
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -704,10 +704,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 1fc6a7bf-8f78-4579-ad0a-0e7867c6fe24
+  cloudProjectId: 87df249f-8fa7-4a27-919c-ee41b0afff52
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Dark Throne Local
+  projectName: Dark Throne Local 2024-03-07_23-10-20
   organizationId: nickpuckdee
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

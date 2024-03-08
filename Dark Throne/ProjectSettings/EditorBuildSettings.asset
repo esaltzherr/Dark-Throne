@@ -6,27 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JoseScene.unity
-    guid: 102d8de7578ec724fa6ce85c589e975c
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 4135ba3db98c46546a7bd3336c768d91
-  - enabled: 1
-    path: Assets/Scenes/ZhiBin_level_1.unity
-    guid: f2476e03b4f5f864a9ee260436e721f4
-  - enabled: 1
-    path: Assets/Scenes/ElroyScene.unity
-    guid: 559b4248aeb7bbb4693a1980aee21420
-  - enabled: 1
-    path: Assets/Scenes/NickPScene.unity
-    guid: 19046039cbcb24ffaac4e6e22753bf9c
-  - enabled: 1
-    path: Assets/Scenes/PrototypeLevel1.unity
-    guid: 2439757150c0bf747b2388e284ff74ea
-  - enabled: 1
-    path: Assets/Scenes/PrototypeLevel2.unity
-    guid: 4cc924c0ae1b2eb4b857980e8a373d56
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 1a3fbceee7641ca4c8abc5c05829d304
+    path: Assets/Scenes/MainScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

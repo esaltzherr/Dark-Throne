@@ -1673,11 +1673,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3304458560873422017, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.51
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 3304458560873422017, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.49
+      value: -15.51
       objectReference: {fileID: 0}
     - target: {fileID: 3304458560873422017, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1709,6 +1709,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3304458560873422017, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914537467160756314, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
+      propertyPath: m_Mass
+      value: 5.7271423
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914537467160756314, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914537467160756314, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 75e928d6ab2a33e43b74683b1e33852c, type: 2}
+    - target: {fileID: 4914537467160756314, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914537467160756314, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914537467160756314, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
+      propertyPath: m_UseFullKinematicContacts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5803910231184055809, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
@@ -1767,6 +1791,11 @@ MonoBehaviour:
   moveSpeed: 3
   detectionRange: 10
   targetPlayer: {fileID: 934984546}
+  groundCheckDistance: 1.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  minimumGroundAdjustDistance: 0.1
 --- !u!1 &1586535722
 GameObject:
   m_ObjectHideFlags: 0
