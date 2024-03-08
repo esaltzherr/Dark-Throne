@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class MovementDashWallJump : MonoBehaviour
 {
+    public ParticleSystem dust;
+
     public string GameOver;
     private float horizontal;
     private float speed = 8f;
@@ -75,6 +77,9 @@ public class MovementDashWallJump : MonoBehaviour
         // Detect jump input
         if (Input.GetKeyDown(KeyCode.W) && canJump)
         {
+            // shows dust particles
+            CreateDust();
+
             jumpInputDetected = true;
             canJump = false; // Disable jumping temporarily
             StartCoroutine(EnableJump()); // Enable jumping after a short delay
@@ -239,10 +244,17 @@ public class MovementDashWallJump : MonoBehaviour
     {
         if (horizontal > 0 && !isFacingRight || horizontal < 0 && isFacingRight)
         {
+            //dust.Play();
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+
+            Vector3 dustLocalScale = dust.transform.localScale;
+            dustLocalScale.x *= -1f;
+            dust.transform.localScale = dustLocalScale;
+
+            dust.Play();
         }
     }
 
@@ -316,5 +328,10 @@ public class MovementDashWallJump : MonoBehaviour
         currentHealth -= num;
         health.value = currentHealth;
         
+    }
+
+    private void CreateDust()
+    {
+        dust.Play();
     }
 }
