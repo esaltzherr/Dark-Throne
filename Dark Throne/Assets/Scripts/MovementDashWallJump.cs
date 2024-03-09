@@ -8,6 +8,7 @@ public class MovementDashWallJump : MonoBehaviour
 {
     public ParticleSystem dust;
 
+    public Animator animator;
     public string GameOver;
     private float horizontal;
     private float speed = 8f;
@@ -103,6 +104,7 @@ public class MovementDashWallJump : MonoBehaviour
 
         // Other input handling
         horizontal = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
