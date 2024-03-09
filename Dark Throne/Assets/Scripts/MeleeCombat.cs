@@ -9,17 +9,25 @@ public class MeleeCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayer;
     public int attackDamage = 40;
-    // Update is called once per frame
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+
+
+
+    // Update is called once per frame 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Attack();
+        if(Time.time >= nextAttackTime){
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
     }
     void Attack()
     {
-
+        animator.SetTrigger("Attack");
         Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(hitBox.position, attackRange, enemyLayer);
 
         foreach(Collider2D enemy in enemiesHit)

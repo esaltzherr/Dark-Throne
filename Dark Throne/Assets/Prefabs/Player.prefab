@@ -683,12 +683,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa857429de0a4e644b3c4c871033c4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dust: {fileID: 0}
   GameOver: GameOver
   rb: {fileID: 7805706532585873376}
   groundCheck: {fileID: 8213138219525228076}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   tr: {fileID: 296192401293878569}
   wallCheck: {fileID: 6175370363997631260}
   wallLayer:
@@ -827,7 +828,7 @@ MonoBehaviour:
   attackRange: 0.44
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   attackDamage: 40
 --- !u!114 &846479097813648370
 MonoBehaviour:
