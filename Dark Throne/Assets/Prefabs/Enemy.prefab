@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 196980207694754951}
   - component: {fileID: 5803910231184055809}
   - component: {fileID: 8560603615658275525}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -165,6 +165,11 @@ MonoBehaviour:
   moveSpeed: 3
   detectionRange: 10
   targetPlayer: {fileID: 0}
+  groundCheckDistance: 1.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  minimumGroundAdjustDistance: 0.1
 --- !u!114 &8560603615658275525
 MonoBehaviour:
   m_ObjectHideFlags: 0

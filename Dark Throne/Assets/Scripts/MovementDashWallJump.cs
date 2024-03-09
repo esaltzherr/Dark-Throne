@@ -63,7 +63,7 @@ public class MovementDashWallJump : MonoBehaviour
         {
             if (!(GetComponent<PlayerInvulnerability>().isInvulnerable))
             {
-                ChangeHealth(50);
+                ChangeHealth(10);
                 IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
                 StartCoroutine(invuln);
             }
