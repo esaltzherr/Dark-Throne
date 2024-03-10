@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4475891141592440745}
   - component: {fileID: 5160106183499535728}
   - component: {fileID: 1759914030163418770}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: flying enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948275591160440333}
   - component: {fileID: 5352356685807688618}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Circle (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7248733012152728477}
   - component: {fileID: 8041378622785576880}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Circle (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3885534454776046791}
   - component: {fileID: 7325522755368389756}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: wing (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3469971090057498085}
   - component: {fileID: 7743844978114960635}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Circle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7011707121353895414}
   - component: {fileID: 2091556225154238172}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961048312750408210}
   - component: {fileID: 3464687049543412392}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Circle (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8608527320687965826}
   - component: {fileID: 2378913092201605108}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Circle (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539215282208386076}
   - component: {fileID: 7160665652751843546}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Circle (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

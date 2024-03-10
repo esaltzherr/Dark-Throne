@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 2700944075814134977}
   - component: {fileID: 6279420632450074532}
   - component: {fileID: 6341961970964489698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlyingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
