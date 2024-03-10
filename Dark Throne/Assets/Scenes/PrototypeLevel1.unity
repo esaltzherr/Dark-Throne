@@ -7910,6 +7910,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1264484394 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4730276300434386488, guid: 10a8a95e6cf9d974dab14ea14bc863a5, type: 3}
+  m_PrefabInstance: {fileID: 1275139151316746562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1306019486
 GameObject:
   m_ObjectHideFlags: 0
@@ -10714,6 +10719,10 @@ PrefabInstance:
       propertyPath: targetPlayer
       value: 
       objectReference: {fileID: 1047980520}
+    - target: {fileID: 8560603615658275525, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 967290084}
     - target: {fileID: 9190269534634027818, guid: 55e16f65db4a3344a95d3da93cc1571e, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -13430,6 +13439,18 @@ PrefabInstance:
       propertyPath: targetPlayer
       value: 
       objectReference: {fileID: 1047980520}
+    - target: {fileID: 3178874120115188876, guid: 10a8a95e6cf9d974dab14ea14bc863a5, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430508616753121341, guid: 10a8a95e6cf9d974dab14ea14bc863a5, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1264484394}
+    - target: {fileID: 5134909671506779299, guid: 10a8a95e6cf9d974dab14ea14bc863a5, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 6702775066101802779, guid: 10a8a95e6cf9d974dab14ea14bc863a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.28
