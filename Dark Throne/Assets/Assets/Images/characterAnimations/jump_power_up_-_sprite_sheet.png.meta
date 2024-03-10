@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 8201c4f613d22944f9f7a662fbf36d1b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.42094868, y: 0.50839454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05f9d39dfd5be8488e10b7025f55187
+      internalID: -549277816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.4472993, y: 0.4916057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6a01eda93b87e49bbdda78a54324d4
+      internalID: -703134784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.47364962, y: 0.49160537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54b828f6a3285c45bf649ebd7c13422
+      internalID: 565010486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.48682463, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090afaefc3549d346b0e95774f4443d8
+      internalID: 1992891062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5131755, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d9200b664776443b743a172da470e2
+      internalID: 1492325768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5131751, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44030f988a28b914a86aca29aaca584a
+      internalID: 2100561860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5263507, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cac711f25bf7e468908fca595ed54a
+      internalID: -660842538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5418501, y: 0.5053331}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf91e63c830918044bb4e163e6ba08bb
+      internalID: 1407597645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5418501, y: 0.4893339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e38010c3a51d34399f257a423174af
+      internalID: 1100094698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2745
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.56696, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa698b9bbae2784e8301ba34211b88e
+      internalID: 693030236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 0
+        width: 305.83334
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5753291, y: 0.49466684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f30854f92c15a4794ef945fe63ef77
+      internalID: -55952107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_power_up_-_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3371
+        y: 0
+        width: 290
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f263d5fe182bf434492a2fa7a04a3904
+      internalID: -1084372068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      jump_power_up_-_sprite_sheet_0: -549277816
+      jump_power_up_-_sprite_sheet_1: -703134784
+      jump_power_up_-_sprite_sheet_10: -55952107
+      jump_power_up_-_sprite_sheet_11: -1084372068
+      jump_power_up_-_sprite_sheet_2: 565010486
+      jump_power_up_-_sprite_sheet_3: 1992891062
+      jump_power_up_-_sprite_sheet_4: 1492325768
+      jump_power_up_-_sprite_sheet_5: 2100561860
+      jump_power_up_-_sprite_sheet_6: -660842538
+      jump_power_up_-_sprite_sheet_7: 1407597645
+      jump_power_up_-_sprite_sheet_8: 1100094698
+      jump_power_up_-_sprite_sheet_9: 693030236
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
