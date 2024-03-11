@@ -1,53 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public float moveSpeed = 3f;
+    public float moveSpeed = 40f;
     public float detectionRange = 10f;
     public Transform targetPlayer;
-    public float groundCheckDistance = 1.5f; 
-    public LayerMask groundLayer; 
-    public float minimumGroundAdjustDistance = 0.1f; 
+    private Rigidbody2D rb;
+
+    private bool shouldStopFollowing = false;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
-        if (targetPlayer != null)
+        if (targetPlayer != null && !shouldStopFollowing)
         {
-            float distanceToPlayer = Vector3.Distance(transform.position, targetPlayer.position);
+            float distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.position);
             if (distanceToPlayer <= detectionRange)
             {
-                Vector3 moveDirection = (targetPlayer.position - transform.position).normalized;
-                Vector3 newPosition = transform.position + moveDirection * moveSpeed * Time.deltaTime;
-                
-                newPosition = AdjustPositionToGround(newPosition, out bool isGrounded);
+                Vector2 moveDirection = (targetPlayer.position - transform.position).normalized;
 
-                if (isGrounded)
+                // Flip the enemy to face the player
+                if (moveDirection.x > 0)
                 {
-                    transform.position = newPosition;
+                    transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 }
-                else
+                else if (moveDirection.x < 0)
                 {
-                    transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
+                    transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 }
+
+                Vector2 newPosition = rb.position + moveDirection * moveSpeed * Time.deltaTime;
+                rb.MovePosition(newPosition);
             }
         }
     }
 
-    Vector3 AdjustPositionToGround(Vector3 proposedPosition, out bool isGrounded)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        RaycastHit hit;
-        isGrounded = false;
-        if (Physics.Raycast(proposedPosition + Vector3.up * 0.1f, Vector3.down, out hit, groundCheckDistance + 0.1f, groundLayer))
+        if (collision.gameObject.tag == "Player")
         {
-            float distanceToGround = hit.distance - 0.1f; 
-            if (distanceToGround <= minimumGroundAdjustDistance)
-            {
-                isGrounded = true;
-                proposedPosition.y = hit.point.y + minimumGroundAdjustDistance; 
-            }
+            shouldStopFollowing = true;
         }
-        return proposedPosition;
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            shouldStopFollowing = false;
+        }
     }
 }
