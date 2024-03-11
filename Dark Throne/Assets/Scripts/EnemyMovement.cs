@@ -1,46 +1,53 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public float moveSpeed = 40f;
+    public float moveSpeed = 3f;
     public float detectionRange = 10f;
     public Transform targetPlayer;
-    private Rigidbody2D rb; // Reference to the enemy's Rigidbody2D
-
-    private bool shouldStopFollowing = false; // Flag to control following behavior
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>(); // Initialize the Rigidbody2D reference
-    }
+    public float groundCheckDistance = 1.5f; 
+    public LayerMask groundLayer; 
+    public float minimumGroundAdjustDistance = 0.1f; 
 
     void Update()
     {
-        if (targetPlayer != null && !shouldStopFollowing)
+        if (targetPlayer != null)
         {
-            float distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.position);
+            float distanceToPlayer = Vector3.Distance(transform.position, targetPlayer.position);
             if (distanceToPlayer <= detectionRange)
             {
-                Vector2 moveDirection = (targetPlayer.position - transform.position).normalized;
-                Vector2 newPosition = rb.position + moveDirection * moveSpeed * Time.deltaTime;
-                rb.MovePosition(newPosition);
+                Vector3 moveDirection = (targetPlayer.position - transform.position).normalized;
+                Vector3 newPosition = transform.position + moveDirection * moveSpeed * Time.deltaTime;
+                
+                newPosition = AdjustPositionToGround(newPosition, out bool isGrounded);
+
+                if (isGrounded)
+                {
+                    transform.position = newPosition;
+                }
+                else
+                {
+                    transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
+                }
             }
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    Vector3 AdjustPositionToGround(Vector3 proposedPosition, out bool isGrounded)
     {
-        if (collision.gameObject.tag == "Player")
+        RaycastHit hit;
+        isGrounded = false;
+        if (Physics.Raycast(proposedPosition + Vector3.up * 0.1f, Vector3.down, out hit, groundCheckDistance + 0.1f, groundLayer))
         {
-            shouldStopFollowing = true; // Stop following when colliding with the player
+            float distanceToGround = hit.distance - 0.1f; 
+            if (distanceToGround <= minimumGroundAdjustDistance)
+            {
+                isGrounded = true;
+                proposedPosition.y = hit.point.y + minimumGroundAdjustDistance; 
+            }
         }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            shouldStopFollowing = false; // Resume following when no longer colliding
-        }
+        return proposedPosition;
     }
 }
