@@ -12,7 +12,7 @@ public class MovementDashWallJump : MonoBehaviour
     public string GameOver;
     private float horizontal;
     private float speed = 8f;
-    private float jumpingPower = 20f;
+    private float jumpingPower = 15f;
     private bool isFacingRight = true;
     private int currentHealth = 100;
     
