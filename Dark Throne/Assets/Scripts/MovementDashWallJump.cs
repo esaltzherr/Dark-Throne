@@ -62,12 +62,7 @@ public class MovementDashWallJump : MonoBehaviour
     {
         if(collidingEnemy)
         {
-            if (!(GetComponent<PlayerInvulnerability>().isInvulnerable))
-            {
-                ChangeHealth(10);
-                IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
-                StartCoroutine(invuln);
-            }
+            ChangeHealth(10);
         }
         if (touchingDoubleJump && Input.GetKeyDown(KeyCode.E))
         {
@@ -328,10 +323,16 @@ public class MovementDashWallJump : MonoBehaviour
         }
     }
 
-    private void ChangeHealth(int num)
+    public void ChangeHealth(int num)
     {
-        currentHealth -= num;
-        health.value = currentHealth;
+        if (!(GetComponent<PlayerInvulnerability>().isInvulnerable))
+        {
+            currentHealth -= num;
+            health.value = currentHealth;
+            animator.SetTrigger("Is_Hit");
+            IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
+            StartCoroutine(invuln);
+        }
         
     }
 

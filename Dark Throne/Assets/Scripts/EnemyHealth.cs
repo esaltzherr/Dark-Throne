@@ -32,8 +32,12 @@ public class EnemyHealth : MonoBehaviour
         animator.SetTrigger("Dead");
 
         this.GetComponent<EnemyFollow>().enabled = false;
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
 
+        Destroy(this.gameObject, 7f);
         //GetComponent<Collider2D>().enabled = false;
         //Destroy(gameObject);
     }
