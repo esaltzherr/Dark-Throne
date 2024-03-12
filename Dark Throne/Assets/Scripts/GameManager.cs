@@ -5,11 +5,13 @@ public class GameManager : MonoBehaviour
 {
     private bool isPaused = false;
 
-    // Update is called once per frame
-    void Start(){
-        Unpause();
 
+    // Update is called once per frame
+    void Start()
+    {
+        Unpause();
     }
+    
     void Update()
     {
         // Check for the pause button (Escape key in this case)
@@ -35,12 +37,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Pause(){
+    public void Pause()
+    {
         isPaused = true;
         Time.timeScale = isPaused ? 0 : 1;
 
     }
-    public void Unpause(){
+    public void Unpause()
+    {
         isPaused = false;
         Time.timeScale = isPaused ? 0 : 1;
     }
