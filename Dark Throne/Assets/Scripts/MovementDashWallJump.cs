@@ -115,6 +115,7 @@ public class MovementDashWallJump : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) || currentHealth == 0)
         {
+            currentHealth = 2;
             SceneManager.LoadScene(GameOver);
         }
 
