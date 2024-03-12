@@ -1,32 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelMove_Ref : MonoBehaviour
 {
-    
     bool playerInDoor = false;
     public string nextScene;
-      
+
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.E) && playerInDoor)
         {
             Debug.Log("NEXT Level");
+            // Update the previous scene name before transitioning.
+            SpawnManager.previousSceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(nextScene);
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        playerInDoor = true;
+        if (other.CompareTag("Player"))
+        {
+            playerInDoor = true;
+        }
     }
+
     void OnTriggerExit2D(Collider2D other)
     {
-        playerInDoor = false;
+        if (other.CompareTag("Player"))
+        {
+            playerInDoor = false;
+        }
     }
-
 }
-
