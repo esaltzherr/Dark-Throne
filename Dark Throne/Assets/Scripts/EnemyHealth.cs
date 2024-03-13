@@ -19,25 +19,45 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        animator.SetTrigger("Is_Hit");
-        if (currentHealth <= 0)
+        if (this.tag == "FlyingEnemy")
         {
             Die();
+        }
+        else
+        {
+            currentHealth -= damage;
+            animator.SetTrigger("Is_Hit");
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 
     void Die()
     {
-        animator.SetTrigger("Dead");
+        animator.SetBool("Dead", true);
+        if (this.tag == "FlyingEnemy")
+        {
+            this.GetComponent<EnemyAttack>().enabled = false;
+            this.GetComponent<flying_enemy>().enabled = false;
+            Rigidbody2D r = GetComponent<Rigidbody2D>();
+            r.constraints = RigidbodyConstraints2D.FreezePosition;
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
+            Destroy(this.gameObject, 1f);
 
-        this.GetComponent<EnemyFollow>().enabled = false;
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.constraints = RigidbodyConstraints2D.FreezePosition;
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+        }
+        else
+        {
+            this.GetComponent<EnemyFollow>().enabled = false;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
 
-        Destroy(this.gameObject, 7f);
+            Destroy(this.gameObject, 7f);
+        }
         //GetComponent<Collider2D>().enabled = false;
         //Destroy(gameObject);
     }

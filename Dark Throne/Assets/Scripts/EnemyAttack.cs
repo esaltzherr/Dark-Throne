@@ -5,8 +5,11 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public Transform playerTransform;
-    public float attackRange = 5.0f;
+    public float attackRange = 2.0f;
     private Animator animator;
+    public float attackRate = 4f;
+    float nextAttackTime = 0f;
+
 
     void Start()
     {
@@ -19,8 +22,11 @@ public class EnemyAttack : MonoBehaviour
 
         if (distanceToPlayer <= attackRange)
         {
-            animator.SetBool("IsIdle", false); 
-            animator.SetTrigger("Attack");
+            if (Time.time >= nextAttackTime)
+            {
+                animator.SetTrigger("Attack");
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
         else
         {
