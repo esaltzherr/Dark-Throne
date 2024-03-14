@@ -63,7 +63,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.01, y: -4.18, z: 0}
-  m_LocalScale: {x: -3.3157716, y: 3.301, z: 1}
+  m_LocalScale: {x: -3.6630154, y: 3.301, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1618594929932980742}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   detectionRange: 10
-  targetPlayer: {fileID: 0}
+  targetPlayer: {fileID: 7608148993344696429, guid: 3948056275c833846a62229857bd879a, type: 3}
   animator: {fileID: 1312469581504702770}
   attackrange: 0.5
   hitBox: {fileID: 1618594929932980742}

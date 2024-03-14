@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class MovementDashWallJump : MonoBehaviour
 {
-    public ParticleSystem dust;
+    //public static MovementDashWallJump instance;
 
+    public ParticleSystem dust;
     public Animator animator;
     public string GameOver;
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 15f;
     private bool isFacingRight = true;
-    private int currentHealth = 100;
+    private static int currentHealth = 100;
     
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
@@ -37,7 +38,8 @@ public class MovementDashWallJump : MonoBehaviour
     private bool canJump = true; // Added variable to track if the player can jump
     private float jumpInputDelay = 0.1f; // Adjustable delay after landing before allowing jump input
     private float jumpCooldown = 0.2f; // Adjustable cooldown after landing before allowing jump input again
-    private bool doubleJumpPowerUp = false;
+
+    private static bool doubleJumpPowerUp = false;
     private bool touchingDoubleJump = false;
     private bool collidingEnemy = false;
 
@@ -341,4 +343,8 @@ public class MovementDashWallJump : MonoBehaviour
     {
         dust.Play();
     }
+
+    
+
+    
 }

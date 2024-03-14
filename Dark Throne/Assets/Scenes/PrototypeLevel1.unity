@@ -12632,10 +12632,6 @@ PrefabInstance:
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 2803203405465461164}
-    - target: {fileID: 5437026571915298021, guid: 3948056275c833846a62229857bd879a, type: 3}
-      propertyPath: attackRange
-      value: 0.67
-      objectReference: {fileID: 0}
     - target: {fileID: 7608148993344696429, guid: 3948056275c833846a62229857bd879a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.67
@@ -12683,10 +12679,6 @@ PrefabInstance:
     - target: {fileID: 8264851648072756112, guid: 3948056275c833846a62229857bd879a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8369996527856578729, guid: 3948056275c833846a62229857bd879a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

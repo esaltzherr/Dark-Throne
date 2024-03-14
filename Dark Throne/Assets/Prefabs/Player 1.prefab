@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 936887154770725683}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.74, y: 0.2, z: -0.31054667}
+  m_LocalPosition: {x: 2.03, y: 0.2, z: -0.31054667}
   m_LocalScale: {x: 1.6806723, y: 1.6806723, z: 1.6806723}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -293,7 +293,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.67, y: -3.37, z: 0}
-  m_LocalScale: {x: 0.595, y: 0.595, z: 0.595}
+  m_LocalScale: {x: 0.9587847, y: 0.9587847, z: 0.9587847}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2597860661880194737}
@@ -470,6 +470,7 @@ MonoBehaviour:
   dust: {fileID: 5916784210280149701}
   animator: {fileID: 3060873048166321666}
   GameOver: GameOver
+  doubleJumpPowerUp: 0
   rb: {fileID: 8959427195404176751}
   groundCheck: {fileID: 2597860661880194737}
   groundLayer:
@@ -610,7 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3060873048166321666}
   hitBox: {fileID: 8369996527856578729}
-  attackRange: 0.44
+  attackRange: 0.67
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
