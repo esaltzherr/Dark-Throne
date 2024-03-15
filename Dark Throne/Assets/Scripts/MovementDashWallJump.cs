@@ -103,7 +103,8 @@ public class MovementDashWallJump : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
+        {   
+            StopWallJumping();
             StartCoroutine(Dash());
         }
 
@@ -266,6 +267,10 @@ public class MovementDashWallJump : MonoBehaviour
         rb.gravityScale = 0f;  
 
         horizontal = Input.GetAxisRaw("Horizontal");
+        if (horizontal == 0){
+            horizontal = Mathf.Sign(transform.localScale.x);
+        }
+
         rb.velocity = new Vector2(Mathf.Sign(horizontal) * Mathf.Abs(transform.localScale.x) * dashingPower, 0f);
 
         tr.emitting = true;
