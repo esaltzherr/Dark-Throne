@@ -17,15 +17,69 @@ public class CameraSlide : MonoBehaviour
 
     void Start()
     {
-
         AdjustCameraColliderSize();
         cameraBounds = GetComponent<Collider2D>().bounds;
-        // playerMovementScript = player.GetComponent<PlayerMovement>();
 
+
+
+        // Find and assign the player
+        GameObject playerGameObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerGameObject != null)
+        {
+            player = playerGameObject.GetComponent<SpriteRenderer>();
+            if (player == null) // Check if the player GameObject has a SpriteRenderer component
+            {
+                Debug.LogWarning("The player GameObject does not have a SpriteRenderer component.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Player GameObject not found. Make sure your player GameObject is tagged with 'Player'.");
+        }
     }
 
     void Update()
     {
+        // Intentionally left blank as per requirement to not constantly follow the player
+        CheckPlayerBounds();
+    }
+
+
+    private void CheckPlayerBounds()
+    {
+        if (player == null) return; // Do nothing if the player has not been assigned.
+
+        // Update the camera bounds since they might have changed.
+        cameraBounds = GetComponent<Collider2D>().bounds;
+        Vector2 sizeOfScreen = new Vector2(Mathf.Abs(cameraBounds.max.x - cameraBounds.min.x), Mathf.Abs(cameraBounds.max.y - cameraBounds.min.y));
+
+        Vector3 playerPosition = player.transform.position; // Player's world position
+
+        // Calculate how many full camera widths and heights away the player is from the camera center.
+        float horizontalDistance = playerPosition.x - cameraBounds.center.x;
+        float verticalDistance = playerPosition.y - cameraBounds.center.y;
+
+        // Calculate how many full screens away the player is horizontally and vertically.
+        int horizontalScreensAway = Mathf.FloorToInt(horizontalDistance / sizeOfScreen.x);
+        int verticalScreensAway = Mathf.FloorToInt(verticalDistance / sizeOfScreen.y);
+
+        // Only update the camera if the player is more than half a screen away in either direction.
+        if (Mathf.Abs(horizontalDistance / sizeOfScreen.x) >= 1.1 || Mathf.Abs(verticalDistance / sizeOfScreen.y) >= 1.1)
+        {
+            Debug.Log("Player is out of camera bounds.");
+            // Calculate the new target position for the camera based on the number of screens away.
+            Vector3 targetPosition = new Vector3(
+                cameraBounds.center.x + horizontalScreensAway * sizeOfScreen.x,
+                cameraBounds.center.y + verticalScreensAway * sizeOfScreen.y,
+                transform.position.z // Keep the camera's current Z coordinate
+            );
+
+            // Move the camera smoothly to the new position
+            if (Camera.main.gameObject.activeSelf)
+            {
+                StartCoroutine(MoveCameraSmoothly(targetPosition, 0f)); // You can adjust the duration as needed
+            }
+        }
     }
 
     private void AdjustCameraColliderSize()
@@ -34,7 +88,6 @@ public class CameraSlide : MonoBehaviour
         if (boxCollider != null)
         {
             Camera mainCamera = Camera.main;
-
             if (mainCamera != null)
             {
                 float aspectRatio = mainCamera.aspect;
@@ -89,12 +142,10 @@ public class CameraSlide : MonoBehaviour
             targetPosition.z = currentZ;
 
             gameManager.Pause();
-            if (Camera.main.gameObject.activeSelf){
+            if (Camera.main.gameObject.activeSelf)
+            {
                 StartCoroutine(MoveCameraSmoothly(targetPosition, 0.5f));
             }
-            
-            // gameManager.Unpause()
-
         }
     }
 
@@ -122,5 +173,4 @@ public class CameraSlide : MonoBehaviour
 
         gameManager.Unpause();
     }
-
 }
