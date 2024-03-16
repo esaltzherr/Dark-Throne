@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: -197.16486}
+  m_AnchoredPosition: {x: -398, y: 114}
   m_SizeDelta: {x: 1302.4856, y: 148.3298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87358299
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f049e726bca774eb1ad60baf42b2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ContinueScene: PrototypeLevel1
+  ContinueScene: CaveLevel
   GiveUpScene: MainMenu
 --- !u!114 &348713016
 MonoBehaviour:
@@ -503,7 +503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 256}
+  m_AnchoredPosition: {x: -560, y: 392}
   m_SizeDelta: {x: 665.7816, y: 119.0047}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &404830991
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b79b217f0becd1245ab12401eb1f5c34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34dcd294fb7069a4699acdf7bc1a5e29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -712,7 +712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -133, y: 0}
+  m_AnchoredPosition: {x: -615, y: 264}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1064750444

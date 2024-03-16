@@ -41,8 +41,8 @@ public class MovementDashWallJump : MonoBehaviour
 
     private static bool doubleJumpPowerUp = false;
     private bool touchingDoubleJump = false;
-    private bool collidingEnemy = false;
-
+    private bool collidingEnemy = false;    
+    
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -52,6 +52,7 @@ public class MovementDashWallJump : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] Slider health;
     [SerializeField] private Canvas powerUpCanvas;
+
     [SerializeField] private GameObject powerUp;
 
     private void Start()
@@ -73,6 +74,7 @@ public class MovementDashWallJump : MonoBehaviour
             doubleJumpAvailable = true;
             powerUp.SetActive(false);
         }
+
         // Detect jump input
         if (Input.GetKeyDown(KeyCode.W) && canJump)
         {

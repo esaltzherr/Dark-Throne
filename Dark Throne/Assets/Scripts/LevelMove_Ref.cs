@@ -5,6 +5,7 @@ public class LevelMove_Ref : MonoBehaviour
 {
     bool playerInDoor = false;
     public string nextScene;
+    public Canvas doorCanvas;
 
     void Update()
     {
@@ -22,6 +23,7 @@ public class LevelMove_Ref : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInDoor = true;
+            doorCanvas.enabled = true;
         }
     }
 
@@ -30,6 +32,8 @@ public class LevelMove_Ref : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInDoor = false;
+            doorCanvas.enabled = false;
+
         }
     }
 }
