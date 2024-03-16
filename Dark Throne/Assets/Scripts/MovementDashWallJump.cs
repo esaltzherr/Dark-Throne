@@ -58,6 +58,7 @@ public class MovementDashWallJump : MonoBehaviour
     {
         powerUpCanvas = GameObject.FindGameObjectWithTag("PowerUpTag").GetComponent<Canvas>();
         powerUpCanvas.enabled = false;
+        health.value = currentHealth;
     }
 
     void Update()
@@ -116,7 +117,7 @@ public class MovementDashWallJump : MonoBehaviour
             Flip();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) || currentHealth == 0)
+        if (Input.GetKeyDown(KeyCode.Escape) || currentHealth <= 0)
         {
             currentHealth = 2;
             SceneManager.LoadScene(GameOver);

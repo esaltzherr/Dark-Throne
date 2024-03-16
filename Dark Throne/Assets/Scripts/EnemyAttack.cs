@@ -28,9 +28,6 @@ public class EnemyAttack : MonoBehaviour
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
-        else
-        {
-            animator.SetBool("IsIdle", true);
-        }
+        
     }
 }
