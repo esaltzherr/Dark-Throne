@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4135ba3db98c46546a7bd3336c768d91
+  - enabled: 1
+    path: Assets/Scenes/PrototypeLevel1.unity
+    guid: 2439757150c0bf747b2388e284ff74ea
+  - enabled: 1
+    path: Assets/Scenes/PrototypeLevel2.unity
+    guid: 4cc924c0ae1b2eb4b857980e8a373d56
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 1a3fbceee7641ca4c8abc5c05829d304
+  - enabled: 1
+    path: Assets/Scenes/CaveLevel.unity
+    guid: 1eb5f239356ef204ba0772929520661e
+  - enabled: 1
+    path: Assets/Scenes/CaveLevelTwo.unity
+    guid: b4f47a96fc3bb034782edb9d2a85753e
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 7a0d4f6746f1fb64eab4b2b1d9cd5aa3, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: c6dbecb6df731b74d9c252776822c87b, type: 2}
