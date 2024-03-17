@@ -60,6 +60,7 @@ public class MovementDashWallJump : MonoBehaviour
         powerUpCanvas = GameObject.FindGameObjectWithTag("PowerUpTag").GetComponent<Canvas>();
         powerUpCanvas.enabled = false;
         health.value = currentHealth;
+
     }
 
     void Update()
