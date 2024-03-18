@@ -15,7 +15,8 @@ public class MovementDashWallJump : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 15f;
     private bool isFacingRight = true;
-    private static int currentHealth = 100;
+    private static int maxHealth = 100;
+    private static int currentHealth = maxHealth;
     
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
@@ -120,21 +121,21 @@ public class MovementDashWallJump : MonoBehaviour
             Flip();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) || currentHealth <= 0)
+        if (currentHealth <= 0)
         {
-            currentHealth = 2;
+            currentHealth = maxHealth;
             SceneManager.LoadScene(GameOver);
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            ChangeHealth(25);
-        }
+        // if (Input.GetKeyDown(KeyCode.P))
+        // {
+        //     ChangeHealth(25);
+        // }
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            ChangeHealth(-25);
-        }
+        // if (Input.GetKeyDown(KeyCode.L))
+        // {
+        //     ChangeHealth(-25);
+        // }
     }
 
     private void FixedUpdate()
