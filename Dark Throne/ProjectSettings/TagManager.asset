@@ -10,6 +10,7 @@ TagManager:
   - PowerUpTag
   - FlyingEnemy
   - Door
+  - FinalDoor
   layers:
   - Default
   - TransparentFX

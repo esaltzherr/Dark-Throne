@@ -14682,7 +14682,7 @@ GameObject:
   - component: {fileID: 513128297}
   m_Layer: 0
   m_Name: EndGame
-  m_TagString: Door
+  m_TagString: FinalDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14769,6 +14769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: Credits_And_End
   doorCanvas: {fileID: 2018175127}
+  Player: {fileID: 1486217356}
 --- !u!61 &513128299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16301,6 +16302,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3227482613086510690, guid: 3c172e640c01d744d89ca3b369ac74ea, type: 3}
   m_PrefabInstance: {fileID: 1044358512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1486217356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1575833787833269623, guid: 3948056275c833846a62229857bd879a, type: 3}
+  m_PrefabInstance: {fileID: 1102751330}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1509063786
 PrefabInstance:

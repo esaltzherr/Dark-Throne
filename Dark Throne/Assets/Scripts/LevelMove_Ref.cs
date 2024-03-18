@@ -6,6 +6,7 @@ public class LevelMove_Ref : MonoBehaviour
     bool playerInDoor = false;
     public string nextScene;
     public Canvas doorCanvas;
+    public GameObject Player;
 
     void Update()
     {
@@ -14,6 +15,10 @@ public class LevelMove_Ref : MonoBehaviour
             Debug.Log("NEXT Level");
             // Update the previous scene name before transitioning.
             SpawnManager.previousSceneName = SceneManager.GetActiveScene().name;
+            if(nextScene == "Credits_And_End")
+            {
+                Player.GetComponent<MovementDashWallJump>().MaxHealth();
+            }
             SceneManager.LoadScene(nextScene);
         }
     }

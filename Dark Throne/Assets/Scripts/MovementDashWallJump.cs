@@ -15,8 +15,8 @@ public class MovementDashWallJump : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 15f;
     private bool isFacingRight = true;
-    private static int maxHealth = 100;
-    private static int currentHealth = maxHealth;
+    public static int maxHealth = 100;
+    public static int currentHealth = maxHealth;
 
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
@@ -361,7 +361,10 @@ public class MovementDashWallJump : MonoBehaviour
         dust.Play();
     }
 
-
+    public void MaxHealth()
+    {
+        currentHealth = maxHealth;
+    }
 
 
 }
