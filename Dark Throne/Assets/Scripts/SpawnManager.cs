@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class SpawnManager : MonoBehaviour
 {
     public static string previousSceneName = "";
+    public static string lastLevelScene = "";
 
     private void Awake()
     {
@@ -33,5 +34,9 @@ public class SpawnManager : MonoBehaviour
     {
         // Unsubscribe from the sceneLoaded event when the spawn manager is destroyed.
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    public static void SetLastLevelScene(string sceneName)
+    {
+        lastLevelScene = sceneName;
     }
 }

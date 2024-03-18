@@ -17,7 +17,7 @@ public class MovementDashWallJump : MonoBehaviour
     private bool isFacingRight = true;
     private static int maxHealth = 100;
     private static int currentHealth = maxHealth;
-    
+
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
 
@@ -42,8 +42,8 @@ public class MovementDashWallJump : MonoBehaviour
 
     private static bool doubleJumpPowerUp = false;
     private bool touchingDoubleJump = false;
-    private bool collidingEnemy = false;    
-    
+    private bool collidingEnemy = false;
+
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -66,7 +66,7 @@ public class MovementDashWallJump : MonoBehaviour
 
     void Update()
     {
-        if(collidingEnemy)
+        if (collidingEnemy)
         {
             ChangeHealth(10);
         }
@@ -108,7 +108,7 @@ public class MovementDashWallJump : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {   
+        {
             StopWallJumping();
             StartCoroutine(Dash());
         }
@@ -123,7 +123,13 @@ public class MovementDashWallJump : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            // Update the last level scene before going to the GameOver scene.
+            SpawnManager.lastLevelScene = SceneManager.GetActiveScene().name;
+
+            // Reset the player's health for when they return (optional, depends on your game's design).
             currentHealth = maxHealth;
+
+            // Load the GameOver scene.
             SceneManager.LoadScene(GameOver);
         }
 
@@ -269,10 +275,11 @@ public class MovementDashWallJump : MonoBehaviour
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;  
+        rb.gravityScale = 0f;
 
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (horizontal == 0){
+        if (horizontal == 0)
+        {
             horizontal = Mathf.Sign(transform.localScale.x);
         }
 
@@ -346,7 +353,7 @@ public class MovementDashWallJump : MonoBehaviour
             IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
             StartCoroutine(invuln);
         }
-        
+
     }
 
     private void CreateDust()
@@ -354,7 +361,7 @@ public class MovementDashWallJump : MonoBehaviour
         dust.Play();
     }
 
-    
 
-    
+
+
 }

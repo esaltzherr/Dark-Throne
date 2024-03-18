@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameOverScript : MonoBehaviour
 {
     public string ContinueScene, GiveUpScene;
+    void Start()
+    {
+        // This will set the scene to return to as the one last played
+        ContinueScene = SpawnManager.lastLevelScene;
+    }
 
     void Update()
     {
