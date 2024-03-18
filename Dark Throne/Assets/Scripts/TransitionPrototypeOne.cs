@@ -47,6 +47,6 @@ public class TransitionPrototypeOne : MonoBehaviour
 
     public void OnPointerClick()
     {
-        StartCoroutine(FadeRoutine("CaveLevel"));
+        StartCoroutine(FadeRoutine("TutorialScene"));
     }
 }
