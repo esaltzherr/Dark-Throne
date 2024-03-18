@@ -11,7 +11,14 @@ public class SpawnManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
+    void Start(){
+        Debug.Log(SceneManager.GetActiveScene().name);
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Debug.Log("FJHUDHFJSDHJKFHKJDSHFJKDS");
+            previousSceneName = "";
+        }
+    }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Find the spawn point that corresponds to the previous scene.

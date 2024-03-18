@@ -41708,6 +41708,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8727251414366269435, guid: 152d30fed859f7a4881e730fe83dcf3a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727251414366269435, guid: 152d30fed859f7a4881e730fe83dcf3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 65.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8944091337768677265, guid: 152d30fed859f7a4881e730fe83dcf3a, type: 3}
       propertyPath: doorCanvas
       value: 

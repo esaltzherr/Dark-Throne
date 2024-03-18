@@ -9,7 +9,15 @@ public class GameOverScript : MonoBehaviour
     void Start()
     {
         // This will set the scene to return to as the one last played
-        ContinueScene = SpawnManager.lastLevelScene;
+        if (SpawnManager.lastLevelScene != "")
+        {
+            ContinueScene = SpawnManager.lastLevelScene;
+        }
+        else
+        {
+            ContinueScene = GiveUpScene;
+        }
+
     }
 
     void Update()
@@ -20,6 +28,7 @@ public class GameOverScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
+
             SceneManager.LoadScene(GiveUpScene);
         }
     }
