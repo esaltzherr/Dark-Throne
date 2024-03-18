@@ -23,6 +23,66 @@ MonoBehaviour:
     m_Key: langauge
     m_Metadata:
       m_Items: []
+  - m_Id: 3186138313158656
+    m_Key: Game_Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3191110765408256
+    m_Key: Continue?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3191436075626496
+    m_Key: GameOver_Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193337957609472
+    m_Key: Win
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193377996435456
+    m_Key: VertSlice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193468203331584
+    m_Key: ReturnWin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193522502791168
+    m_Key: Cred
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193541939195904
+    m_Key: Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196533010624512
+    m_Key: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196615349006336
+    m_Key: Tutorial_walljump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196688531222528
+    m_Key: Tutorial_dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196792390578176
+    m_Key: Tutorial_cont
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3197298978615296
+    m_Key: Tutorial_playbutton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3197329701892096
+    m_Key: Tutorial_attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3198509358280704
+    m_Key: Tutorial_Move
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
