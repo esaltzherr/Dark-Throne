@@ -32,7 +32,7 @@ You are the knight who was once the pride of your kingdom, now twisted by dark s
 
 ### Main Team
 - **Lucas Lee**: Project Lead and Producer
-- **Patcharapol Puckdee**: Animator and AI Programmer
+- **Patcharapol (Nicholas) Puckdee**: Animator and AI Programmer
 - **Jose Orantes**: UI and Game Designer
 - **Elroy Saltzherr**: Level Designer and Programmer
 - **Nicholas Lee**: Deployment and Tools
