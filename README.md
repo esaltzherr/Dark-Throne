@@ -1,38 +1,41 @@
 # Dark Throne
-Dark Throne is a captivating 2D platformer that unfolds in a kingdom seized by a corrupt king. As an outcast knight subjected to experiments, the player embarks on a quest for vengeance, only to discover layers of intrigue and secrets that challenge their understanding of justice and power. This game represents a vertical slice created for a university project, demonstrating core gameplay, innovative mechanics, and the thematic depth of the narrative.
+
+Explore the depths of betrayal and vengeance in Dark Throne, a compelling 2D platformer set against the backdrop of a kingdom under the tyrannical rule of a corrupt monarch. As a knight, transformed and forsaken through dark experiments, your quest for revenge unveils a web of secrets that could change the fate of your fallen realm. Created as a vertical slice for a university project, this game showcases engaging gameplay, innovative mechanics, and a narrative rich with intrigue.
+
+[Play Dark Throne](https://esaltzherr.github.io/Dark-Throne/website/)
 
 ## About the Game
 
 ### Storyline
-In Dark Throne, you play as a knight betrayed by the monarch you once served. Enhanced through forbidden experiments and then exiled, you seek revenge against the tyrant king. As you navigate through the kingdom, you uncover truths that blur the lines between friend and foe, challenging your quest and moral compass.
+You are the knight who was once the pride of your kingdom, now twisted by dark science and cast out by the king you swore to serve. With nothing but vengeance in your heart, you rise against the monarch, only to find the lines between right and wrong are not as clear as they once seemed.
 
 ### Gameplay Features
-- **Engaging 2D Movement**: Experience fluid wall-jumping, dashing, and acceleration mechanics designed for seamless map traversal.
-- **Combat and Power-Ups**: Utilize melee attacks and consumable power-ups to navigate and overcome enemy threats.
-- **Strategic Enemy Encounters**: Face ground enemies with limited detection ranges, requiring stealth and strategy.
-- **Inclusive Design**: The game is designed with accessibility in mind, catering to players with limited vision, dexterity, and attention.
-- **Offline Play**: Enjoy the full game without any need for an internet connection, available for desktop operating systems.
+- **Dynamic 2D Movement**: Master fluid wall-jumping, dashing, and acceleration for thrilling map exploration.
+- **Combat and Power-Ups**: Battle using melee attacks and find consumable power-ups to enhance your abilities.
+- **Strategic Enemy Encounters**: Outsmart ground enemies with cunning and agility, utilizing their limited detection to your advantage.
+- **Accessibility Focused**: Designed for inclusivity, supporting players with limited vision, dexterity, and attention.
+- **Offline Play**: Fully offline gameplay on desktop operating systems for uninterrupted adventures.
 
 ## Game Development Insights
 
 ### Prototypes
-- **Splash Screen**: Features epic art and smooth scene transitions to captivate players from the outset.
-- **Scene Flow**: Employs smart camera transitions and goal visibility to guide player movement and strategy.
+- **Splash Screen**: Initiates the journey with striking art and smooth transitions, setting the stage for adventure.
+- **Scene Flow**: Guides players with intuitive camera work and visible goals, enhancing strategic gameplay.
 
 ### Constraints and Solutions
-- **Limited Vision**: Incorporates a grayscale filter and clear HUD text.
-- **Limited Dexterity**: Offers simple control schemes with keys assigned for ease of use.
-- **Limited Audition**: Background music enhances the atmosphere without being essential for gameplay.
-- **Resting Mechanisms**: Players can take breaks safely in conquered or enemy-free zones.
+- **Limited Vision**: A grayscale filter and distinct HUD text ensure clarity and engagement.
+- **Limited Dexterity**: A simple control scheme allows effortless navigation and combat.
+- **Limited Audition**: Ambient music enriches the experience without being crucial for progress.
+- **Resting Mechanisms**: Players can pause their adventure in safe zones, free from enemy threats.
 
 ### Localization
-- Available in English and Mandarin Chinese, ensuring broad accessibility without reliance on AI translation tools.
+- Offering English and Mandarin Chinese versions, embracing a global community without the need for AI translations.
 
 ## Credits
 
 ### Main Team
 - **Lucas Lee**: Project Lead and Producer
-- **Nicholas Puckdee**: Animator and AI Programmer
+- **Patcharapol Puckdee**: Animator and AI Programmer
 - **Jose Orantes**: UI and Game Designer
 - **Elroy Saltzherr**: Level Designer and Programmer
 - **Nicholas Lee**: Deployment and Tools
@@ -43,11 +46,9 @@ In Dark Throne, you play as a knight betrayed by the monarch you once served. En
 - **Adam Aviles**: Art
 - **Akhror Rakhmatov**: SFX
 
-For more information and updates, follow our GitHub repository.
+### References
+- Background image courtesy of [Adobe Stock](https://stock.adobe.com/search?k=purple+fire&asset_id=659831280)
 
 
 
-https://esaltzherr.github.io/Dark-Throne/website/
 
-Credits:
-Background image: https://stock.adobe.com/search?k=purple+fire&asset_id=659831280
