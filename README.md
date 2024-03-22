@@ -2,7 +2,7 @@
 
 Explore the depths of betrayal and vengeance in Dark Throne, a compelling 2D platformer set against the backdrop of a kingdom under the tyrannical rule of a corrupt monarch. As a knight, transformed and forsaken through dark experiments, your quest for revenge unveils a web of secrets that could change the fate of your fallen realm. Created as a vertical slice for a university project, this game showcases engaging gameplay, innovative mechanics, and a narrative rich with intrigue.
 
-# Website: https://esaltzherr.github.io/Dark-Throne/website/
+### Website: https://esaltzherr.github.io/Dark-Throne/website/
 
 ## About the Game
 
