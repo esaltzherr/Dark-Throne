@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOver.unity
     guid: 1a3fbceee7641ca4c8abc5c05829d304
   - enabled: 1
-    path: Assets/Scenes/CaveLevel.unity
+    path: Assets/Scenes/ElroyScene.unity
     guid: 1eb5f239356ef204ba0772929520661e
   - enabled: 1
     path: Assets/Scenes/CaveLevelTwo.unity
