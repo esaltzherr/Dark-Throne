@@ -30,7 +30,7 @@ public class CameraResolution : MonoBehaviour
         {
             Rect rect = camera.rect;
  
-            rect.width = 1.0f;
+            rect.width = 1.0f;  
             rect.height = scaleheight;
             rect.x = 0;
             rect.y = (1.0f - scaleheight) / 2.0f;

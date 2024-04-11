@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOver.unity
     guid: 1a3fbceee7641ca4c8abc5c05829d304
   - enabled: 1
-    path: Assets/Scenes/ElroyScene.unity
-    guid: 1eb5f239356ef204ba0772929520661e
-  - enabled: 1
     path: Assets/Scenes/CaveLevelTwo.unity
     guid: b4f47a96fc3bb034782edb9d2a85753e
   - enabled: 1
@@ -23,6 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: 439f3e3a494632f49964ebc450020ab4
+  - enabled: 1
+    path: Assets/Scenes/CaveLevel.unity
+    guid: de686aff632057e4198341edf65cea05
+  - enabled: 1
+    path: Assets/Scenes/ElroyScene1.unity
+    guid: 1eb5f239356ef204ba0772929520661e
+  - enabled: 1
+    path: Assets/Scenes/ElroyScene2.unity
+    guid: 2fba165e8fe2dda488584570f331ae28
+  - enabled: 1
+    path: Assets/Scenes/ElroyScene3.unity
+    guid: a5912209423f7e447967fc4d91d366bb
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 7a0d4f6746f1fb64eab4b2b1d9cd5aa3, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: c6dbecb6df731b74d9c252776822c87b, type: 2}

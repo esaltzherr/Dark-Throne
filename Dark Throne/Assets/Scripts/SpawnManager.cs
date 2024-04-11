@@ -3,47 +3,78 @@ using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
-    public static string previousSceneName = "";
+    public static SpawnManager Instance { get; private set; } // Singleton instance
+
+    public static string id = "";
     public static string lastLevelScene = "";
+    public static string previousSceneName; // to be deleted when LevelMoveRef is deleted
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            // If there is no instance, this becomes the singleton instance of the SpawnManager
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            // A SpawnManager instance already exists, destroy this one
+            Destroy(gameObject);
+            return;
+        }
+
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    void Start(){
-        Debug.Log(SceneManager.GetActiveScene().name);
-        if (SceneManager.GetActiveScene().name == "MainMenu")
-        {
-            Debug.Log("FJHUDHFJSDHJKFHKJDSHFJKDS");
-            previousSceneName = "";
-        }
-    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Find the spawn point that corresponds to the previous scene.
-        GameObject spawnPoint = GameObject.Find(previousSceneName + "_Spawn");
-        if (spawnPoint == null){
-            spawnPoint = GameObject.Find("Anything_Spawn");
-        }
-        if (spawnPoint != null)
+        lastLevelScene = SceneManager.GetActiveScene().name;
+
+        // Attempt to find a spawn point with a matching ID.
+        SceneWalk[] spawnPoints = FindObjectsOfType<SceneWalk>();
+        Transform targetSpawnPointTransform = null;
+        foreach (var point in spawnPoints)
         {
-            // Find the player and move them to the spawn point.
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null) // Check if the player exists.
+            if (point.spawnPointId == id)
             {
-                player.transform.position = spawnPoint.transform.position;
+                // Assuming each point.gameObject has a child named "SpawnPoint"
+                Transform childTransform = point.gameObject.transform.Find("SpawnPoint");
+                if (childTransform != null)
+                {
+                    targetSpawnPointTransform = childTransform;
+                    // Debug.Log("Found spawn point: " + targetSpawnPointTransform.name);
+                }
+                else
+                {
+                    Debug.LogError("No 'SpawnPoint' child found under " + point.gameObject.name);
+                }
+                break; // Found the matching spawn point
+            }
+        }
+
+        // If a matching spawn point (child) is found, move the player to it.
+        if (targetSpawnPointTransform != null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                player.transform.position = targetSpawnPointTransform.position;
             }
         }
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe from the sceneLoaded event when the spawn manager is destroyed.
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (Instance == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
     }
-    public static void SetLastLevelScene(string sceneName)
+
+    // Method to explicitly set the ID.
+    public static void SetId(string newId)
     {
-        lastLevelScene = sceneName;
+        id = newId;
     }
 }
