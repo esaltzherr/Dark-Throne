@@ -15,7 +15,7 @@ public class LevelMove_Ref : MonoBehaviour
             Debug.Log("NEXT Level");
             // Update the previous scene name before transitioning.
             SpawnManager.previousSceneName = SceneManager.GetActiveScene().name;
-            if(nextScene == "Credits_And_End")
+            if(nextScene == "WinAndCredits")
             {
                 Player.GetComponent<MovementDashWallJump>().MaxHealth();
             }

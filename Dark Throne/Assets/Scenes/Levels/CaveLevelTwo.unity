@@ -14767,7 +14767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd39e3b0e20660a4484326c592023804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Credits_And_End
+  nextScene: WinAndCredits
   doorCanvas: {fileID: 2018175127}
   Player: {fileID: 1486217356}
 --- !u!61 &513128299
@@ -16298,11 +16298,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c172e640c01d744d89ca3b369ac74ea, type: 3}
---- !u!1 &1347167917 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4950678714708106228, guid: dfad436dd950bdb4abe031491f71a3fa, type: 3}
-  m_PrefabInstance: {fileID: 1251951178}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1364823883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3227482613086510690, guid: 3c172e640c01d744d89ca3b369ac74ea, type: 3}
@@ -16519,8 +16514,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6f30ecea8afbf4da21ba9ee77f7387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1347167917}
-  paralaxAmount: 1
 --- !u!212 &1556552489
 SpriteRenderer:
   m_ObjectHideFlags: 0

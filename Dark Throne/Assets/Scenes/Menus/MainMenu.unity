@@ -1465,6 +1465,7 @@ MonoBehaviour:
   fadeImage: {fileID: 1664511224}
   fadeDuration: 3
   button: {fileID: 2039784531}
+  nextScene: Tutorial
 --- !u!1 &1855390692
 GameObject:
   m_ObjectHideFlags: 0

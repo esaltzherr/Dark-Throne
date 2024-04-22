@@ -10,6 +10,7 @@ public class StartGameFadeTransition : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 3f;
     public Button button;
+    public string nextScene;
     private float timer;
 
     // Start is called before the first frame update
@@ -47,6 +48,6 @@ public class StartGameFadeTransition : MonoBehaviour
 
     public void OnPointerClick()
     {
-        StartCoroutine(FadeRoutine("TutorialScene"));
+        StartCoroutine(FadeRoutine(nextScene));
     }
 }
