@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class TransitionPrototypeOne : MonoBehaviour
+public class StartGameFadeTransition : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 3f;
