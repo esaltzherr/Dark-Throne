@@ -14,9 +14,11 @@ public class PlayerMovement : MonoBehaviour
 
     // Add a jump key field to customize the jump input in the inspector
     public KeyCode jumpKey = KeyCode.W;
+    public PlayerPowerUps playerPowerUps;
 
     void Start()
     {
+        playerPowerUps = GetComponent<PlayerPowerUps>();
         // Ensure Rigidbody2D is assigned
         if (rb == null)
         {
@@ -63,11 +65,28 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-
-        if (Input.GetKeyDown(jumpKey) && IsGrounded() && !GetComponent<PlayerWallInteraction>().IsWallJumping)
+        if (Input.GetKeyDown(jumpKey))
         {
-            Jump();
+            if (!GetComponent<PlayerWallInteraction>().IsWallJumping)
+            {
+                if (IsGrounded())
+                {
+                    Jump();
+                }
+                else if (playerPowerUps.CanDoubleJump()){
+                    Jump();
+                    playerPowerUps.DoubleJump();
+                }
+            }
         }
+        if (IsGrounded()){
+            playerPowerUps.ResetDoubleJump();
+        }
+
+        // if (Input.GetKeyDown(jumpKey) && IsGrounded() && !GetComponent<PlayerWallInteraction>().IsWallJumping)
+        // {
+        //     Jump();
+        // }
 
         if (!GetComponent<PlayerWallInteraction>().IsWallJumping)
         {
@@ -88,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f);
         foreach (var collider in colliders)
-        {   
+        {
             if (collider.CompareTag("Ground"))
             {
                 return true;
