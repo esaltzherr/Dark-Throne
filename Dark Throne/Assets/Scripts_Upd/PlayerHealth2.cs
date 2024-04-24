@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,22 +34,16 @@ public class PlayerHealth2 : MonoBehaviour
         UpdateHealthUI();
     }
 
-    public void ChangeHealth(int amount)
+    
+    public void ChangeHealth(int num)
     {
-        currentHealth += amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, MaxHealth);
-        UpdateHealthUI();
-
-        if (amount < 0)
+        if (!(GetComponent<PlayerInvulnerability>().isInvulnerable))
         {
-            animator.SetTrigger("Hurt");
-            // Optional: Add invulnerability period or effects
-        }
-
-        if (currentHealth <= 0)
-        {
-            // Handle player death, e.g., restart level or show game over screen
-            Death();
+            currentHealth += num;
+            healthSlider.value = currentHealth;
+            animator.SetTrigger("Is_Hit");
+            IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
+            StartCoroutine(invuln);
         }
     }
 

@@ -353,7 +353,6 @@ public class MovementDashWallJump : MonoBehaviour
             IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
             StartCoroutine(invuln);
         }
-
     }
 
     private void CreateDust()

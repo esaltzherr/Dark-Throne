@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth = 100;
     private int currentHealth;
     public Animator animator;
+    public bool isStaggering = false;
     void Start()
     {
         currentHealth = maxHealth;
@@ -19,6 +20,12 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        //Die if staggered
+        if(isStaggering == true)
+        {
+            Die();
+        }
+
         if (this.tag == "FlyingEnemy")
         {
             Die();
@@ -29,10 +36,14 @@ public class EnemyHealth : MonoBehaviour
             animator.SetTrigger("Is_Hit");
             if (currentHealth <= 0)
             {
-                Die();
+                animator.SetBool("Stagger", true);
+                isStaggering = true;
+                this.gameObject.GetComponent<EnemyFollow>().enabled = false;
+                StartCoroutine(StaggerDeath());
             }
         }
     }
+
 
     void Die()
     {
@@ -60,6 +71,11 @@ public class EnemyHealth : MonoBehaviour
         }
         //GetComponent<Collider2D>().enabled = false;
         //Destroy(gameObject);
+    }
+    IEnumerator StaggerDeath()
+    {
+        yield return new WaitForSeconds(3f);
+        Die();
     }
 }
 

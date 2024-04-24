@@ -19,8 +19,24 @@ public class EnemyFollow : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        FindPlayer();
     }
 
+    private void FindPlayer()
+    {
+        if (targetPlayer == null)
+        {
+            GameObject playerObject = GameObject.FindWithTag("Player");
+            if (playerObject != null)
+            {
+                targetPlayer = playerObject.transform;
+            }
+            else
+            {
+                Debug.LogWarning("CameraFollow: Player not found. Please assign a Player tag to the player object.");
+            }
+        }
+    }
     void Update()
     {
         animator.SetBool("Moving", false);
@@ -68,7 +84,7 @@ public class EnemyFollow : MonoBehaviour
             if (collider.CompareTag("Player"))
             {
                 GameObject player = collider.gameObject;
-                player.GetComponent<MovementDashWallJump>().ChangeHealth(10);
+                player.GetComponent<PlayerHealth2>().ChangeHealth(10);
             }
         }
 
