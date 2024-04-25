@@ -77,4 +77,21 @@ public class SpawnManager : MonoBehaviour
     {
         id = newId;
     }
+    // remove soon
+    void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            PlayerDash dashScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDash>();
+            PlayerPowerUps jumpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPowerUps>();
+            PlayerMovement moveScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+            dashScript.loseDash();
+            jumpScript.loseDoubleJump();
+            moveScript.KillPlayer();
+            SetId("000000000000");
+            SceneManager.LoadScene("CaveBeginning");
+        }
+    }
+
 }

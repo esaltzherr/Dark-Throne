@@ -50,7 +50,7 @@ public class PlayerHealth2 : MonoBehaviour
             }
             else if (num < 0)
             {
-                TakeDamage(num);
+                TakeDamage(-num);
             }
         }
     }
@@ -58,12 +58,12 @@ public class PlayerHealth2 : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-        // Debug.Log("Player took " + damageAmount + " damage. Current health: " + currentHealth);
+        Debug.Log("Player took " + damageAmount + " damage. Current health: " + currentHealth);
         animator.SetTrigger("Is_Hit");
         IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
         StartCoroutine(invuln);
         UpdateHealthUI();
-        if (currentHealth < 0){
+        if (currentHealth <= 0){
             StartCoroutine(Die());
         }
     }
@@ -78,7 +78,7 @@ public class PlayerHealth2 : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        Debug.Log("Health" + healthSlider.value + "");
+        Debug.Log("Health" + currentHealth + "");
         healthSlider.value = currentHealth;
     }
 
@@ -87,10 +87,18 @@ public class PlayerHealth2 : MonoBehaviour
         SpawnManager.lastLevelScene = SceneManager.GetActiveScene().name;
 
         // Reset the player's health for when they return (optional, depends on your game's design).
-        Heal(MaxHealth);
+
+        // REMOVE AND REPLACE WITH ACTUAL data stuff later
+        PlayerMovement movement = GetComponent<PlayerMovement>();
+        movement.KillPlayer();
+
+
 
         // Load the GameOver scene.
         SceneManager.LoadScene(SpawnManager.lastLevelScene);
+        Heal(MaxHealth);
+        
+        
     }
 
     public IEnumerator Die(){
