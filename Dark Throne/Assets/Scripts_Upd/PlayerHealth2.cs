@@ -84,7 +84,6 @@ public class PlayerHealth2 : MonoBehaviour
 
     private void Death()
     {
-        Debug.Log("A2");
         SpawnManager.lastLevelScene = SceneManager.GetActiveScene().name;
 
         // Reset the player's health for when they return (optional, depends on your game's design).
@@ -95,7 +94,6 @@ public class PlayerHealth2 : MonoBehaviour
     }
 
     public IEnumerator Die(){
-        Debug.Log("AHHHHHHHHH");
         yield return new WaitForSeconds(1); // TODO: Needs to be replaced with death animation
         Death();
     }
