@@ -2,14 +2,20 @@ using UnityEngine;
 
 public class PlayerPowerUps : MonoBehaviour
 {
-    private bool doubleJumpAvailable = true;
+    private bool doubleJumpAquired = false;
     private static float maxJumps = 1;
     private float jumps = maxJumps;
 
 
+    void Update(){
+        if (Input.GetKeyDown(KeyCode.N)){
+            toggleDoubleJump();
+        }
+    }
+
     public bool CanDoubleJump() 
     {
-        return doubleJumpAvailable && jumps > 0; 
+        return doubleJumpAquired && jumps > 0; 
     }
 
     public void DoubleJump()
@@ -25,4 +31,22 @@ public class PlayerPowerUps : MonoBehaviour
         jumps = maxJumps;
     }
     
+    public void gainDoubleJump(){
+        doubleJumpAquired = true;
+    }
+
+    public void loseDoubleJump(){
+        doubleJumpAquired = false;
+    }
+
+    public void toggleDoubleJump(){
+        if (doubleJumpAquired){
+            loseDoubleJump();
+        }
+        else{
+            gainDoubleJump();
+        }
+    }
+
+
 }
