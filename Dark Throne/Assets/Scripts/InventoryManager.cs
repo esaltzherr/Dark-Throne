@@ -32,16 +32,30 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItem(string itemName, int quantity, Sprite itemSprite)
+    public int AddItem(string itemName, int quantity, Sprite itemSprite)
     {
-        // Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
+        Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
         for(int i = 0; i < itemSlot.Length; i++)
         {
-            if(itemSlot[i].isFull == false)
+            if(itemSlot[i].isFull == false && itemSlot[i].name == name || itemSlot[i].quantity == 0) 
             {
-                itemSlot[i].AddItem(itemName,quantity,itemSprite);
-                return;
+                int leftOverItems = itemSlot[i].AddItem(itemName,quantity,itemSprite);
+                if(leftOverItems > 0){
+                    leftOverItems = AddItem(itemName, leftOverItems, itemSprite);
+                    return leftOverItems;
+                }
             }
+        }
+        return quantity;
+    
+    }
+
+
+    public void DeselectAllSlots()
+    {
+        for(int i = 0; i < itemSlot.Length; i++){
+            itemSlot[i].selectedShader.SetActive(false);
+            itemSlot[i].thisItemSelected = false;
         }
     }
 
