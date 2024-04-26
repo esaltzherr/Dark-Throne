@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        if (Input.GetKeyDown(jumpKey))
+        if (Input.GetKeyDown(jumpKey) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (!GetComponent<PlayerWallInteraction>().IsWallJumping)
             {
