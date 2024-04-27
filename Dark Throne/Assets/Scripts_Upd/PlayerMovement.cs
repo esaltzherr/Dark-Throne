@@ -16,8 +16,41 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode jumpKey = KeyCode.W;
     public PlayerPowerUps playerPowerUps;
 
+
+    // remove this after playtetst prob / when persitant data
+    public static PlayerMovement Instance { get; private set; } // Singleton instance
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            // If there is no instance, this becomes the singleton instance of the SpawnManager
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            // A SpawnManager instance already exists, destroy this one
+            Destroy(gameObject);
+            return;
+        }
+    }
+    // remove
+    public void KillPlayer()
+    {
+
+        Destroy(gameObject);
+        Instance = null;
+        return;
+
+
+    }
+
+
     void Start()
     {
+
+
+
         playerPowerUps = GetComponent<PlayerPowerUps>();
         // Ensure Rigidbody2D is assigned
         if (rb == null)
@@ -65,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        if (Input.GetKeyDown(jumpKey))
+        if (Input.GetKeyDown(jumpKey) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (!GetComponent<PlayerWallInteraction>().IsWallJumping)
             {
@@ -73,13 +106,15 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Jump();
                 }
-                else if (playerPowerUps.CanDoubleJump()){
+                else if (playerPowerUps.CanDoubleJump())
+                {
                     Jump();
                     playerPowerUps.DoubleJump();
                 }
             }
         }
-        if (IsGrounded()){
+        if (IsGrounded())
+        {
             playerPowerUps.ResetDoubleJump();
         }
 
