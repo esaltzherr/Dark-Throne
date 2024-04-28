@@ -32,7 +32,7 @@ public class SpawnManager : MonoBehaviour
         lastLevelScene = SceneManager.GetActiveScene().name;
 
         // Attempt to find a spawn point with a matching ID.
-        SceneWalk[] spawnPoints = FindObjectsOfType<SceneWalk>();
+        NextSceneTrigger[] spawnPoints = FindObjectsOfType<NextSceneTrigger>();
         Transform targetSpawnPointTransform = null;
         foreach (var point in spawnPoints)
         {

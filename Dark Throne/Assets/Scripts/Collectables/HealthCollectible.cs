@@ -11,10 +11,10 @@ public class HealthCollectible : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            PlayerHealthOld playerHealthOld = collision.gameObject.GetComponent<PlayerHealthOld>();
+            if (playerHealthOld != null)
             {
-                playerHealth.Heal(healthBonus); // heal player
+                playerHealthOld.Heal(healthBonus); // heal player
                 Destroy(gameObject); // destroy collectable
             }
         }

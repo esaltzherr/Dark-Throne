@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SceneIndicator : MonoBehaviour
+public class NextSceneTriggerIndicator : MonoBehaviour
 {
     public GameObject objectToChangeColor; // Assign in inspector
     private Color greyColor = new Color(0.5f, 0.5f, 0.5f, 0.5f); // Grey color

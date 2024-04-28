@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneWalk : MonoBehaviour
+public class NextSceneTrigger : MonoBehaviour
 {
     public string sceneToLoad = "ElroyScene2";
     public string spawnPointId = "123456789"; // Ensure this matches a spawnPointId in the scene
