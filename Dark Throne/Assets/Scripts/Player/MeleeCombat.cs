@@ -37,6 +37,11 @@ public class MeleeCombat : MonoBehaviour
             enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
     }
+    public void IncreaseAttackDamage(int amount)
+    {
+        attackDamage += amount;
+        Debug.Log("Attack Damage Increased: " + attackDamage);
+    }
     private void OnDrawGizmosSelected()
     {
         if(hitBox == null)
