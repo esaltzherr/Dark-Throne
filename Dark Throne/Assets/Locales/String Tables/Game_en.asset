@@ -23,7 +23,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1069493156413440
-    m_Localized: English
+    m_Localized: Language
     m_Metadata:
       m_Items: []
   - m_Id: 3186138313158656
@@ -90,6 +90,14 @@ MonoBehaviour:
   - m_Id: 3198509358280704
     m_Localized: Move with A and D and jump with W. Press E to interact with some
       objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18336542619684864
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18338524801617920
+    m_Localized: Dark Throne
     m_Metadata:
       m_Items: []
   references:

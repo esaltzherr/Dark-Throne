@@ -16,19 +16,19 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: 6ccc42f47ddbdc94abfc502a6f4f3641
   m_Entries:
   - m_Id: 257927074906112
-    m_Key: Start_game
+    m_Key: menu_startgame
     m_Metadata:
       m_Items: []
   - m_Id: 1069493156413440
-    m_Key: langauge
+    m_Key: menu_lang
     m_Metadata:
       m_Items: []
   - m_Id: 3186138313158656
-    m_Key: Game_Over
+    m_Key: gameover
     m_Metadata:
       m_Items: []
   - m_Id: 3191110765408256
-    m_Key: Continue?
+    m_Key: continue
     m_Metadata:
       m_Items: []
   - m_Id: 3191436075626496
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3193337957609472
-    m_Key: Win
+    m_Key: win
     m_Metadata:
       m_Items: []
   - m_Id: 3193377996435456
@@ -44,43 +44,51 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3193468203331584
-    m_Key: ReturnWin
+    m_Key: win_return
     m_Metadata:
       m_Items: []
   - m_Id: 3193522502791168
-    m_Key: Cred
+    m_Key: credits
     m_Metadata:
       m_Items: []
   - m_Id: 3193541939195904
-    m_Key: Team
+    m_Key: team
     m_Metadata:
       m_Items: []
   - m_Id: 3196533010624512
-    m_Key: Tutorial
+    m_Key: tutorial
     m_Metadata:
       m_Items: []
   - m_Id: 3196615349006336
-    m_Key: Tutorial_walljump
+    m_Key: tutorial_walljump
     m_Metadata:
       m_Items: []
   - m_Id: 3196688531222528
-    m_Key: Tutorial_dash
+    m_Key: tutorial_dash
     m_Metadata:
       m_Items: []
   - m_Id: 3196792390578176
-    m_Key: Tutorial_cont
+    m_Key: tutorial_cont
     m_Metadata:
       m_Items: []
   - m_Id: 3197298978615296
-    m_Key: Tutorial_playbutton
+    m_Key: tutorial_playbutton
     m_Metadata:
       m_Items: []
   - m_Id: 3197329701892096
-    m_Key: Tutorial_attack
+    m_Key: tutorial_attack
     m_Metadata:
       m_Items: []
   - m_Id: 3198509358280704
-    m_Key: Tutorial_Move
+    m_Key: tutorial_move
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18336542619684864
+    m_Key: menu_settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18338524801617920
+    m_Key: menu_title
     m_Metadata:
       m_Items: []
   m_Metadata:
