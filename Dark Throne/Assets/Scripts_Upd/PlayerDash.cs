@@ -7,6 +7,7 @@ public class PlayerDash : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
 
     public bool IsDashing { get; private set; }
+    private bool dashAquired = false;
     private bool canDash = true;
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
@@ -35,9 +36,12 @@ public class PlayerDash : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && canDash && dashAquired)
         {
             StartCoroutine(Dash());
+        }
+        if (Input.GetKeyDown(KeyCode.M)){
+            toggleDash();
         }
     }
 
@@ -71,5 +75,22 @@ public class PlayerDash : MonoBehaviour
 
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    public void gainDash(){
+        dashAquired = true;
+    }
+
+    public void loseDash(){
+        dashAquired = false;
+    }
+
+    public void toggleDash(){
+        if (dashAquired){
+            loseDash();
+        }
+        else{
+            gainDash();
+        }
     }
 }

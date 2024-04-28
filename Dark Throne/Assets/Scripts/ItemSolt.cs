@@ -14,6 +14,9 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler
     public Sprite itemSprite;
     public bool isFull;
 
+    [SerializeField]
+    private int maxNumberOfItems;
+
     //Item SLOT//
     [SerializeField]
     private TMP_Text quantityText;
@@ -24,16 +27,44 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler
     public GameObject selectedShader;
     public bool thisItemSelected;
 
-    public void AddItem(string itemName, int quantity, Sprite itemSprite)
-    {
-        this.itemName = itemName;
-        this.quantity = quantity;
-        this.itemSprite = itemSprite;
-        isFull = true;
+    private InventoryManager inventoryManager;
 
-        quantityText.text = quantity.ToString();
-        quantityText.enabled = true;
+    private void Start()
+    {
+        inventoryManager = GameObject.Find("inventory_canvas").GetComponent<InventoryManager>();
+    }
+
+    public int AddItem(string itemName, int quantity, Sprite itemSprite)
+    {
+        if(isFull){
+            return quantity;
+        }
+
+        //update the name
+        this.itemName = itemName;
+
+        //update the Image
+        this.itemSprite = itemSprite;
         itemImage.sprite = itemSprite;
+
+        //update the quantity
+        this.quantity += quantity;
+        if(this.quantity >= maxNumberOfItems){
+            quantityText.text = maxNumberOfItems.ToString();
+            quantityText.enabled = true;
+            isFull = true;
+
+        //return the leftover
+            int extraItems = this.quantity - maxNumberOfItems;
+            this.quantity = maxNumberOfItems;
+            return extraItems;
+        }
+
+        //update the quantity text
+        quantityText.text = this.quantity.ToString();
+        quantityText.enabled = true;
+
+        return 0;
     }
 
 
@@ -52,6 +83,7 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler
 
     public void OnLeftClick()
     {
+        inventoryManager.DeselectAllSlots();
         selectedShader.SetActive(true);
         thisItemSelected = true;
     }
