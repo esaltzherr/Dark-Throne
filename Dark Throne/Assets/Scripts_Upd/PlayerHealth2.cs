@@ -35,11 +35,11 @@ public class PlayerHealth2 : MonoBehaviour
 
     }
 
-    // void Update()
-    // {
-    //     UpdateHealthUI();
+    void Update()
+    {
+        UpdateHealthUI();
 
-    // }
+    }
     public void ChangeHealth(int num)
     {
         if (!(GetComponent<PlayerInvulnerability>().isInvulnerable))
@@ -62,7 +62,6 @@ public class PlayerHealth2 : MonoBehaviour
         animator.SetTrigger("Is_Hit");
         IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
         StartCoroutine(invuln);
-        UpdateHealthUI();
         if (currentHealth <= 0){
             StartCoroutine(Die());
         }
@@ -72,13 +71,12 @@ public class PlayerHealth2 : MonoBehaviour
     {
         currentHealth = Mathf.Min(currentHealth + healAmount, MaxHealth);
         // Debug.Log("Player healed " + healAmount + " health. Current health: " + currentHealth);
-        UpdateHealthUI();
     }
 
 
     private void UpdateHealthUI()
     {
-        Debug.Log("Health" + currentHealth + "");
+        //Debug.Log("Health" + currentHealth + "");
         healthSlider.value = currentHealth;
     }
 
@@ -104,5 +102,20 @@ public class PlayerHealth2 : MonoBehaviour
     public IEnumerator Die(){
         yield return new WaitForSeconds(1); // TODO: Needs to be replaced with death animation
         Death();
+    }
+
+
+    public int getMaxHealth(){
+        return MaxHealth;
+    }
+    public void setMaxHealth(int maxHealth){
+        MaxHealth = maxHealth;
+    }
+    public int getHealth(){
+        return currentHealth;
+    }
+    public void setHealth(int health){
+        currentHealth = health;
+
     }
 }
