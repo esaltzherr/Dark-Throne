@@ -33,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
         else
         {
             currentHealth -= damage;
+            Debug.Log(currentHealth + " ------- " + transform.position);
             animator.SetTrigger("Is_Hit");
             if (currentHealth <= 0)
             {
@@ -76,6 +77,13 @@ public class EnemyHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         Die();
+    }
+
+    public int getHealth(){
+        return currentHealth;
+    }
+    public void setHealth(int newHealth){
+        currentHealth = newHealth;
     }
 }
 
