@@ -26,10 +26,13 @@ public class SaveLoadJSONPlayer : MonoBehaviour
     private PlayerDash playerDashScript;
     private PlayerHealth2 playerHealthScript;
 
+    public GameObject player; // Assign this in the Unity Editor
 
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player"); // Make sure your player is tagged correctly
+
         getScripts();
 
         // place the data into the object
@@ -110,30 +113,39 @@ public class SaveLoadJSONPlayer : MonoBehaviour
 
     public void getScripts()
     {
-        playerPowerUpsScript = GetComponent<PlayerPowerUps>();
-        playerDashScript = GetComponent<PlayerDash>();
-        playerHealthScript = GetComponent<PlayerHealth2>();
-
+        if (player != null)
+        {
+            playerPowerUpsScript = player.GetComponent<PlayerPowerUps>();
+            playerDashScript = player.GetComponent<PlayerDash>();
+            playerHealthScript = player.GetComponent<PlayerHealth2>();
+        }
+        else
+        {
+            Debug.LogError("Player object not set or found!");
+        }
     }
+
     public void getData()
     {
         playerData.sceneName = SceneManager.GetActiveScene().name;
-        playerData.position = transform.position;
+        playerData.position = player.transform.position;
         playerData.health = playerHealthScript.getHealth();
         playerData.maxHealth = playerHealthScript.getMaxHealth();
         playerData.dashAquired = playerDashScript.dashGained();
         playerData.doubleJumpAquired = playerPowerUpsScript.doubleJumpGained();
     }
 
-    public void useData(){
+    public void useData()
+    {
         playerHealthScript.setMaxHealth(playerData.maxHealth);
         playerHealthScript.setHealth(playerData.health);
         playerDashScript.setDashGained(playerData.dashAquired);
         playerPowerUpsScript.setDoubleJumpGained(playerData.doubleJumpAquired);
     }
-    public void usePosition(){
+    public void usePosition()
+    {
         SpawnManager.SetId("GettingRidOfID");
         SceneManager.LoadScene(playerData.sceneName);
-        transform.position = playerData.position;
+        player.transform.position = playerData.position;
     }
 }

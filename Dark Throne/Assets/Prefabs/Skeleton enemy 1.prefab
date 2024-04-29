@@ -215,7 +215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 100
   animator: {fileID: 1312469581504702770}
+  isStaggering: 0
 --- !u!95 &1312469581504702770
 Animator:
   serializedVersion: 5

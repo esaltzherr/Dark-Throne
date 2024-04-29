@@ -25,17 +25,25 @@ public class AllScenesEnemies
 
 
 
-
 public class SaveLoadJSONEnemies : MonoBehaviour
 {
     AllScenesEnemies enemyData;
     string saveFilePath;
 
-    void Start()
+    void Awake()
     {
         enemyData = new AllScenesEnemies();
         saveFilePath = Application.persistentDataPath + "/EnemyData.json";
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    // void Start()
+    // {
+        
+    // }
 
     void Update()
     {
@@ -82,6 +90,7 @@ public class SaveLoadJSONEnemies : MonoBehaviour
 
     public void GetDataFromFile()
     {
+        Debug.Log("Path:" + saveFilePath);
         if (File.Exists(saveFilePath))
         {
             // Load data from JSON file
@@ -97,31 +106,82 @@ public class SaveLoadJSONEnemies : MonoBehaviour
     }
 
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (saveFilePath == null)
+        {
+            Debug.LogError("Save file path is not set.");
+            return;
+        }
+        Debug.Log("Scene loaded: " + scene.name);
+        // You can execute any additional setup code here
+        LoadGame();
+    }
     public GameObject enemyPrefab; // Assign this in the Unity Editor
 
     public void LoadGame()
     {
+
         GetDataFromFile();
+
+        //
+
+
+
         // Spawn the enemies
         if (enemyData != null && enemyData.allScenes.ContainsKey(SceneManager.GetActiveScene().name))
         {
-            // EnemyData > currentSceneEnemies = enemyData.allScenes[SceneManager.GetActiveScene().name];
+            Debug.Log("Cleared Enemies");
+            ClearCurrentEnemies();
+
+            List<EnemyData> currentSceneEnemies = enemyData.allScenes[SceneManager.GetActiveScene().name];
 
 
-            // foreach (EnemyData enemy in currentSceneEnemies)
-            // {
-            //     if (enemyPrefab != null)
-            //     {
-            //         // Instantiate the enemy at the loaded position
-            //         GameObject spawnedEnemy = Instantiate(enemyPrefab, enemy.position, Quaternion.identity);
-            //         EnemyHealth enemyHealthScript = spawnedEnemy.GetComponent
+            foreach (EnemyData enemy in currentSceneEnemies)
+            {
+                if (enemyPrefab != null)
+                {
+                    // Instantiate the enemy at the loaded position
+                    if (enemy.health <= 0)
+                    {
+                        continue;
+                    }
+                    GameObject spawnedEnemy = Instantiate(enemyPrefab, enemy.position, Quaternion.identity);
 
-
-            //     }
-            // }
+                    // Assuming the prefab has an EnemyHealth component to set its health
+                    EnemyHealth enemyHealthScript = spawnedEnemy.GetComponent<EnemyHealth>();
+                    if (enemyHealthScript != null)
+                    {
+                        // Set the health of the instantiated enemy
+                        enemyHealthScript.setHealth(enemy.health);
+                    }
+                    else
+                    {
+                        Debug.LogError("EnemyHealth script not found on the enemy prefab!");
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Enemy prefab is not assigned!");
+                }
+            }
         }
 
     }
+
+    void ClearCurrentEnemies()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+
+        foreach (GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
+    }
+
+
+
     public void printFile()
     {
         if (enemyData != null && enemyData.allScenes.Count > 0)

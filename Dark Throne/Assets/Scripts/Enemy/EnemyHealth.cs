@@ -5,12 +5,12 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    public int currentHealth = 100;
     public Animator animator;
     public bool isStaggering = false;
     void Start()
     {
-        currentHealth = maxHealth;
+        
     }
 
     void Update()
