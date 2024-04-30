@@ -9,6 +9,8 @@ public class InventoryManager : MonoBehaviour
     private bool menuActivated;
     public Itemslot[] itemSlot;
 
+    public ItemSos[] itemSOs;
+
     void Start()
     {
         
@@ -29,6 +31,16 @@ public class InventoryManager : MonoBehaviour
             Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;
+        }
+    }
+
+    public void UseItem(string itemName)
+    {
+        for(int i = 0; i < itemSOs.Length; i++)
+        {
+            if(itemSOs[i].itemName == itemName){
+                itemSOs[i].UseItem();
+            }
         }
     }
 

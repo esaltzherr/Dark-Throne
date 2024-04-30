@@ -31,7 +31,7 @@ public class Item : MonoBehaviour
             }
             else
                 quantity = leftOverItems;
-                Destroy(gameObject);
+                // Destroy(gameObject);
         }
     }
     // Update is called once per frame

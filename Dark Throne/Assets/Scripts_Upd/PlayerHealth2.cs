@@ -70,8 +70,9 @@ public class PlayerHealth2 : MonoBehaviour
 
     public void Heal(int healAmount)
     {
+        currentHealth += healAmount;
+        Debug.Log("Player healed " + healAmount + " health. Current health: " + currentHealth);
         currentHealth = Mathf.Min(currentHealth + healAmount, MaxHealth);
-        // Debug.Log("Player healed " + healAmount + " health. Current health: " + currentHealth);
         UpdateHealthUI();
     }
 
