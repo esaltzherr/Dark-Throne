@@ -83,7 +83,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
         }
         else
         {
-            Debug.Log("There is no save files to load!");
+            Debug.Log("There is no save files to load! (Player)");
         }
     }
     public void printFile()

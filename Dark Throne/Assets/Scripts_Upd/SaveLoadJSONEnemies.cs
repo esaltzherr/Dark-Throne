@@ -101,7 +101,7 @@ public class SaveLoadJSONEnemies : MonoBehaviour
         }
         else
         {
-            Debug.Log("There is no save file to load!");
+            Debug.Log("There is no save file to load! (Enemies)");
         }
     }
 
