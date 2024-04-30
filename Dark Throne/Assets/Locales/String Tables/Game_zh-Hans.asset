@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Game_zh-Hans
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: zh-Hans
+  m_SharedData: {fileID: 11400000, guid: 6ccc42f47ddbdc94abfc502a6f4f3641, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 257927074906112
+    m_Localized: "\u5F00\u59CB\u6E38\u620F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1069493156413440
+    m_Localized: "\u8BED\u8A00"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3186138313158656
+    m_Localized: "\u6E38\u620F\u7ED3\u675F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3191110765408256
+    m_Localized: "\u7EE7\u7EED\uFF1F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3191436075626496
+    m_Localized: "\u6309 Enter \u7EE7\u7EED / \u6309\u9000\u683C\u653E\u5F03"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193337957609472
+    m_Localized: "\u4F60\u8D62\u4E86\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193468203331584
+    m_Localized: "\u6309\u9000\u683C\u8FD4\u56DE\u4E3B\u83DC\u5355"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193377996435456
+    m_Localized: "\u4F60\u5DF2\u7ECF\u5230\u8FBE\u4E86\u5782\u76F4\u5207\u7247\u7684\u672B\u5C3E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193522502791168
+    m_Localized: "\u5236\u4F5C\u4EBA\u5458\u540D\u5355"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193541939195904
+    m_Localized: "\u56E2\u961F\uFF1A\r\nLucas Lee - \u6E38\u620F\u5236\u4F5C\u4EBA\r\nNicholas
+      Puckdee - AI \u4E0E\u52A8\u753B\r\nJose Orantes - UI \u4E0E\u5173\u5361\u8BBE\u8BA1\r\nElroy
+      Saltzherr - \u5173\u5361\u8BBE\u8BA1\u4E0E\u6444\u50CF\u5934\r\nNicholas Lee
+      - \u90E8\u7F72\u4E0E\u6280\u672F\r\nZhiBin Huang - \u672C\u5730\u5316\u4E0E\u4EBA\u5DE5\u667A\u80FD\r\nBrendan
+      Wang - \u52A8\u4F5C\u8BBE\u8BA1\u4E0E\u52A8\u753B\u5E08\r\n\r\n\u5916\u90E8\u8D21\u732E\uFF1A\r\nAdam
+      Aviles - \u827A\u672F\r\nAkhror Rakhmatov - \u97F3\u6548\r\n\r\n\u5176\u4ED6\uFF1A\r\n\u9AB7\u9AC5\u7CBE\u7075
+      - https://astrobob.itch.io/animated-pixel-art-skeleton\r\n\u5236\u4F5C\u80CC\u666F
+      - Wallpapaer Flare\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196533010624512
+    m_Localized: "\u6559\u7A0B "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196615349006336
+    m_Localized: "\u8DF3\u8DC3\u5E76\u5954\u8DD1\u5230\u5899\u58C1\u4E0A\uFF0C\u7136\u540E\u6309\u8DF3\u8DC3\u952E\u8FDB\u884C\u5899\u58C1\u8DF3\u8DC3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196688531222528
+    m_Localized: "\u6309 Shift \u8FDB\u884C\u51B2\u523A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196792390578176
+    m_Localized: "\u7EE7\u7EED "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3197298978615296
+    m_Localized: "\u6E38\u73A9 "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3197329701892096
+    m_Localized: "\u6309\u7A7A\u683C\u952E\u8FDB\u884C\u653B\u51FB "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3198509358280704
+    m_Localized: "\u4F7F\u7528 A \u548C D \u79FB\u52A8\uFF0C\u4F7F\u7528 W \u8DF3\u8DC3\u3002\u6309
+      E \u4E0E\u67D0\u4E9B\u7269\u4F53\u4EA4\u4E92"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18336542619684864
+    m_Localized: "\u8BBE\u5B9A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18338524801617920
+    m_Localized: "\u6697\u5F71\u738B\u5EA7"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
