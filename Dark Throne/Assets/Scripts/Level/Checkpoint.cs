@@ -27,4 +27,8 @@ public class Checkpoint : MonoBehaviour
             Debug.LogError("SaveLoadJSONCheckpoints script not found in the scene!");
         }
     }
+
+    public void Activate(){
+        isAcquired = true;
+    }
 }

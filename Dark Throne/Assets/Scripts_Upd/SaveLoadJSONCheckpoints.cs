@@ -115,20 +115,37 @@ public class SaveLoadJSONCheckpoints : MonoBehaviour
 
     public void LoadGame()
     {
-        // TODO: Reactivate all allready aquired checkpoints for the scene.
-        // basically just go through and if the positions exist call a activate fucntion ()
-
         GetDataFromFile();
-        if (checkpointData != null && checkpointData.allScenes.ContainsKey(SceneManager.GetActiveScene().name))
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (checkpointData != null && checkpointData.allScenes.ContainsKey(currentSceneName))
         {
-            List<CheckpointData> currentSceneCheckpoints = checkpointData.allScenes[SceneManager.GetActiveScene().name];
-            foreach (CheckpointData checkpoint in currentSceneCheckpoints)
+            List<CheckpointData> savedCheckpoints = checkpointData.allScenes[currentSceneName];
+            GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+
+            foreach (GameObject checkpointObject in checkpoints)
             {
-                // Here you might want to handle activating checkpoints in the scene based on their acquired status
-                Debug.Log($"Checkpoint at {checkpoint.position}");// acquired: {checkpoint.isAcquired}");
+                Checkpoint checkpointScript = checkpointObject.GetComponent<Checkpoint>();
+                if (checkpointScript != null && !checkpointScript.isAcquired)
+                {
+                    Vector3 checkpointPos = checkpointObject.transform.position;
+                    foreach (CheckpointData data in savedCheckpoints)
+                    {
+                        if (Vector3.Distance(checkpointPos, data.position) < 0.1f) // Consider a small threshold to account for floating point imprecision
+                        {
+                            checkpointScript.Activate();
+                            break;
+                        }
+                    }
+                }
             }
         }
+        else
+        {
+            Debug.Log("No checkpoint data available for this scene.");
+        }
     }
+
 
     public void DeleteSaveFile()
     {
