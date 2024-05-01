@@ -84,7 +84,7 @@ public class EnemyFollow : MonoBehaviour
             if (collider.CompareTag("Player"))
             {
                 GameObject player = collider.gameObject;
-                player.GetComponent<PlayerHealth>().ChangeHealth(-10);
+                player.GetComponent<PlayerHealth2>().ChangeHealth(-10);
             }
         }
 
