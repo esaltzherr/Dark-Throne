@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth2 : MonoBehaviour
 {
     public static int MaxHealth = 100;
-    private int currentHealth = MaxHealth;
+    public int currentHealth = MaxHealth;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Animator animator;
 

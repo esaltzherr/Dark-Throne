@@ -12,17 +12,29 @@ public class ItemSos : ScriptableObject
     public AttributeToChange attributeToChange = new AttributeToChange();
     public int amountToChangeAttribute;
 
-    public void UseItem(){
+    public bool UseItem(){
         if(stateToChange == StatToChange.health){
-            GameObject.Find("Player").GetComponent<PlayerHealth2>().Heal(10);
+            PlayerHealth2 playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth2>();
+            if(playerHealth.currentHealth == 100)
+            {
+                return false;
+            }
+            else{
+                playerHealth.Heal(amountToChangeStat);
+                return true;
+            }
+        
+        }
+        return false;
+
+    }
+
+    //GameObject.Find("Player").GetComponent<PlayerHealth2>().Heal(5);
     //ChangeHealth(amountToChangeStat);
     //     //     //player.GetComponent<PlayerHealth2>().Heal(10);
     //     // }
     //     // if(stateToChange == StatToChange.mana){
     //     //     GameObject.Find("ManaManager").GetComponent<PlayerMana>().ChangeHealth(amountToChangeStat);
-     }
-
-    }
 
    public enum StatToChange{
     none,

@@ -2056,7 +2056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: coffee
-  quantity: 1
+  quantity: 15
   sprite: {fileID: 0}
 --- !u!50 &892612860
 Rigidbody2D:
