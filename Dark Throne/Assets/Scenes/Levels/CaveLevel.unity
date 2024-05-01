@@ -2056,8 +2056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: coffee
-  quantity: 15
-  sprite: {fileID: 0}
+  quantity: 1
+  sprite: {fileID: 21300000, guid: 9fa453abae4141b4b881ce584de73671, type: 3}
 --- !u!50 &892612860
 Rigidbody2D:
   serializedVersion: 4

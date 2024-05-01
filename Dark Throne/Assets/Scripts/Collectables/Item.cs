@@ -6,13 +6,13 @@ public class Item : MonoBehaviour
 {
 
     [SerializeField]
-    private string itemName;
+    public string itemName;
 
     [SerializeField]
-    private int quantity;
+    public int quantity;
 
     [SerializeField]
-    private Sprite sprite;
+    public Sprite sprite;
 
     private InventoryManager inventoryManager;
     // Start is called before the first frame update
