@@ -5,36 +5,33 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Menus/Splash.unity
+    guid: 15e424861fc224bc9906ec746faa3259
+  - enabled: 1
     path: Assets/Scenes/Menus/MainMenu.unity
     guid: 4135ba3db98c46546a7bd3336c768d91
-  - enabled: 0
-    path: Assets/Scenes/Menus/Settings.unity
-    guid: d1b0f5a51c433ce4882d057fef3c61b3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menus/Tutorial.unity
     guid: 439f3e3a494632f49964ebc450020ab4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menus/GameOver.unity
     guid: 1a3fbceee7641ca4c8abc5c05829d304
-  - enabled: 0
-    path: Assets/Scenes/CaveLevel.unity
-    guid: de686aff632057e4198341edf65cea05
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/CaveLevel.unity
     guid: ab32a02bd365bff48b7c57327e67e984
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/CaveLevelTwo.unity
     guid: b4f47a96fc3bb034782edb9d2a85753e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menus/WinAndCredits.unity
     guid: 46a339d21a4e4fe4e966705a930ae319
   - enabled: 1
-    path: Assets/Scenes/Levels/CaveBeginning.unity
-    guid: 652a9fb4f9c0b48478b14bde7d7aa2c0
-  - enabled: 1
     path: Assets/Scenes/Prototyping/CaveAreaTwo.unity
     guid: 701873a1d7cb1b74c8ea3f1c7671cfdb
+  - enabled: 1
+    path: Assets/Scenes/Levels/CaveBeginning.unity
+    guid: 652a9fb4f9c0b48478b14bde7d7aa2c0
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 7a0d4f6746f1fb64eab4b2b1d9cd5aa3, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: c6dbecb6df731b74d9c252776822c87b, type: 2}
