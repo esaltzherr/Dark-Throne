@@ -627,11 +627,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6033456207640630623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aec301437f5f04e46b3571dbdc2bf351, type: 3}
+  m_Script: {fileID: 11500000, guid: cb246db5e3e5bde449e6d29dd0fa0caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
   healthSlider: {fileID: 7204562057004236153}
-  animator: {fileID: 0}
+  animator: {fileID: 1512955147486551197}
 --- !u!114 &577204051867180896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +653,7 @@ MonoBehaviour:
   jumpingPower: 15
   isFacingRight: 1
   jumpKey: 119
+  playerPowerUps: {fileID: 0}
 --- !u!114 &302123130724288282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,7 +681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0be16fc83c1604a9bb272d03f39c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpCanvas: {fileID: 0}
 --- !u!1 &6893656164230285565
 GameObject:
   m_ObjectHideFlags: 0

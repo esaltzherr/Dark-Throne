@@ -8,14 +8,74 @@ public class EnemyHealth : MonoBehaviour
     private int currentHealth;
     public Animator animator;
     public bool isStaggering = false;
+    public Transform targetPlayer;
+    public int executeDirection = -1;
+
+    public bool detected = false;
     void Start()
     {
         currentHealth = maxHealth;
+        FindPlayer();
     }
 
+
+    private void FindPlayer()
+    {
+        if (targetPlayer == null)
+        {
+            GameObject playerObject = GameObject.FindWithTag("Player");
+            if (playerObject != null)
+            {
+                targetPlayer = playerObject.transform;
+            }
+            else
+            {
+                Debug.LogWarning("CameraFollow: Player not found. Please assign a Player tag to the player object.");
+            }
+        }
+    }
     void Update()
     {
-        
+        Vector2 moveDirection = (targetPlayer.position - transform.position).normalized;
+
+        // Flip the enemy to face the player
+        if (moveDirection.x > 0)
+        {
+            //player is on the right side of skeleton
+            executeDirection = -1;
+        }
+        else if (moveDirection.x < 0)
+        {
+            //player is on the left side of skeleton
+            executeDirection = 1;
+        }
+        //detected = false;
+        //detection();
+    }
+    /*
+    public void detection()
+    {
+        Transform ind = this.gameObject.transform.GetChild(1);
+        GameObject indicator = ind.gameObject;
+        if (!detected)
+        {
+            indicator.SetActive(false);
+        }
+        else
+        {
+            indicator.SetActive(true);
+            indicator.GetComponent<Animator>().Play("Target");
+        }
+    }
+    */
+    public void SkeletonExecute()
+    {
+        isStaggering = false;
+        animator.SetBool("Execute", true);
+        //add any item drops or effects on execute here
+
+        Destroy(this.gameObject, 3.5f);
+
     }
 
     public void TakeDamage(int damage)
@@ -75,7 +135,10 @@ public class EnemyHealth : MonoBehaviour
     IEnumerator StaggerDeath()
     {
         yield return new WaitForSeconds(3f);
-        Die();
+        if (isStaggering)
+        {
+            Die();
+        }
     }
 }
 

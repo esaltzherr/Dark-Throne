@@ -14,6 +14,8 @@ public class EnemyFollow : MonoBehaviour
     float nextAttackTime = 0f;
 
 
+    //execute animation is by default backwards
+    public int executeDirection = -1;
 
 
     void Start()
@@ -51,10 +53,12 @@ public class EnemyFollow : MonoBehaviour
                 if (moveDirection.x > 0)
                 {
                     transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                    executeDirection = -1;
                 }
                 else if (moveDirection.x < 0)
                 {
                     transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                    executeDirection = 1;
                 }
 
 
