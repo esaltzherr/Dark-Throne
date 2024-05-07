@@ -23,6 +23,7 @@ public class MapDisplay : MonoBehaviour
         // Optionally, start with the map not visible
         if (mapPanel != null)
         {
+            Time.timeScale = 1; // Ensure time is running normally when the game starts
             mapPanel.SetActive(false);
         }
         else
@@ -36,6 +37,16 @@ public class MapDisplay : MonoBehaviour
         if (mapPanel != null && Input.GetKeyDown(KeyCode.Tab))
         {
             mapPanel.SetActive(!mapPanel.activeSelf);
+
+            // Toggle time scale between paused and running
+            if (mapPanel.activeSelf)
+            {
+                Time.timeScale = 0; // Pause the game when the map is visible
+            }
+            else
+            {
+                Time.timeScale = 1; // Resume normal game speed when the map is hidden
+            }
         }
     }
 }

@@ -100,6 +100,7 @@ public class MapCheckpoints : MonoBehaviour
                 return;
             }
         }
+        Time.timeScale = 1;
         mapPanel.SetActive(false);
     }
 }
