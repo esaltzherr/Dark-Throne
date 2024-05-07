@@ -148,4 +148,11 @@ public class SaveLoadJSONPlayer : MonoBehaviour
         SceneManager.LoadScene(playerData.sceneName);
         player.transform.position = playerData.position;
     }
+
+    public void teleportToCheckpoint(string id, string sceneName, Vector3 position){
+        useData();
+        SpawnManager.SetId(id);
+        SceneManager.LoadScene(sceneName);
+        player.transform.position = position;
+    }
 }

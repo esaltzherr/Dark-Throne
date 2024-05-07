@@ -11,6 +11,11 @@ public class CheckpointData
     [JsonConverter(typeof(Vector3Converter))]
 
     public Vector3 position;
+
+    // Add the id to the spawnmanager.
+    public string ID;
+
+
     // public bool isAcquired;
 }
 
@@ -45,11 +50,11 @@ public class SaveLoadJSONCheckpoints : MonoBehaviour
         // if (Input.GetKeyDown(KeyCode.U))
         //     LoadGame();
 
-        // if (Input.GetKeyDown(KeyCode.I))
-        //     DeleteSaveFile();
+        if (Input.GetKeyDown(KeyCode.V))
+            DeleteSaveFile();
     }
 
-    public void SaveGame(Vector3 position)
+    public void SaveGame(Vector3 position, string id)
     {
 
         string currentSceneName = SceneManager.GetActiveScene().name;
@@ -62,6 +67,7 @@ public class SaveLoadJSONCheckpoints : MonoBehaviour
 
         CheckpointData data = new CheckpointData();
         data.position = position;
+        data.ID = id;
         // data.isAcquired = checkpoint.GetComponent<Checkpoint>().isAcquired; // Assuming there is a 'Checkpoint' script that contains the 'isAcquired' property
 
         checkpointData.allScenes[currentSceneName].Add(data);
@@ -111,6 +117,7 @@ public class SaveLoadJSONCheckpoints : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         LoadGame();
+        MakeCheckpointsOnMap();
     }
 
     public void LoadGame()
@@ -160,16 +167,84 @@ public class SaveLoadJSONCheckpoints : MonoBehaviour
         }
     }
 
-    public void GetCheckpoints(string sceneName)
+    public void MakeCheckpointsOnMap()
     {
-        GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
-        foreach (GameObject checkpoint in checkpoints)
-        {
-            CheckpointData data = new CheckpointData();
-            data.position = checkpoint.transform.position;
-            // data.isAcquired = checkpoint.GetComponent<Checkpoint>().isAcquired; // Assuming there is a 'Checkpoint' script that contains the 'isAcquired' property
+        GetDataFromFile();
 
-            checkpointData.allScenes[sceneName].Add(data);
+        // Find the 'MapCheckpoints' script attached to a GameObject in the scene.
+        MapCheckpoints mapCheckpointsScript = GameObject.FindObjectOfType<MapCheckpoints>();
+
+        if (mapCheckpointsScript == null)
+        {
+            Debug.LogError("MapCheckpoints script not found in the scene.");
+            return;
+        }
+
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (checkpointData.allScenes.ContainsKey(sceneName))
+        {
+            mapCheckpointsScript.ResetCheckpoints();
+            List<CheckpointData> checkpoints = checkpointData.allScenes[sceneName];
+            foreach (CheckpointData checkpoint in checkpoints)
+            {
+                mapCheckpointsScript.AddCheckpoint(checkpoint.position, checkpoint.ID);
+                
+            }
+        }
+        else
+        {
+            Debug.Log("No checkpoint data available for this scene in the map.");
         }
     }
+
+
+
+
+    // public void GetCheckpoints()//string sceneName)
+    // {
+    //     string sceneName = SceneManager.GetActiveScene().name;
+    //     GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+    //     foreach (GameObject checkpoint in checkpoints)
+    //     {
+    //         CheckpointData data = new CheckpointData();
+    //         data.position = checkpoint.transform.position;
+    //         // data.isAcquired = checkpoint.GetComponent<Checkpoint>().isAcquired; // Assuming there is a 'Checkpoint' script that contains the 'isAcquired' property
+
+    //         checkpointData.allScenes[sceneName].Add(data);
+    //     }
+    // }
+    public Vector3? GetLocation(string id)
+    {
+        // Get the current scene name
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        // Check if there are checkpoints for the current scene
+        if (checkpointData.allScenes.ContainsKey(currentSceneName))
+        {
+            // Get the list of checkpoints for the current scene
+            List<CheckpointData> checkpoints = checkpointData.allScenes[currentSceneName];
+
+            // Loop through each checkpoint data to find the matching ID
+            foreach (CheckpointData checkpoint in checkpoints)
+            {
+                if (checkpoint.ID == id)
+                {
+                    // If found, return the position
+                    return checkpoint.position;
+                }
+            }
+            // If no checkpoint with the matching ID is found
+            Debug.Log("No checkpoint found with ID: " + id);
+        }
+        else
+        {
+            // If there are no checkpoints for the scene
+            Debug.Log("No checkpoint data available for this scene.");
+        }
+
+        // Return null if nothing is found or if there are no checkpoints for the scene
+        return null;
+    }
+
+
 }

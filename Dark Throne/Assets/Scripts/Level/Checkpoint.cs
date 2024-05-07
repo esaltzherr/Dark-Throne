@@ -3,12 +3,13 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     public bool isAcquired = false;
+    public string id = "123456789";
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !isAcquired)
         {
-            isAcquired = true;
+            Activate();
             Debug.Log("Checkpoint acquired at: " + transform.position);
             SaveCheckpoint();
         }
@@ -20,7 +21,9 @@ public class Checkpoint : MonoBehaviour
         SaveLoadJSONCheckpoints saveLoadScript = FindObjectOfType<SaveLoadJSONCheckpoints>();
         if (saveLoadScript != null)
         {
-            saveLoadScript.SaveGame(transform.position);
+            saveLoadScript.SaveGame(transform.position, id);
+            saveLoadScript.MakeCheckpointsOnMap();
+            
         }
         else
         {
@@ -30,5 +33,10 @@ public class Checkpoint : MonoBehaviour
 
     public void Activate(){
         isAcquired = true;
+        
     }
+
+
+    
+
 }
