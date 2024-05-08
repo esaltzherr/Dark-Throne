@@ -104,10 +104,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (IsGrounded())
                 {
+                    animator.SetTrigger("Jumping");
                     Jump();
                 }
                 else if (playerPowerUps.CanDoubleJump())
                 {
+                    animator.SetTrigger("Jumping");
                     Jump();
                     playerPowerUps.DoubleJump();
                 }

@@ -5,11 +5,13 @@ public class PlayerDash : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private TrailRenderer tr;
+    [SerializeField] private Animator animator;
+
 
     public bool IsDashing { get; private set; }
     private bool dashAquired = false;
     private bool canDash = true;
-    private float dashingPower = 24f;
+    private float dashingPower = 8f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
@@ -32,12 +34,22 @@ public class PlayerDash : MonoBehaviour
                 Debug.LogWarning("TrailRenderer component not found on " + gameObject.name + ". Dashing visual effects will not be visible.");
             }
         }
+
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+            if (animator == null)
+            {
+                Debug.LogError("Animator component not found on " + gameObject.name + ". Please attach an Animator component.", this);
+            }
+        }
     }
 
     void Update()
     {
         if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && canDash && dashAquired)
         {
+
             StartCoroutine(Dash());
         }
         if (Input.GetKeyDown(KeyCode.M)){
@@ -47,6 +59,7 @@ public class PlayerDash : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        animator.SetTrigger("Dashing");
         IsDashing = true;
         canDash = false;
         float originalGravity = rb.gravityScale;
