@@ -70,7 +70,7 @@ public class MeleeCombat : MonoBehaviour
             }
             else
             {
-                if (indicatorInstance == null)
+                if (indicatorInstance != null)
                 {
                     Destroy(indicatorInstance);
                     indicatorInstance = null;
