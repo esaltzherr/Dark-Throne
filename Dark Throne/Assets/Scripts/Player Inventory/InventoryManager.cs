@@ -36,13 +36,13 @@ public class InventoryManager : MonoBehaviour
 
     public bool UseItem(string itemName)
     {
-        for(int i = 0; i < itemSOs.Length; i++)
+        for(int x = 0; x < itemSOs.Length; x++)
         {
-            if(itemSOs[i].itemName == itemName){
-                bool usable = itemSOs[i].UseItem();
+            if(itemSOs[x].itemName == itemName){
+                bool usable = itemSOs[x].UseItem();
+                Debug.Log("usable = " + usable);
                 return usable;
             }
-            return false;
         }
         return false;
     }
