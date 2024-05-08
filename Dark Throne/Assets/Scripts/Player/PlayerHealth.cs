@@ -7,12 +7,13 @@ public class PlayerHealth : MonoBehaviour
 {
     public static int MaxHealth = 100;
     private int currentHealth = MaxHealth;
+    private int healthItemsCollected = 0; // counter for health items collected
+
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Animator animator;
 
     private void Start()
     {
-
         if (healthSlider == null)
         {
             healthSlider = GetComponent<Slider>();
@@ -26,83 +27,65 @@ public class PlayerHealth : MonoBehaviour
             animator = GetComponent<Animator>();
             if (animator == null)
             {
-                Debug.LogError("Animator component not found on " + gameObject.name + ". Please attach a Animator component.", this);
+                Debug.LogError("Animator component not found on " + gameObject.name + ". Please attach an Animator component.", this);
             }
         }
-
-
-
-
     }
 
-    // void Update()
-    // {
-    //     UpdateHealthUI();
-
-    // }
-    public void ChangeHealth(int num)
+    public void CollectHealthItem(int healthBonus)
     {
-        if (!(GetComponent<PlayerInvulnerability>().isInvulnerable))
+        healthItemsCollected++; // increment health item count
+        if (healthItemsCollected % 3 == 0) // check if this is the third item collected
         {
-            if (num > 0)
-            {
-                Heal(num);
-            }
-            else if (num < 0)
-            {
-                TakeDamage(-num);
-            }
+            IncreaseMaxHealth(healthBonus);
+        }
+        else
+        {
+            Heal(healthBonus); // heal normally if not the third item
         }
     }
 
-    public void TakeDamage(int damageAmount)
+    private void IncreaseMaxHealth(int amount)
     {
-        currentHealth -= damageAmount;
-        Debug.Log("Player took " + damageAmount + " damage. Current health: " + currentHealth);
-        animator.SetTrigger("Is_Hit");
-        IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
-        StartCoroutine(invuln);
-        UpdateHealthUI();
-        if (currentHealth <= 0){
-            StartCoroutine(Die());
-        }
+        MaxHealth += amount; // increase max health
+        Heal(amount); // heal the player by the amount increased
+        UpdateHealthUI(); // update the health UI
     }
 
     public void Heal(int healAmount)
     {
-        currentHealth = Mathf.Min(currentHealth + healAmount, MaxHealth);
-        // Debug.Log("Player healed " + healAmount + " health. Current health: " + currentHealth);
-        UpdateHealthUI();
+        currentHealth = Mathf.Min(currentHealth + healAmount, MaxHealth); // ensure current health does not exceed max health
+        UpdateHealthUI(); // update the health UI
     }
 
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealth -= damageAmount; // reduce current health by damage amount
+        animator.SetTrigger("Is_Hit"); // play hit animation
+        IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
+        StartCoroutine(invuln); // Start invulnerability coroutine
+        UpdateHealthUI(); // Update the health UI
+        if (currentHealth <= 0)
+        {
+            StartCoroutine(Die()); // Start death coroutine if health falls below or equals zero
+        }
+    }
 
     private void UpdateHealthUI()
     {
-        Debug.Log("Health" + currentHealth + "");
-        healthSlider.value = currentHealth;
+        healthSlider.value = currentHealth; // Set the slider value to current health
     }
 
     private void Death()
     {
-        SpawnManager.lastLevelScene = SceneManager.GetActiveScene().name;
-
-        // Reset the player's health for when they return (optional, depends on your game's design).
-
-        // REMOVE AND REPLACE WITH ACTUAL data stuff later
-        PlayerMovement movement = GetComponent<PlayerMovement>();
-        movement.KillPlayer();
-
-
-
-        // Load the GameOver scene.
-        SceneManager.LoadScene(SpawnManager.lastLevelScene);
-        Heal(MaxHealth);
-        
-        
+        SceneManager.LoadScene(SpawnManager.lastLevelScene); // Reload the last level scene
+        Heal(MaxHealth); // Reset health to max
     }
 
-    public IEnumerator Die(){
-        yield return new WaitForSeconds(1); // TODO: Needs to be replaced with death animation
+    public IEnumerator Die()
+    {
+        yield return new WaitForSeconds(1); // Delay for death animation
         Death();
     }
 }
+
