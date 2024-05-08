@@ -7,7 +7,7 @@ public class PlayerWallInteraction : MonoBehaviour
     public bool IsWallSliding { get; private set; }
     public bool IsWallJumping { get; private set; }
     private float wallSlidingSpeed = 2f;
-    private Vector2 wallJumpingPower = new Vector2(8f, 16f);
+    private Vector2 wallJumpingPower = new Vector2(8f, 12f);
     private float wallJumpingDuration = 0.4f;
 
     private PlayerMovement playerMovement; // Reference to the PlayerMovement script
