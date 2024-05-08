@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -36,19 +37,6 @@ public class EnemyHealth : MonoBehaviour
     }
     void Update()
     {
-        Vector2 moveDirection = (targetPlayer.position - transform.position).normalized;
-
-        // Flip the enemy to face the player
-        if (moveDirection.x > 0)
-        {
-            //player is on the right side of skeleton
-            executeDirection = -1;
-        }
-        else if (moveDirection.x < 0)
-        {
-            //player is on the left side of skeleton
-            executeDirection = 1;
-        }
         //detected = false;
         //detection();
     }
@@ -71,7 +59,23 @@ public class EnemyHealth : MonoBehaviour
     public void SkeletonExecute()
     {
         isStaggering = false;
-        animator.SetBool("Execute", true);
+        Vector2 moveDirection = (targetPlayer.position - transform.position).normalized;
+
+        if (moveDirection.x > 0)
+        {
+            //player is on the right side of skeleton
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            executeDirection = -1;
+        }
+        else if (moveDirection.x < 0)
+        {
+            //player is on the left side of skeleton
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            executeDirection = 1;
+        }
+        this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        animator.SetBool("Executed", true);
         //add any item drops or effects on execute here
 
         Destroy(this.gameObject, 3.5f);

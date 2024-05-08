@@ -16,6 +16,15 @@ public class MeleeCombat : MonoBehaviour
     public GameObject indicatorprefab;
     private GameObject indicatorInstance;
 
+    Collider2D closestEnemy = null;
+    public bool inExecuteAnimation = false;
+
+    private Vector2 enemyPosition;
+
+    public KeyCode executeKey = KeyCode.F;
+
+
+
     // Update is called once per frame 
     void Update()
     {
@@ -27,13 +36,27 @@ public class MeleeCombat : MonoBehaviour
             }
         }
         findClosestEnemy();
+        if(closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
+        {
+            inExecuteAnimation = true;
+            closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
+            enemyPosition = closestEnemy.transform.position;
+            this.transform.position = enemyPosition;
+
+            this.GetComponent<PlayerMovement>().enabled = false;
+            this.GetComponent<PlayerDash>().enabled = false;
+            this.GetComponent<SpriteRenderer>().enabled = false;
+            this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            StartCoroutine(enableMovement());
+        }
     }
 
     void findClosestEnemy()
     {
         Collider2D[] enemiesDetected = Physics2D.OverlapCircleAll(this.transform.position, detectionRange, enemyLayer);
         float closestDistance = Mathf.Infinity;
-        Collider2D closestEnemy = null;
+        closestEnemy = null;
 
         foreach (Collider2D enemy in enemiesDetected)
         {
@@ -106,5 +129,18 @@ public class MeleeCombat : MonoBehaviour
         Gizmos.DrawWireSphere(hitBox.position, attackRange);
 
         Gizmos.DrawWireSphere(this.transform.position, detectionRange);
+    }
+
+    IEnumerator enableMovement()
+    {
+        yield return new WaitForSeconds(3.5f);
+        this.GetComponent<PlayerMovement>().enabled = true;
+        this.GetComponent<PlayerDash>().enabled = true;
+        this.GetComponent<SpriteRenderer>().enabled = true;
+        this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        inExecuteAnimation = false;
     }
 }

@@ -63,7 +63,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.01, y: -4.18, z: 0}
-  m_LocalScale: {x: -3.6630154, y: 3.301, z: 1}
+  m_LocalScale: {x: -6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1618594929932980742}
@@ -221,6 +221,7 @@ MonoBehaviour:
   isStaggering: 0
   targetPlayer: {fileID: 0}
   executeDirection: -1
+  detected: 0
 --- !u!95 &1312469581504702770
 Animator:
   serializedVersion: 5
