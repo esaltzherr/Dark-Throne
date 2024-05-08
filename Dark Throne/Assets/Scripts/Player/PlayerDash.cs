@@ -93,4 +93,10 @@ public class PlayerDash : MonoBehaviour
             gainDash();
         }
     }
+    public bool dashGained(){
+        return dashAquired;
+    }
+    public void setDashGained(bool aquired){
+        dashAquired = aquired;
+    }
 }
