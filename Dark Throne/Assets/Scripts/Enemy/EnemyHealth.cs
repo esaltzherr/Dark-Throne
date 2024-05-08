@@ -136,6 +136,16 @@ public class EnemyHealth : MonoBehaviour
         //GetComponent<Collider2D>().enabled = false;
         //Destroy(gameObject);
     }
+
+    public int getHealth()
+    {
+        return currentHealth;
+    }
+    public void setHealth(int newHealth)
+    {
+        currentHealth = newHealth;
+    }
+
     IEnumerator StaggerDeath()
     {
         yield return new WaitForSeconds(3f);

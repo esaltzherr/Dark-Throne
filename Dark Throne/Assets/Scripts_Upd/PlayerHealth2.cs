@@ -40,6 +40,11 @@ public class PlayerHealth2 : MonoBehaviour
         UpdateHealthUI();
 
     }
+
+    public int getCurrentHealth()
+    {
+        return currentHealth; 
+    }
     public void ChangeHealth(int num)
     {
         if (!(GetComponent<PlayerInvulnerability>().isInvulnerable))
