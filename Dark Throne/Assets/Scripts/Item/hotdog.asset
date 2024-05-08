@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbc031c7b77c31429a307328086e3b3, type: 3}
   m_Name: hotdog
   m_EditorClassIdentifier: 
-  itemName: coffee
+  itemName: hotdog
   stateToChange: 1
-  amountToChangeStat: 4
+  amountToChangeStat: 10
   attributeToChange: 0
   amountToChangeAttribute: 0
