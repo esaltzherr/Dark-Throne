@@ -47,6 +47,11 @@ public class PlayerPowerUps : MonoBehaviour
         }
     }
 
-
+    public bool doubleJumpGained(){
+        return doubleJumpAquired;
+    }
+    public void setDoubleJumpGained(bool aquired){
+        doubleJumpAquired = aquired;
+    }
 
 }

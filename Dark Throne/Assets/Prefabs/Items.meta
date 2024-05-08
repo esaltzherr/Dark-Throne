@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Dark Throne/Assets/Prefabs/Items.meta
 guid: 447a955f20355440093a7edeec3e5b5b
 folderAsset: yes
 DefaultImporter:
+========
+guid: 22212f253c85f3a44b211b7cbac0380c
+PrefabImporter:
+>>>>>>>> ElroyBranch:Dark Throne/Assets/Prefabs/CheckpointOnMap.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
