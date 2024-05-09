@@ -33,6 +33,15 @@ public class NextSceneTrigger : MonoBehaviour
                     return;  // Stop execution if still not found
                 }
             }
+            
+            if (AnalyticsManager.Instance != null)
+            {
+                AnalyticsManager.Instance.OnLevelComplete(spawnPointId);
+            }
+            else
+            {
+                Debug.LogError("AnalyticsManager instance not found");
+            }
 
             enemyJSON.SaveGame(); // Call SaveGame on the referenced component
             SpawnManager.SetId(this.spawnPointId);
