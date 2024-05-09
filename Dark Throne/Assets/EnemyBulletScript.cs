@@ -29,9 +29,10 @@ public class EnemyBulletScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer > 5)
-        {
-            //Destroy(gameObject);
+        if(timer > 3)
+        {   
+            Debug.Log("Bullet destroyed due to timer.");
+            Destroy(gameObject);
         }
     }
 
@@ -40,7 +41,8 @@ public class EnemyBulletScript : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<PlayerHealth2>().TakeDamage(10);
-            //Destroy(gameObject);
+            Debug.Log("Bullet collided with player.");
+            Destroy(gameObject);
         }
     }
 
