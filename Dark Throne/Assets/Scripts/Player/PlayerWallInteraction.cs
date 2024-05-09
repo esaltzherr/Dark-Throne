@@ -60,7 +60,7 @@ public class PlayerWallInteraction : MonoBehaviour
 
     private void WallSlide()
     {
-        if (IsWalled() && !playerMovement.IsGrounded() && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0)
+        if (IsWalled() && !playerMovement.IsGrounded())// && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0)
         {
             IsWallSliding = true;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
@@ -78,6 +78,7 @@ public class PlayerWallInteraction : MonoBehaviour
             float wallJumpingDirection = playerMovement.isFacingRight ? -1 : 1;
             IsWallJumping = true;
             rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            playerMovement.TurnAround();
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
         }
     }
@@ -86,4 +87,5 @@ public class PlayerWallInteraction : MonoBehaviour
     {
         IsWallJumping = false;
     }
+    
 }

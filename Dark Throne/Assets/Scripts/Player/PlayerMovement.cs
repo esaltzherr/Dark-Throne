@@ -181,4 +181,16 @@ public class PlayerMovement : MonoBehaviour
     {
         dust.Play();
     }
+
+    public void TurnAround()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
+
+        Vector3 dustLocalScale = dust.transform.localScale;
+        dustLocalScale.x *= -1f;
+        dust.transform.localScale = dustLocalScale;
+    }
 }
