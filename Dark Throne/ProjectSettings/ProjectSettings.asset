@@ -723,11 +723,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 87df249f-8fa7-4a27-919c-ee41b0afff52
+  cloudProjectId: 76332805-ffe5-41f7-8aca-913b5211ac1a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Dark Throne Local 2024-03-07_23-10-20
-  organizationId: nickpuckdee
+  projectName: DarkThrone
+  organizationId: lsaltzherr
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
