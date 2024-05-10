@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
@@ -17,6 +18,7 @@ public class EnemyFollow : MonoBehaviour
     //execute animation is by default backwards
     public int executeDirection = -1;
 
+    private float timer = 0;
 
     void Start()
     {
@@ -41,8 +43,9 @@ public class EnemyFollow : MonoBehaviour
     }
     void Update()
     {
+
         animator.SetBool("Moving", false);
-        if (targetPlayer != null && !shouldStopFollowing)
+        if (targetPlayer != null  && !shouldStopFollowing || !targetPlayer.GetComponent<MeleeCombat>().inExecuteAnimation)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.position);
             if (distanceToPlayer <= detectionRange)
@@ -64,10 +67,13 @@ public class EnemyFollow : MonoBehaviour
 
                 if(distanceToPlayer <= 2)
                 {
+
                     if (Time.time >= nextAttackTime)
                     {
+
                         Attack();
                         nextAttackTime = Time.time + 1f / attackRate;
+
 
                     }
 
@@ -81,7 +87,27 @@ public class EnemyFollow : MonoBehaviour
     
     private void Attack()
     {
-        animator.SetTrigger("Attack");
+        if (!targetPlayer.GetComponent<MeleeCombat>().inExecuteAnimation)
+        {
+            animator.SetTrigger("Attack");
+            StartCoroutine(attackHitbox());
+            /*Collider2D[] playerHit = Physics2D.OverlapCircleAll(hitBox.position, attackrange);
+            foreach (Collider2D collider in playerHit)
+            {
+                if (collider.CompareTag("Player"))
+                {
+                    GameObject player = collider.gameObject;
+                    player.GetComponent<PlayerHealth2>().ChangeHealth(-10);
+                }
+            }
+            */
+        }
+
+    }
+
+    IEnumerator attackHitbox()
+    {
+        yield return new WaitForSeconds(0.25f);
         Collider2D[] playerHit = Physics2D.OverlapCircleAll(hitBox.position, attackrange);
         foreach (Collider2D collider in playerHit)
         {
@@ -91,8 +117,8 @@ public class EnemyFollow : MonoBehaviour
                 player.GetComponent<PlayerHealth2>().ChangeHealth(-10);
             }
         }
-
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")

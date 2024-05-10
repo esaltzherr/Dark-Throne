@@ -50,18 +50,20 @@ public class MeleeCombat : MonoBehaviour
         findClosestEnemy();
         if(closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
         {
+            this.GetComponent<PlayerHealth2>().Heal(10);
             this.GetComponent<PlayerInvulnerability>().ExecuteInvulnerability();
             inExecuteAnimation = true;
             closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
             enemyPosition = closestEnemy.transform.position;
             this.transform.position = enemyPosition;
-
+            
             this.GetComponent<PlayerMovement>().enabled = false;
             this.GetComponent<PlayerDash>().enabled = false;
             this.GetComponent<SpriteRenderer>().enabled = false;
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             StartCoroutine(enableMovement());
+            
         }
     }
 
@@ -132,7 +134,9 @@ public class MeleeCombat : MonoBehaviour
     void Swipe()
     {
         animator.SetTrigger("AttackSwing");
-        Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(hitBox.position, attackRange + 0.5f, enemyLayer);
+        Vector2 swipeHitbox = new Vector2(hitBox.position.x - 1, hitBox.position.y);
+
+        Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(swipeHitbox, attackRange + 0.5f, enemyLayer);
 
         foreach (Collider2D enemy in enemiesHit)
         {
@@ -154,12 +158,18 @@ public class MeleeCombat : MonoBehaviour
         }
         Gizmos.DrawWireSphere(hitBox.position, attackRange);
 
+        Vector2 swipeHitbox = new Vector2(hitBox.position.x - 1, hitBox.position.y);
+        Gizmos.DrawWireSphere(swipeHitbox, attackRange + 0.5f);
+
+
         Gizmos.DrawWireSphere(this.transform.position, detectionRange);
     }
 
-    IEnumerator enableMovement()
+    public IEnumerator enableMovement()
     {
+
         yield return new WaitForSeconds(3.5f);
+        
         this.GetComponent<PlayerMovement>().enabled = true;
         this.GetComponent<PlayerDash>().enabled = true;
         this.GetComponent<SpriteRenderer>().enabled = true;

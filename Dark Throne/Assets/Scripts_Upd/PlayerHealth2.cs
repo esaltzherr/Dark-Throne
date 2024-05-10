@@ -106,6 +106,8 @@ public class PlayerHealth2 : MonoBehaviour
 
     public IEnumerator Die(){
         this.animator.SetBool("Dead", true);
+        this.GetComponent<PlayerMovement>().enabled = false;
+        this.GetComponent<PlayerHealth2>().enabled = false;
         yield return new WaitForSeconds(1.5f); // TODO: Needs to be replaced with death animation
         Death();
     }

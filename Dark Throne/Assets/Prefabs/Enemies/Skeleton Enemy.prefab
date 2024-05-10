@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1323830404620560950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 0.05, z: 0}
+  m_LocalPosition: {x: 0.219, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -181,8 +181,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04, y: 0.07}
-  m_Size: {x: 0.35, y: 0.5}
+  m_Offset: {x: -0.040000003, y: 0.005358994}
+  m_Size: {x: 0.35, y: 0.37071812}
   m_Direction: 0
 --- !u!114 &2691965007769515049
 MonoBehaviour:
@@ -196,13 +196,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2f5f2913e6144259c122c89efca26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 7
   detectionRange: 10
   targetPlayer: {fileID: 7608148993344696429, guid: 3948056275c833846a62229857bd879a, type: 3}
   animator: {fileID: 1312469581504702770}
   attackrange: 0.5
   hitBox: {fileID: 1618594929932980742}
-  attackRate: 2
+  attackRate: 0.5
   executeDirection: -1
 --- !u!114 &5568135725467640434
 MonoBehaviour:
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277ec8616178943f58fb690c5cb36fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 160
   animator: {fileID: 1312469581504702770}
   isStaggering: 0
   targetPlayer: {fileID: 0}

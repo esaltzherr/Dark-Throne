@@ -77,11 +77,9 @@ public class EnemyHealth : MonoBehaviour
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetBool("Executed", true);
         //add any item drops or effects on execute here
-
         Destroy(this.gameObject, 3.5f);
 
     }
-
     public void TakeDamage(int damage)
     {
         //Die if staggered
