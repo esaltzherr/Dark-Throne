@@ -144,7 +144,7 @@ TextureImporter:
         serializedVersion: 2
         x: 110
         y: 0
-        width: 55
+        width: 53
         height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -163,7 +163,7 @@ TextureImporter:
       name: stab-Sheet_3
       rect:
         serializedVersion: 2
-        x: 165
+        x: 164
         y: 0
         width: 55
         height: 29
@@ -186,7 +186,7 @@ TextureImporter:
         serializedVersion: 2
         x: 220
         y: 0
-        width: 55
+        width: 57
         height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -207,7 +207,7 @@ TextureImporter:
         serializedVersion: 2
         x: 275
         y: 0
-        width: 55
+        width: 57
         height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics;
+using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -12,13 +14,29 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Start2();
+    }
+
+    async void Start2()
+    {
+        await UnityServices.InitializeAsync();
+        AnalyticsService.Instance.StartDataCollection();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    
+    public void SendAnalyticEvent()
+    {
+        CustomEvent ligma = new CustomEvent("deez")
+        {
+            { "ligma", "whats ligma" }
+        };
+        AnalyticsService.Instance.RecordEvent(ligma);
+        AnalyticsService.Instance.Flush();
     }
 
     public void ChangeScene(string sceneName)

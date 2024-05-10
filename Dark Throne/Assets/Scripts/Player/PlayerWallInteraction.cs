@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerWallInteraction : MonoBehaviour
 {
@@ -63,12 +64,17 @@ public class PlayerWallInteraction : MonoBehaviour
     {
         if (IsWalled() && !playerMovement.IsGrounded())// && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0)
         {
+            this.GetComponent<SpriteRenderer>().flipX = true;
             IsWallSliding = true;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            this.gameObject.GetComponent<Animator>().SetBool("Sliding", true);
         }
         else
         {
+            this.GetComponent<SpriteRenderer>().flipX = false;
             IsWallSliding = false;
+            this.gameObject.GetComponent<Animator>().SetBool("Sliding", false);
+
         }
     }
 
@@ -76,6 +82,7 @@ public class PlayerWallInteraction : MonoBehaviour
     {   
         if (IsWallSliding && Input.GetKeyDown(jumpKey))
         {
+            this.GetComponent<SpriteRenderer>().flipX = false;
             float wallJumpingDirection = playerMovement.isFacingRight ? -1 : 1;
             IsWallJumping = true;
             rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
