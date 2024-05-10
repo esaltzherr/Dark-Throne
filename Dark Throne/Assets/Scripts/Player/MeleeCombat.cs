@@ -23,6 +23,7 @@ public class MeleeCombat : MonoBehaviour
 
     public KeyCode executeKey = KeyCode.F;
 
+    private bool canCombo = false;
 
 
     // Update is called once per frame 
@@ -33,7 +34,18 @@ public class MeleeCombat : MonoBehaviour
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
+                canCombo = true;
             }
+        }
+        else if(canCombo)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && canCombo)
+            {
+                Swipe();
+                nextAttackTime = Time.time + 1f / attackRate;
+                canCombo = false;
+            }
+
         }
         findClosestEnemy();
         if(closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
@@ -116,6 +128,19 @@ public class MeleeCombat : MonoBehaviour
             enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
     }
+
+    void Swipe()
+    {
+        animator.SetTrigger("AttackSwing");
+        Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(hitBox.position, attackRange + 0.5f, enemyLayer);
+
+        foreach (Collider2D enemy in enemiesHit)
+        {
+
+            Debug.Log("Enemy Hit: " + enemy.name);
+            enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+        }
+    }
     public void IncreaseAttackDamage(int amount)
     {
         attackDamage += amount;
@@ -144,4 +169,5 @@ public class MeleeCombat : MonoBehaviour
 
         inExecuteAnimation = false;
     }
+    
 }
