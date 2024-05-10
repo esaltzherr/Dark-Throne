@@ -94,9 +94,9 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler
             }
         }
         else{
-        inventoryManager.DeselectAllSlots();
-        selectedShader.SetActive(true);
-        thisItemSelected = true;
+            inventoryManager.DeselectAllSlots();
+            selectedShader.SetActive(true);
+            thisItemSelected = true;
         }
     }
 

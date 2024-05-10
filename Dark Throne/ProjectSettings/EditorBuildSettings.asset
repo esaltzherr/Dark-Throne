@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/WinAndCredits.unity
     guid: 46a339d21a4e4fe4e966705a930ae319
   - enabled: 1
-    path: Assets/Scenes/Prototyping/CaveAreaTwo.unity
+    path: Assets/Scenes/Levels/CaveAreaTwo.unity
     guid: 701873a1d7cb1b74c8ea3f1c7671cfdb
   - enabled: 1
     path: Assets/Scenes/Levels/CaveBeginning.unity
