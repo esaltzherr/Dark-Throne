@@ -105,7 +105,8 @@ public class PlayerHealth2 : MonoBehaviour
     }
 
     public IEnumerator Die(){
-        yield return new WaitForSeconds(1); // TODO: Needs to be replaced with death animation
+        this.animator.SetBool("Dead", true);
+        yield return new WaitForSeconds(1.5f); // TODO: Needs to be replaced with death animation
         Death();
     }
 
