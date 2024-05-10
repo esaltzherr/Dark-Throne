@@ -324,6 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: ElroyScene2
   spawnPointId: 123456789
+  enemyJSON: {fileID: 0}
 --- !u!1 &3124498462947834152
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: ElroyScene2
   spawnPointId: 1
+  enemyJSON: {fileID: 0}
 --- !u!1 &9057409751349672720
 GameObject:
   m_ObjectHideFlags: 0
