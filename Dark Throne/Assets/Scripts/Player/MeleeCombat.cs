@@ -38,6 +38,7 @@ public class MeleeCombat : MonoBehaviour
         findClosestEnemy();
         if(closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
         {
+            this.GetComponent<PlayerInvulnerability>().ExecuteInvulnerability();
             inExecuteAnimation = true;
             closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
             enemyPosition = closestEnemy.transform.position;
