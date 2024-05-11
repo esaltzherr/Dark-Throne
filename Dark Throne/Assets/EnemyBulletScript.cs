@@ -44,6 +44,11 @@ public class EnemyBulletScript : MonoBehaviour
             Debug.Log("Bullet collided with player.");
             Destroy(gameObject);
         }
+        if(other.gameObject.tag == "Ground")
+        {
+            Debug.Log("Bullet collided with ground.");
+            Destroy(gameObject);
+        }
     }
 
     // void OnTriggerEnter2D(Collision2D other)
