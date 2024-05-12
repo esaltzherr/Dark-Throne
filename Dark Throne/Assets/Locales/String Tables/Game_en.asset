@@ -100,6 +100,14 @@ MonoBehaviour:
     m_Localized: Dark Throne
     m_Metadata:
       m_Items: []
+  - m_Id: 23125242885001216
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23125361646718976
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

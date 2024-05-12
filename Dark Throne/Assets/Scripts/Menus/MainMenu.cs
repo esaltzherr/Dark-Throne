@@ -14,10 +14,10 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Start2();
+        StartAsync();
     }
 
-    async void Start2()
+    async void StartAsync()
     {
         await UnityServices.InitializeAsync();
         AnalyticsService.Instance.StartDataCollection();
@@ -58,5 +58,16 @@ public class MainMenu : MonoBehaviour
     public void SetBackButtonFunctionality(GameObject hide, GameObject show)
     {
         
+    }
+
+    public void PlaySFX(AudioSource audioSource)
+    {
+        Debug.Log(audioSource);
+        audioSource.Play();
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
