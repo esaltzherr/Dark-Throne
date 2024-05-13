@@ -76,6 +76,17 @@ public class EnemyHealth : MonoBehaviour
         this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetBool("Executed", true);
+        
+        // save this event, so we can see how many people do it
+        if (AnalyticsManager.Instance != null)
+        {
+            AnalyticsManager.Instance.ExecutedEnemy();
+        }
+        else
+        {
+            Debug.LogError("AnalyticsManager instance not found");
+        }
+
         //add any item drops or effects on execute here
         Destroy(this.gameObject, 3.5f);
 
@@ -83,7 +94,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         //Die if staggered
-        if(isStaggering == true)
+        if (isStaggering == true)
         {
             Die();
         }

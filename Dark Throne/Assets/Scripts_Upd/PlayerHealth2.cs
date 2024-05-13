@@ -43,7 +43,7 @@ public class PlayerHealth2 : MonoBehaviour
 
     public int getCurrentHealth()
     {
-        return currentHealth; 
+        return currentHealth;
     }
     public void ChangeHealth(int num)
     {
@@ -67,7 +67,8 @@ public class PlayerHealth2 : MonoBehaviour
         animator.SetTrigger("Is_Hit");
         IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
         StartCoroutine(invuln);
-        if (currentHealth <= 0){
+        if (currentHealth <= 0)
+        {
             StartCoroutine(Die());
         }
     }
@@ -100,29 +101,43 @@ public class PlayerHealth2 : MonoBehaviour
         // Load the GameOver scene.
         SceneManager.LoadScene(SpawnManager.lastLevelScene);
         Heal(MaxHealth);
-        
-        
+
+
     }
 
-    public IEnumerator Die(){
+    public IEnumerator Die()
+    {
+        if (AnalyticsManager.Instance != null)
+        {
+            AnalyticsManager.Instance.PlayerDeathEvent();
+        }
+        else
+        {
+            Debug.LogError("AnalyticsManager instance not found");
+        }
         this.animator.SetBool("Dead", true);
         this.GetComponent<PlayerMovement>().enabled = false;
         this.GetComponent<PlayerHealth2>().enabled = false;
+
         yield return new WaitForSeconds(1.5f); // TODO: Needs to be replaced with death animation
         Death();
     }
 
 
-    public int getMaxHealth(){
+    public int getMaxHealth()
+    {
         return MaxHealth;
     }
-    public void setMaxHealth(int maxHealth){
+    public void setMaxHealth(int maxHealth)
+    {
         MaxHealth = maxHealth;
     }
-    public int getHealth(){
+    public int getHealth()
+    {
         return currentHealth;
     }
-    public void setHealth(int health){
+    public void setHealth(int health)
+    {
         currentHealth = health;
 
     }

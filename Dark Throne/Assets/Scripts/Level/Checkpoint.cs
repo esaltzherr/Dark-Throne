@@ -10,6 +10,16 @@ public class Checkpoint : MonoBehaviour
         if (other.CompareTag("Player") && !isAcquired)
         {
             Activate();
+
+            if (AnalyticsManager.Instance != null)
+            {
+                AnalyticsManager.Instance.AquiredCheckpoint(id);
+            }
+            else
+            {
+                Debug.LogError("AnalyticsManager instance not found");
+            }
+
             Debug.Log("Checkpoint acquired at: " + transform.position);
             SaveCheckpoint();
         }
