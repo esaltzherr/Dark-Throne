@@ -44,11 +44,6 @@ public class AnalyticsManager : MonoBehaviour
 
     public void OnLevelComplete(string transitionID)
     {
-
-
-
-#if ENABLE_CLOUD_SERVICES_ANALYTICS
-
     
         CustomEvent LevelComplete = new CustomEvent("LevelComplete")
         {
@@ -56,14 +51,6 @@ public class AnalyticsManager : MonoBehaviour
             { "Time", 1000 }
         };
         AnalyticsService.Instance.RecordEvent(LevelComplete);
-
-        // Analytics.CustomEvent("LevelComplete", new Dictionary<string, object>
-        // {
-        //     { "ID", transitionID },
-        //     { "time", 1000 }
-        // });
-        // Debug.Log("CLOUD SERIVES INDEED ON");
-#endif
         Debug.Log("Level complete event attempted to send.");
     }
 
