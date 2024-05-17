@@ -30,16 +30,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/CaveAreaTwo.unity
     guid: 701873a1d7cb1b74c8ea3f1c7671cfdb
   - enabled: 1
-    path: Assets/Scenes/Levels/CaveBeginning.unity
+    path: Assets/Scenes/Levels/BuildLevels/CaveBeginning.unity
     guid: 652a9fb4f9c0b48478b14bde7d7aa2c0
   - enabled: 1
-    path: Assets/Scenes/Levels/CaveLevelDash.unity
+    path: Assets/Scenes/Levels/BuildLevels/CaveLevelDash.unity
     guid: feb63f232d41b034fb3e8e9549f7b5bb
   - enabled: 1
-    path: Assets/Scenes/Levels/CaveAreaTwoP1.unity
+    path: Assets/Scenes/Levels/BuildLevels/CaveAreaTwoP1.unity
     guid: 4803cead9b8f4ab4fb9b86efffd2328e
   - enabled: 1
-    path: Assets/Scenes/Levels/CaveAreaTwoPT2.unity
+    path: Assets/Scenes/Levels/BuildLevels/CaveAreaTwoPT2.unity
     guid: 3003473211ac3b540ab05ecc216f8443
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 7a0d4f6746f1fb64eab4b2b1d9cd5aa3, type: 2}
