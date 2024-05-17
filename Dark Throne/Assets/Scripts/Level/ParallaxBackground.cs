@@ -21,6 +21,6 @@ public class ParallaxBackground : MonoBehaviour
     {
         float dist = (_camera.transform.position.x * paralaxAmount);
 
-        transform.position = new Vector3(_startPos + dist, transform.position.y, transform.position.x);
+        transform.position = new Vector3(_startPos + dist, transform.position.y, transform.position.z);
     }
 }
