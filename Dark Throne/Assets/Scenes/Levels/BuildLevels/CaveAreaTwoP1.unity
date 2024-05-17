@@ -1111,7 +1111,7 @@ GameObject:
   - component: {fileID: 475630557}
   - component: {fileID: 475630556}
   - component: {fileID: 475630555}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Background (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20175,7 +20175,7 @@ GameObject:
   - component: {fileID: 932307251}
   - component: {fileID: 932307250}
   - component: {fileID: 932307249}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Background (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20553,7 +20553,7 @@ GameObject:
   - component: {fileID: 1078158305}
   - component: {fileID: 1078158304}
   - component: {fileID: 1078158303}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Background (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21445,7 +21445,7 @@ GameObject:
   - component: {fileID: 1502292949}
   - component: {fileID: 1502292948}
   - component: {fileID: 1502292947}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Background (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

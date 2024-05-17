@@ -12,7 +12,6 @@ TagManager:
   - Door
   - FinalDoor
   - Indicator
-  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -24,7 +23,7 @@ TagManager:
   - Ground
   - Player
   - 
-  - Background
+  - 
   - 
   - 
   - 
