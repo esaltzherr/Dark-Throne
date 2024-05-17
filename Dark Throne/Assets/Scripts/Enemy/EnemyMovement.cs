@@ -18,8 +18,6 @@ public class EnemyFollow : MonoBehaviour
     //execute animation is by default backwards
     public int executeDirection = -1;
 
-    private float timer = 0;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -114,7 +112,7 @@ public class EnemyFollow : MonoBehaviour
             if (collider.CompareTag("Player"))
             {
                 GameObject player = collider.gameObject;
-                player.GetComponent<PlayerHealth2>().ChangeHealth(-10);
+                player.GetComponent<PlayerHealth2>().ChangeHealth(-1);
             }
         }
     }

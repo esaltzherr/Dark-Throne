@@ -50,7 +50,7 @@ public class MeleeCombat : MonoBehaviour
         findClosestEnemy();
         if(closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
         {
-            this.GetComponent<PlayerHealth2>().Heal(10);
+            this.GetComponent<PlayerHealth2>().Heal(1);
             this.GetComponent<PlayerInvulnerability>().ExecuteInvulnerability();
             inExecuteAnimation = true;
             closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();

@@ -7,13 +7,22 @@ public class PlayerHealth2 : MonoBehaviour
 {
     public static int MaxHealth = 100;
     private int currentHealth = MaxHealth;
-    [SerializeField] private Slider healthSlider;
+    //[SerializeField] private Slider healthSlider;
     [SerializeField] private Animator animator;
+    [SerializeField] private Animator Portrait_animator;
+
+    public static int MaxHearts = 6;
+    public int currentHearts = MaxHearts;
+    public Image[] hearts;
+
+    private bool recentlyHealed = false;
+    private int heartHealed;
+    
 
     private void Start()
     {
 
-        if (healthSlider == null)
+        /*if (healthSlider == null)
         {
             healthSlider = GetComponent<Slider>();
             if (healthSlider == null)
@@ -21,6 +30,7 @@ public class PlayerHealth2 : MonoBehaviour
                 Debug.LogError("Slider component not found on " + gameObject.name + ". Please attach a Slider component.", this);
             }
         }
+        */
         if (animator == null)
         {
             animator = GetComponent<Animator>();
@@ -62,12 +72,14 @@ public class PlayerHealth2 : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        currentHealth -= damageAmount;
-        Debug.Log("Player took " + damageAmount + " damage. Current health: " + currentHealth);
+        currentHearts -= damageAmount;
+        Portrait_animator.SetInteger("Health", currentHearts);
+        Debug.Log("Player took " + damageAmount + " damage. Current health: " + currentHearts);
         animator.SetTrigger("Is_Hit");
+        Portrait_animator.SetTrigger("Portrait_hit");
         IEnumerator invuln = GetComponent<PlayerInvulnerability>().BecomeInvulnerable();
         StartCoroutine(invuln);
-        if (currentHealth <= 0)
+        if (currentHearts <= 0)
         {
             StartCoroutine(Die());
         }
@@ -75,7 +87,17 @@ public class PlayerHealth2 : MonoBehaviour
 
     public void Heal(int healAmount)
     {
-        currentHealth = Mathf.Min(currentHealth + healAmount, MaxHealth);
+        //currentHearts = Mathf.Min(currentHearts + healAmount, MaxHearts);
+        if (currentHearts < MaxHearts)
+        {
+            currentHearts = Mathf.Min(currentHearts + healAmount, MaxHearts);
+            Portrait_animator.SetInteger("Health", currentHearts);
+            Portrait_animator.SetTrigger("Portrait_hit");
+            heartHealed = currentHearts;
+            recentlyHealed = true;
+        }
+        //StartCoroutine(disableHealAnimator(currentHearts));
+
         // Debug.Log("Player healed " + healAmount + " health. Current health: " + currentHealth);
     }
 
@@ -83,7 +105,28 @@ public class PlayerHealth2 : MonoBehaviour
     private void UpdateHealthUI()
     {
         //Debug.Log("Health" + currentHealth + "");
-        healthSlider.value = currentHealth;
+        
+        //healthSlider.value = currentHealth;
+        for (int i = 0; i < MaxHearts; i++)
+        {
+            if(i < currentHearts)
+            {
+                hearts[i].gameObject.SetActive(true);
+                //hearts[i].GetComponent<Animator>().enabled = true
+            }
+            else
+            {
+                hearts[i].gameObject.SetActive(false);
+            }
+        }
+        if (recentlyHealed)
+        {
+            Debug.Log("RecentlyHealed = " + recentlyHealed);
+            hearts[heartHealed-1].GetComponent<Animator>().SetTrigger("Heal");
+            //StartCoroutine(disableHealAnimator(i));
+            recentlyHealed = false;
+        }
+
     }
 
     private void Death()
@@ -100,7 +143,7 @@ public class PlayerHealth2 : MonoBehaviour
 
         // Load the GameOver scene.
         SceneManager.LoadScene(SpawnManager.lastLevelScene);
-        Heal(MaxHealth);
+        Heal(MaxHearts);
 
 
     }
@@ -134,11 +177,17 @@ public class PlayerHealth2 : MonoBehaviour
     }
     public int getHealth()
     {
-        return currentHealth;
+        return currentHearts;
     }
     public void setHealth(int health)
     {
-        currentHealth = health;
+        currentHearts = health;
 
+    }
+
+    IEnumerator disableHealAnimator(int currentHP)
+    {
+        yield return new WaitForSeconds(0.267f);
+        hearts[currentHP].GetComponent<Animator>().enabled = false;
     }
 }
