@@ -14,6 +14,8 @@ public class PlayerWallInteraction : MonoBehaviour
 
     private PlayerMovement playerMovement; // Reference to the PlayerMovement script
     public KeyCode jumpKey = KeyCode.W;
+    public KeyCode jumpKey2 = KeyCode.UpArrow;
+    
 
     void Start()
     {
@@ -80,7 +82,7 @@ public class PlayerWallInteraction : MonoBehaviour
 
     private void WallJump()
     {   
-        if (IsWallSliding && Input.GetKeyDown(jumpKey))
+        if (IsWallSliding && (Input.GetKeyDown(jumpKey) || Input.GetKeyDown(jumpKey2)))
         {
             this.GetComponent<SpriteRenderer>().flipX = false;
             float wallJumpingDirection = playerMovement.isFacingRight ? -1 : 1;
