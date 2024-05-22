@@ -1,15 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Services.Analytics;
 using Unity.Services.Core;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
-public class MainMenu : MonoBehaviour
+public class Utility : MonoBehaviour
 {
 
     public GameObject[] objectsToShow;
+    public AudioMixer audioMixer;
     
     // Start is called before the first frame update
     void Start()
@@ -49,21 +52,15 @@ public class MainMenu : MonoBehaviour
         otherGameObject.SetActive(!otherGameObject.activeSelf);
     }
 
-    // public void HideObject(GameObject gameObject)
-    // {
-    //     gameObject.SetActive(false);
-    //     Debug.Log(gameObject.activeSelf);
-    // }
-
-    public void SetBackButtonFunctionality(GameObject hide, GameObject show)
-    {
-        
-    }
-
     public void PlaySFX(AudioSource audioSource)
     {
         Debug.Log(audioSource);
         audioSource.Play();
+    }
+
+    public void SetMasterVolume(float value)
+    {
+        audioMixer.SetFloat("MasterVol", MathF.Log10(value) * 20);
     }
 
     public void ExitGame()

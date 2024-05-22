@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private bool isPaused = false;
+    public GameObject pauseMenuCanvas;
 
 
     // Update is called once per frame
@@ -30,10 +31,12 @@ public class GameManager : MonoBehaviour
         if (isPaused)
         {
             // Code to display your pause menu
+            pauseMenuCanvas.SetActive(true);
         }
         else
         {
             // Code to hide your pause menu
+            pauseMenuCanvas.SetActive(false);
         }
     }
 

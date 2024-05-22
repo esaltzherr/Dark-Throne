@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
-public class Con : MonoBehaviour
+public class LanguageChanger : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
