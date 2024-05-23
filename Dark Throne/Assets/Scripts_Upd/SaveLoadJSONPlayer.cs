@@ -8,13 +8,14 @@ using System.Reflection; // Add this at the top of your file
 
 public class PlayerData
 {
-    public int maxHealth;
-    public int health;
+    public int maxHearts;
+    public int hearts;
     public Vector3 position;
     public string sceneName;
     // public Vector3 positionOfLastCheckpoint;
     public bool dashAquired;
     public bool doubleJumpAquired;
+    public string ID;
 }
 
 public class SaveLoadJSONPlayer : MonoBehaviour
@@ -25,6 +26,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
     private PlayerPowerUps playerPowerUpsScript;
     private PlayerDash playerDashScript;
     private PlayerHealth2 playerHealthScript;
+    private SpawnManager spawnManagerScript;
 
     public GameObject player; // Assign this in the Unity Editor
 
@@ -79,13 +81,37 @@ public class SaveLoadJSONPlayer : MonoBehaviour
 
 
             useData();
-            usePosition();
+            useCheckpoint();
         }
         else
         {
             Debug.Log("There is no save files to load! (Player)");
         }
     }
+
+    public void Respawn()
+    {
+        if (File.Exists(saveFilePath))
+        {
+            // Gets the data and places it into the format
+            string loadPlayerData = File.ReadAllText(saveFilePath);
+            playerData = JsonUtility.FromJson<PlayerData>(loadPlayerData);
+
+
+            printFile();
+
+
+            useDataFullHealth();
+            useCheckpoint();
+        }
+        else
+        {
+            Debug.Log("There is no save files to load! (Player)");
+        }
+    }
+
+
+
     public void printFile()
     {
         FieldInfo[] fields = typeof(PlayerData).GetFields(BindingFlags.Public | BindingFlags.Instance);
@@ -118,6 +144,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
             playerPowerUpsScript = player.GetComponent<PlayerPowerUps>();
             playerDashScript = player.GetComponent<PlayerDash>();
             playerHealthScript = player.GetComponent<PlayerHealth2>();
+            
         }
         else
         {
@@ -129,24 +156,37 @@ public class SaveLoadJSONPlayer : MonoBehaviour
     {
         playerData.sceneName = SceneManager.GetActiveScene().name;
         playerData.position = player.transform.position;
-        playerData.health = playerHealthScript.getHealth();
-        playerData.maxHealth = playerHealthScript.getMaxHealth();
+        playerData.hearts = playerHealthScript.getHearts();
+        playerData.maxHearts = playerHealthScript.getMaxHearts();
         playerData.dashAquired = playerDashScript.dashGained();
         playerData.doubleJumpAquired = playerPowerUpsScript.doubleJumpGained();
+        playerData.ID = SpawnManager.GetId();
     }
+    
 
     public void useData()
     {
-        playerHealthScript.setMaxHealth(playerData.maxHealth);
-        playerHealthScript.setHealth(playerData.health);
+        playerHealthScript.setMaxHearts(playerData.maxHearts);
+        playerHealthScript.setHearts(playerData.hearts);
         playerDashScript.setDashGained(playerData.dashAquired);
         playerPowerUpsScript.setDoubleJumpGained(playerData.doubleJumpAquired);
+        
     }
-    public void usePosition()
+    public void useDataFullHealth()
     {
-        SpawnManager.SetId("GettingRidOfID");
+        playerHealthScript.setMaxHearts(playerData.maxHearts);
+        playerHealthScript.setHearts(playerData.maxHearts);
+        Debug.Log("GAINGNIGNNGNGNN DASHSHSHHSHSHSH");
+        playerDashScript.setDashGained(playerData.dashAquired);
+        playerPowerUpsScript.setDoubleJumpGained(playerData.doubleJumpAquired);
+        
+    }
+    public void useCheckpoint()
+    {
+        // SpawnManager.SetId("GettingRidOfID");
+        SpawnManager.SetId(playerData.ID);
         SceneManager.LoadScene(playerData.sceneName);
-        player.transform.position = playerData.position;
+        //player.transform.position = playerData.position;
     }
 
     public void teleportToCheckpoint(string id, string sceneName, Vector3 position){

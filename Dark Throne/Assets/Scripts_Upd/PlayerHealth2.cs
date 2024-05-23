@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth2 : MonoBehaviour
 {
-    public static int MaxHealth = 100;
-    private int currentHealth = MaxHealth;
+    // public static int MaxHealth = 100;
+    // private int currentHealth = MaxHealth;
+    // private int healthItemsCollected = 0; // counter for health items collected
     //[SerializeField] private Slider healthSlider;
     [SerializeField] private Animator animator;
     [SerializeField] private Animator Portrait_animator;
@@ -17,7 +18,7 @@ public class PlayerHealth2 : MonoBehaviour
 
     private bool recentlyHealed = false;
     private int heartHealed;
-    
+
 
     private void Start()
     {
@@ -51,9 +52,9 @@ public class PlayerHealth2 : MonoBehaviour
 
     }
 
-    public int getCurrentHealth()
+    public int getCurrentHearts()
     {
-        return currentHealth;
+        return currentHearts;
     }
     public void ChangeHealth(int num)
     {
@@ -105,11 +106,11 @@ public class PlayerHealth2 : MonoBehaviour
     private void UpdateHealthUI()
     {
         //Debug.Log("Health" + currentHealth + "");
-        
+
         //healthSlider.value = currentHealth;
         for (int i = 0; i < MaxHearts; i++)
         {
-            if(i < currentHearts)
+            if (i < currentHearts)
             {
                 hearts[i].gameObject.SetActive(true);
                 //hearts[i].GetComponent<Animator>().enabled = true
@@ -122,7 +123,7 @@ public class PlayerHealth2 : MonoBehaviour
         if (recentlyHealed)
         {
             Debug.Log("RecentlyHealed = " + recentlyHealed);
-            hearts[heartHealed-1].GetComponent<Animator>().SetTrigger("Heal");
+            hearts[heartHealed - 1].GetComponent<Animator>().SetTrigger("Heal");
             //StartCoroutine(disableHealAnimator(i));
             recentlyHealed = false;
         }
@@ -136,15 +137,30 @@ public class PlayerHealth2 : MonoBehaviour
         // Reset the player's health for when they return (optional, depends on your game's design).
 
         // REMOVE AND REPLACE WITH ACTUAL data stuff later
-        PlayerMovement movement = GetComponent<PlayerMovement>();
-        movement.KillPlayer();
+        // PlayerMovement movement = GetComponent<PlayerMovement>();
+        // movement.KillPlayer();
 
+        this.GetComponent<PlayerMovement>().enabled = true;
+        this.GetComponent<PlayerHealth2>().enabled = true;
+        this.animator.SetBool("Dead", false);
 
+        // // Load the GameOver scene.
+        // SceneManager.LoadScene(SpawnManager.lastLevelScene);
 
-        // Load the GameOver scene.
-        SceneManager.LoadScene(SpawnManager.lastLevelScene);
+        // Commented out because it should heal you in SaveScript Resapwn
         Heal(MaxHearts);
 
+        // Find the SaveLoadJSONCheckpoints script in the scene
+        SaveLoadJSONPlayer saveLoadPlayerScript = FindObjectOfType<SaveLoadJSONPlayer>();
+        if (saveLoadPlayerScript != null)
+        {
+
+            saveLoadPlayerScript.Respawn();
+        }
+        else
+        {
+            Debug.LogError("SaveLoadJSONPlayer script not found in the scene!");
+        }
 
     }
 
@@ -167,19 +183,26 @@ public class PlayerHealth2 : MonoBehaviour
     }
 
 
-    public int getMaxHealth()
+    public int getMaxHearts()
     {
-        return MaxHealth;
+        return MaxHearts;
     }
-    public void setMaxHealth(int maxHealth)
+    public void setMaxHearts(int maxHearts)
     {
-        MaxHealth = maxHealth;
+        MaxHearts = maxHearts;
     }
-    public int getHealth()
+    // private void IncreaseMaxHealth(int amount)
+    // {
+    //     MaxHealth += amount; // increase max health
+    //     Heal(amount); // heal the player by the amount increased
+    //     UpdateHealthUI(); // update the health UI
+    // }
+
+    public int getHearts()
     {
         return currentHearts;
     }
-    public void setHealth(int health)
+    public void setHearts(int health)
     {
         currentHearts = health;
 
@@ -190,4 +213,18 @@ public class PlayerHealth2 : MonoBehaviour
         yield return new WaitForSeconds(0.267f);
         hearts[currentHP].GetComponent<Animator>().enabled = false;
     }
+
+
+    // public void CollectHealthItem(int healthBonus)
+    // {
+    //     healthItemsCollected++; // increment health item count
+    //     if (healthItemsCollected % 3 == 0) // check if this is the third item collected
+    //     {
+    //         IncreaseMaxHealth(healthBonus);
+    //     }
+    //     else
+    //     {
+    //         Heal(healthBonus); // heal normally if not the third item
+    //     }
+    // }
 }

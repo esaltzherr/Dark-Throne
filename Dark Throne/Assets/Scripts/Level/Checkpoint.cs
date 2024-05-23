@@ -7,22 +7,30 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !isAcquired)
+        if (other.CompareTag("Player"))
         {
-            Activate();
-
-            if (AnalyticsManager.Instance != null)
+            if (!isAcquired)
             {
-                AnalyticsManager.Instance.AquiredCheckpoint(id);
-            }
-            else
-            {
-                Debug.LogError("AnalyticsManager instance not found");
-            }
+                Activate();
 
-            Debug.Log("Checkpoint acquired at: " + transform.position);
-            SaveCheckpoint();
+                if (AnalyticsManager.Instance != null)
+                {
+                    AnalyticsManager.Instance.AquiredCheckpoint(id);
+                }
+                else
+                {
+                    Debug.LogError("AnalyticsManager instance not found");
+                }
+
+                Debug.Log("Checkpoint acquired at: " + transform.position);
+                SaveCheckpoint();
+            }
+            // Set the recent ID
+            SaveID();
         }
+
+
+
     }
 
     private void SaveCheckpoint()
@@ -33,7 +41,7 @@ public class Checkpoint : MonoBehaviour
         {
             saveLoadScript.SaveGame(transform.position, id);
             saveLoadScript.MakeCheckpointsOnMap();
-            
+
         }
         else
         {
@@ -41,12 +49,26 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
-    public void Activate(){
+    public void Activate()
+    {
         isAcquired = true;
-        
+
     }
 
+    private void SaveID()
+    {
+        // Find the SaveLoadJSONCheckpoints script in the scene
+        SaveLoadJSONPlayer saveLoadPlayerScript = FindObjectOfType<SaveLoadJSONPlayer>();
+        if (saveLoadPlayerScript != null)
+        {
+            SpawnManager.SetId(id);
+            saveLoadPlayerScript.SaveGame();
+        }
+        else
+        {
+            Debug.LogError("SaveLoadJSONPlayer script not found in the scene!");
+        }
+    }
 
-    
 
 }

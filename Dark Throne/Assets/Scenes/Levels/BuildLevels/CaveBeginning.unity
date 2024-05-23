@@ -21449,6 +21449,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6201704937351651368, guid: abfd68aa5e1c1aa45829f2a8831e6b3b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25508,11 +25512,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1816195155599946845, guid: 1886052b766bf8049896f208f82bb508, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -742
+      value: -862.6
       objectReference: {fileID: 0}
     - target: {fileID: 1816195155599946845, guid: 1886052b766bf8049896f208f82bb508, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -551
+      value: -548.9
       objectReference: {fileID: 0}
     - target: {fileID: 4111324199470257100, guid: 1886052b766bf8049896f208f82bb508, type: 3}
       propertyPath: m_IsActive
@@ -25520,7 +25524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6902020999646127489, guid: 1886052b766bf8049896f208f82bb508, type: 3}
       propertyPath: orthographic size
-      value: 69.99691
+      value: 65.90007
       objectReference: {fileID: 0}
     - target: {fileID: 6956685296881267792, guid: 1886052b766bf8049896f208f82bb508, type: 3}
       propertyPath: positionScale
