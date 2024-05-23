@@ -22,6 +22,7 @@ public class GainAbility : MonoBehaviour
                     Debug.LogError("AnalyticsManager instance not found");
                 }
                 dashScript.gainDash();
+                Save();
             }
             else
             {
@@ -30,5 +31,18 @@ public class GainAbility : MonoBehaviour
         }
     }
 
+    private void Save()
+    {
+        // Find the SaveLoadJSONCheckpoints script in the scene
+        SaveLoadJSONPlayer saveLoadPlayerScript = FindObjectOfType<SaveLoadJSONPlayer>();
+        if (saveLoadPlayerScript != null)
+        {
+            saveLoadPlayerScript.SaveGame();
+        }
+        else
+        {
+            Debug.LogError("SaveLoadJSONPlayer script not found in the scene!");
+        }
+    }
 
 }

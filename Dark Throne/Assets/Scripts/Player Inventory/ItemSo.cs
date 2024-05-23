@@ -15,7 +15,7 @@ public class ItemSos : ScriptableObject
     public bool UseItem(){
         if(stateToChange == StatToChange.health){
             PlayerHealth2 playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth2>();
-            if(playerHealth.getCurrentHealth() == 100)
+            if(playerHealth.getCurrentHearts() == playerHealth.getMaxHearts())
             {
                 return false;
             }
