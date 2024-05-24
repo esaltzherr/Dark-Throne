@@ -7,7 +7,7 @@ public class PlayerHealth2 : MonoBehaviour
 {
     // public static int MaxHealth = 100;
     // private int currentHealth = MaxHealth;
-    // private int healthItemsCollected = 0; // counter for health items collected
+    private int healthItemsCollected = 0; // counter for health items collected
     //[SerializeField] private Slider healthSlider;
     [SerializeField] private Animator animator;
     [SerializeField] private Animator Portrait_animator;
@@ -191,12 +191,12 @@ public class PlayerHealth2 : MonoBehaviour
     {
         MaxHearts = maxHearts;
     }
-    // private void IncreaseMaxHealth(int amount)
-    // {
-    //     MaxHealth += amount; // increase max health
-    //     Heal(amount); // heal the player by the amount increased
-    //     UpdateHealthUI(); // update the health UI
-    // }
+    private void IncreaseMaxHealth(int amount)
+    {
+        MaxHearts += amount; // increase max health
+        Heal(amount); // heal the player by the amount increased
+        UpdateHealthUI(); // update the health UI
+    }
 
     public int getHearts()
     {
@@ -215,16 +215,16 @@ public class PlayerHealth2 : MonoBehaviour
     }
 
 
-    // public void CollectHealthItem(int healthBonus)
-    // {
-    //     healthItemsCollected++; // increment health item count
-    //     if (healthItemsCollected % 3 == 0) // check if this is the third item collected
-    //     {
-    //         IncreaseMaxHealth(healthBonus);
-    //     }
-    //     else
-    //     {
-    //         Heal(healthBonus); // heal normally if not the third item
-    //     }
-    // }
+    public void CollectHealthItem(int healthBonus)
+    {
+        healthItemsCollected++; // increment health item count
+        if (healthItemsCollected % 3 == 0) // check if this is the third item collected
+        {
+            IncreaseMaxHealth(healthBonus);
+        }
+        else
+        {
+            Heal(healthBonus); // heal normally if not the third item
+        }
+    }
 }
