@@ -53,7 +53,14 @@ public class MeleeCombat : MonoBehaviour
             this.GetComponent<PlayerHealth2>().Heal(1);
             this.GetComponent<PlayerInvulnerability>().ExecuteInvulnerability();
             inExecuteAnimation = true;
-            closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
+            if (closestEnemy.tag == "FlyingEnemy")
+            {
+                closestEnemy.GetComponent<EnemyHealth>().FlyingExecute();
+            }
+            else
+            {
+                closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
+            }
             enemyPosition = closestEnemy.transform.position;
             this.transform.position = enemyPosition;
             
