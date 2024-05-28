@@ -40,7 +40,7 @@ public class Checkpoint : MonoBehaviour
         if (saveLoadScript != null)
         {
             saveLoadScript.SaveGame(transform.position, id);
-            saveLoadScript.MakeCheckpointsOnMap();
+            // saveLoadScript.MakeCheckpointsOnMap();
 
         }
         else
@@ -53,7 +53,18 @@ public class Checkpoint : MonoBehaviour
     {
         isAcquired = true;
 
+        // Find the child with the CheckpointButton script
+        CheckpointButton checkpointButton = GetComponentInChildren<CheckpointButton>(true);
+        if (checkpointButton != null)
+        {
+            checkpointButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("CheckpointButton script not found in child objects!");
+        }
     }
+
 
     private void SaveID()
     {
@@ -70,5 +81,14 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
+
+    public void useCheckpoint(string name)
+    {
+        Debug.Log("teleporting to checkpoint:" + name);
+
+        Vector3 pos = this.transform.position;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = pos;
+    }
 
 }

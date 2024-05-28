@@ -22,7 +22,7 @@ public class MapCheckpoints : MonoBehaviour
                 Debug.LogError("MapCheckpoints: Failed to find MapDisplay script or mapPanel.");
             }
         }
-    }
+    }   
 
     public void AddCheckpoint(Vector3 worldPosition, string newId)
     {

@@ -142,12 +142,11 @@ public class PlayerHealth2 : MonoBehaviour
 
         this.GetComponent<PlayerMovement>().enabled = true;
         this.GetComponent<PlayerHealth2>().enabled = true;
-        this.animator.SetBool("Dead", false);
+        
 
         // // Load the GameOver scene.
         // SceneManager.LoadScene(SpawnManager.lastLevelScene);
 
-        // Commented out because it should heal you in SaveScript Resapwn
         Heal(MaxHearts);
 
         // Find the SaveLoadJSONCheckpoints script in the scene
@@ -161,7 +160,9 @@ public class PlayerHealth2 : MonoBehaviour
         {
             Debug.LogError("SaveLoadJSONPlayer script not found in the scene!");
         }
-
+        
+        
+        this.animator.SetTrigger("Jumping");
     }
 
     public IEnumerator Die()

@@ -117,7 +117,7 @@ public class SaveLoadJSONCheckpoints : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         LoadGame();
-        MakeCheckpointsOnMap();
+        // MakeCheckpointsOnMap();
     }
 
     public void LoadGame()
@@ -135,15 +135,24 @@ public class SaveLoadJSONCheckpoints : MonoBehaviour
                 Checkpoint checkpointScript = checkpointObject.GetComponent<Checkpoint>();
                 if (checkpointScript != null && !checkpointScript.isAcquired)
                 {
-                    Vector3 checkpointPos = checkpointObject.transform.position;
                     foreach (CheckpointData data in savedCheckpoints)
                     {
-                        if (Vector3.Distance(checkpointPos, data.position) < 0.1f) // Consider a small threshold to account for floating point imprecision
-                        {
+                        if(data.ID == checkpointScript.id){
                             checkpointScript.Activate();
                             break;
                         }
+                        
                     }
+
+                    // Vector3 checkpointPos = checkpointObject.transform.position;
+                    // foreach (CheckpointData data in savedCheckpoints)
+                    // {
+                    //     if (Vector3.Distance(checkpointPos, data.position) < 0.1f) // Consider a small threshold to account for floating point imprecision
+                    //     {
+                    //         checkpointScript.Activate();
+                    //         break;
+                    //     }
+                    // }
                 }
             }
         }
@@ -167,35 +176,35 @@ public class SaveLoadJSONCheckpoints : MonoBehaviour
         }
     }
 
-    public void MakeCheckpointsOnMap()
-    {
-        GetDataFromFile();
+    // public void MakeCheckpointsOnMap()
+    // {
+    //     GetDataFromFile();
 
-        // Find the 'MapCheckpoints' script attached to a GameObject in the scene.
-        MapCheckpoints mapCheckpointsScript = GameObject.FindObjectOfType<MapCheckpoints>();
+    //     // Find the 'MapCheckpoints' script attached to a GameObject in the scene.
+    //     MapCheckpoints mapCheckpointsScript = GameObject.FindObjectOfType<MapCheckpoints>();
 
-        if (mapCheckpointsScript == null)
-        {
-            Debug.LogError("MapCheckpoints script not found in the scene.");
-            return;
-        }
+    //     if (mapCheckpointsScript == null)
+    //     {
+    //         Debug.LogError("MapCheckpoints script not found in the scene.");
+    //         return;
+    //     }
 
-        string sceneName = SceneManager.GetActiveScene().name;
-        if (checkpointData.allScenes.ContainsKey(sceneName))
-        {
-            mapCheckpointsScript.ResetCheckpoints();
-            List<CheckpointData> checkpoints = checkpointData.allScenes[sceneName];
-            foreach (CheckpointData checkpoint in checkpoints)
-            {
-                mapCheckpointsScript.AddCheckpoint(checkpoint.position, checkpoint.ID);
-                
-            }
-        }
-        else
-        {
-            Debug.Log("No checkpoint data available for this scene in the map.");
-        }
-    }
+    //     string sceneName = SceneManager.GetActiveScene().name;
+    //     if (checkpointData.allScenes.ContainsKey(sceneName))
+    //     {
+    //         mapCheckpointsScript.ResetCheckpoints();
+    //         List<CheckpointData> checkpoints = checkpointData.allScenes[sceneName];
+    //         foreach (CheckpointData checkpoint in checkpoints)
+    //         {
+    //             mapCheckpointsScript.AddCheckpoint(checkpoint.position, checkpoint.ID);
+
+    //         }
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("No checkpoint data available for this scene in the map.");
+    //     }
+    // }
 
 
 
