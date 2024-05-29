@@ -107,14 +107,29 @@ public class Npc : MonoBehaviour
 
     private void DisplayNextDialogue()
     {
+        // Check if there's only one dialogue
+        if (dialogues.Length == 1)
+        {
+            // Toggle the visibility of the single dialogue
+            dialogues[0].SetActive(!dialogues[0].activeInHierarchy);
+
+            // Hide the speech bubble if the dialogue is hidden
+            if (!dialogues[0].activeInHierarchy)
+            {
+                speechBubble.SetActive(false);
+            }
+            return;
+        }
+
+        // For multiple dialogues
         bool first = false;
         bool last = false;
-        if (dialogues[currentDialogueIndex].activeInHierarchy == false)
+
+        if (!dialogues[currentDialogueIndex].activeInHierarchy)
         {
             first = true;
             dialogues[currentDialogueIndex].SetActive(true);
         }
-
 
         // Disable the current dialogue
         if (currentDialogueIndex < dialogues.Length)
@@ -122,25 +137,28 @@ public class Npc : MonoBehaviour
             dialogues[currentDialogueIndex].SetActive(false);
         }
 
-        // skip this if its the first dialog so that 
-        if (first == false)
+        // Skip this if it's the first dialog so that 
+        if (!first)
         {
             // Move to the next dialogue
             int before = currentDialogueIndex;
             currentDialogueIndex = (currentDialogueIndex + 1) % dialogues.Length;
-            if(before > currentDialogueIndex){
+            if (before > currentDialogueIndex)
+            {
                 last = true;
             }
         }
 
-        if (last == false){
+        if (!last)
+        {
             // Enable the next dialogue
             if (currentDialogueIndex < dialogues.Length)
             {
                 dialogues[currentDialogueIndex].SetActive(true);
             }
         }
-        else{
+        else
+        {
             if (speechBubble != null)
             {
                 speechBubble.SetActive(false);
@@ -151,4 +169,5 @@ public class Npc : MonoBehaviour
             }
         }
     }
+
 }
