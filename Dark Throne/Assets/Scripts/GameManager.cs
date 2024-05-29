@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+
 public class GameManager : MonoBehaviour
 {
     private bool isPaused = false;
-    public GameObject pauseMenuCanvas;
+    public PauseMenu pauseMenu;
 
 
     // Update is called once per frame
@@ -31,12 +33,12 @@ public class GameManager : MonoBehaviour
         if (isPaused)
         {
             // Code to display your pause menu
-            pauseMenuCanvas.SetActive(true);
+            pauseMenu.Show();
         }
         else
         {
             // Code to hide your pause menu
-            pauseMenuCanvas.SetActive(false);
+            pauseMenu.ResetPauseMenu();
         }
     }
 
