@@ -9,6 +9,8 @@ public class Npc : MonoBehaviour
     private int currentDialogueIndex = 0;
     private GameObject[] dialogues;
     private GameObject interactButton;
+    private NPCIcon npcIcon;
+
 
     private void Start()
     {
@@ -34,7 +36,6 @@ public class Npc : MonoBehaviour
             Debug.LogWarning("SpeechBubble child not found in " + gameObject.name);
         }
 
-
         interactButton = transform.Find("InteractButton").gameObject;
         if (interactButton != null)
         {
@@ -43,6 +44,12 @@ public class Npc : MonoBehaviour
         else
         {
             Debug.LogWarning("InteractButton child not found in " + gameObject.name);
+        }
+
+        npcIcon = GetComponentInChildren<NPCIcon>();
+        if (npcIcon == null)
+        {
+            Debug.LogWarning("NPCIcon script not found in " + gameObject.name);
         }
 
     }
@@ -67,12 +74,6 @@ public class Npc : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            // Enable the speech bubble and show the first dialogue
-            if (speechBubble != null)
-            {
-                // speechBubble.SetActive(true);
-                // DisplayNextDialogue();
-            }
 
             if (interactButton != null)
             {
@@ -87,6 +88,7 @@ public class Npc : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = false;
+
             // Disable the speech bubble and all dialogues
             if (speechBubble != null)
             {
@@ -117,6 +119,13 @@ public class Npc : MonoBehaviour
             if (!dialogues[0].activeInHierarchy)
             {
                 speechBubble.SetActive(false);
+                
+                // Disable the NPC icon once all dialogues are finished
+                if (npcIcon != null)
+                {
+                    npcIcon.Disable();
+                }
+                
             }
             return;
         }
@@ -161,13 +170,18 @@ public class Npc : MonoBehaviour
         {
             if (speechBubble != null)
             {
+                Debug.Log("JKFJID KD: SAJ KD:   sa");
                 speechBubble.SetActive(false);
                 foreach (GameObject dialogue in dialogues)
                 {
                     dialogue.SetActive(false);
                 }
+                // Disable the NPC icon once all dialogues are finished
+                if (npcIcon != null)
+                {
+                    npcIcon.Disable();
+                }
             }
         }
     }
-
 }
