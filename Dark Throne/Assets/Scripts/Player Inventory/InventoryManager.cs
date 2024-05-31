@@ -19,16 +19,16 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q) && menuActivated)
+        if(Input.GetKeyDown(KeyCode.Tab) && menuActivated)
         {
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActivated = false;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Q) && !menuActivated)
+        else if (Input.GetKeyDown(KeyCode.Tab) && !menuActivated)
         {
-            Time.timeScale = 0;
+           //Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;
         }
