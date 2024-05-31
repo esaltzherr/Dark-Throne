@@ -18057,7 +18057,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8d54d77983081448205e7fe3306eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   InventoryMenu: {fileID: 2110530770}
   itemSlot:
   - {fileID: 195025248}
@@ -18070,11 +18069,6 @@ MonoBehaviour:
   itemSOs:
   - {fileID: 11400000, guid: ad6572f496eb30d4e900bd969f488ede, type: 2}
   - {fileID: 11400000, guid: d642b17f803101e44ad0d234764b8500, type: 2}
-=======
-  InventoryMenu: {fileID: 0}
-  itemSlot: []
-  itemSOs: []
->>>>>>> 05e89086037bb36296a8290f893e83e44c61c5d7
 --- !u!114 &253390981
 MonoBehaviour:
   m_ObjectHideFlags: 0
