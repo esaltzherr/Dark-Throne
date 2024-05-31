@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public float moveSpeed = 40f;
+    private float moveSpeed = 40f;
     public float detectionRange = 10f;
     public Transform targetPlayer;
     private Rigidbody2D rb;
@@ -17,8 +17,6 @@ public class EnemyFollow : MonoBehaviour
 
     //execute animation is by default backwards
     public int executeDirection = -1;
-
-    private float timer = 0;
 
     void Start()
     {
@@ -114,7 +112,7 @@ public class EnemyFollow : MonoBehaviour
             if (collider.CompareTag("Player"))
             {
                 GameObject player = collider.gameObject;
-                player.GetComponent<PlayerHealth2>().ChangeHealth(-10);
+                player.GetComponent<PlayerHealth2>().ChangeHealth(-1);
             }
         }
     }

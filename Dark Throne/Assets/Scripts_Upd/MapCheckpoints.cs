@@ -22,7 +22,7 @@ public class MapCheckpoints : MonoBehaviour
                 Debug.LogError("MapCheckpoints: Failed to find MapDisplay script or mapPanel.");
             }
         }
-    }
+    }   
 
     public void AddCheckpoint(Vector3 worldPosition, string newId)
     {
@@ -35,11 +35,11 @@ public class MapCheckpoints : MonoBehaviour
                 return;
             }
         }
-        Debug.Log("W:"+ worldPosition);
-        Debug.Log("S:"+ positionScale);
+        // Debug.Log("W:"+ worldPosition);
+        // Debug.Log("S:"+ positionScale);
         // Apply scaling and offset to the world position to convert it to map coordinates
         Vector3 adjustedPosition = (worldPosition * positionScale) + positionOffset;
-        Debug.Log("A:" + adjustedPosition);
+        // Debug.Log("A:" + adjustedPosition);
 
         // Instantiate the checkpoint at the adjusted position with default rotation
         GameObject newCheckpoint = Instantiate(checkpointPrefab, adjustedPosition, Quaternion.identity, mapPanel.transform);

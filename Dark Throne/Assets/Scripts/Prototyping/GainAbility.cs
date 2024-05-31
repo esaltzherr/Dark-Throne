@@ -13,7 +13,16 @@ public class GainAbility : MonoBehaviour
             // If the dashScript is found on the player, call gainDash.
             if (dashScript != null)
             {
+                if (AnalyticsManager.Instance != null)
+                {
+                    AnalyticsManager.Instance.DashGainEvent();
+                }
+                else
+                {
+                    Debug.LogError("AnalyticsManager instance not found");
+                }
                 dashScript.gainDash();
+                Save();
             }
             else
             {
@@ -22,5 +31,18 @@ public class GainAbility : MonoBehaviour
         }
     }
 
+    private void Save()
+    {
+        // Find the SaveLoadJSONCheckpoints script in the scene
+        SaveLoadJSONPlayer saveLoadPlayerScript = FindObjectOfType<SaveLoadJSONPlayer>();
+        if (saveLoadPlayerScript != null)
+        {
+            saveLoadPlayerScript.SaveGame();
+        }
+        else
+        {
+            Debug.LogError("SaveLoadJSONPlayer script not found in the scene!");
+        }
+    }
 
 }

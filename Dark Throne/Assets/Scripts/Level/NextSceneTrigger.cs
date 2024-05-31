@@ -45,6 +45,7 @@ public class NextSceneTrigger : MonoBehaviour
 
             enemyJSON.SaveGame(); // Call SaveGame on the referenced component
             SpawnManager.SetId(this.spawnPointId);
+            Debug.Log("" + spawnPointId);
             SceneManager.LoadScene(sceneToLoad);
         }
     }

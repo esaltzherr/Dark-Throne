@@ -29,6 +29,7 @@ public class SpawnManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH " + id);
         lastLevelScene = SceneManager.GetActiveScene().name;
 
         // Attempt to find a spawn point with a matching ID.
@@ -43,7 +44,7 @@ public class SpawnManager : MonoBehaviour
                 if (childTransform != null)
                 {
                     targetSpawnPointTransform = childTransform;
-                    // Debug.Log("Found spawn point: " + targetSpawnPointTransform.name);
+                    Debug.Log("Found spawn point: " + targetSpawnPointTransform.name);
                 }
                 else
                 {
@@ -52,6 +53,23 @@ public class SpawnManager : MonoBehaviour
                 break; // Found the matching spawn point
             }
         }
+
+
+
+        // (coulda been done better) Check checkpoints after if its not a doorway
+        if (targetSpawnPointTransform == null){
+            Checkpoint[] checkpoints = FindObjectsOfType<Checkpoint>();
+            foreach (var point in checkpoints)
+            {
+                if (point.id == id)
+                {
+                    targetSpawnPointTransform = point.transform;
+                    break;
+                }
+            }
+        }
+
+
 
         // If a matching spawn point (child) is found, move the player to it.
         if (targetSpawnPointTransform != null)
@@ -76,6 +94,10 @@ public class SpawnManager : MonoBehaviour
     public static void SetId(string newId)
     {
         id = newId;
+    }
+    public static string GetId()
+    {
+        return id;
     }
     // remove soon
     void Update()

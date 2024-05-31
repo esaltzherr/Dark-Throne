@@ -1,0 +1,906 @@
+fileFormatVersion: 2
+guid: c40bebfca5e9ce14b8f1216b0a5239b3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3820
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09df0b46aa2d1741bb1af94cba1e979
+      internalID: 1588139985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3820
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2468392cfa70140b1f0de614876422
+      internalID: -1741823124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3820
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf42ca58db177c489df2fb36ee7d242
+      internalID: 1942291188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3820
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e4b05d67950f242bf5e4df265b1647
+      internalID: -384373519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3820
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efa9401bb755a140bb02a06ce06e610
+      internalID: 673935119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3820
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68bd464ef8fd92e47a75343047725d5d
+      internalID: -824982250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3056
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e863f54a37099514297a406af8143d8c
+      internalID: -605821832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3056
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eceb9d1f0401394bbf072dbc33c64b2
+      internalID: -767421173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3056
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e77573efbe3d2b4199f9c28b434e6fc
+      internalID: 63191476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3056
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d76a08c36db724faa9e79d6687a70e
+      internalID: 1109267697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3056
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c5b4f07d50b8d43aa52453e94f4a5a
+      internalID: -1199565284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3056
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7f79584892d3a4aa9fc7f5c5154ce6
+      internalID: 1654426468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2292
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae73362a9db139488473455c146bf49
+      internalID: -51187079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2292
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0de87ec2be3b04682343f8ecc00671
+      internalID: -1696401469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2292
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec6297fddff2b6469b61778589a8953
+      internalID: 535476858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2292
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ad07b03de84a746ae0a154aa02ac38
+      internalID: 714255309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2292
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a87963355e45745aa02f9516542c25
+      internalID: 21458327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2292
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5002603ea91a1147a97b962f05ed1c1
+      internalID: 1980506643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1528
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c763b23dae879b04d8a0822d6c9cd4a5
+      internalID: 419276993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1528
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4773ad156878ff343aecd46b0adfe919
+      internalID: 1312958885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1528
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1232d98d6c1793d499757bfdafb00631
+      internalID: -1824476540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1528
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42ff36932607ef4c867dae484cf0c58
+      internalID: 1681826548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1528
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2ae4bdb67c4a743b9ff9430d67e6a5
+      internalID: -2145731203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1528
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38a1c597261f034f9ab335c8ea9c495
+      internalID: 1188400024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 764
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d714809e26b4b9a4d8da667cf07db739
+      internalID: 1424893125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 764
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe94af7e774ae04aa62ba1fd0b11f18
+      internalID: -1578581343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 764
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd4ba242f2b37340adc3edcafe542e3
+      internalID: 1861880053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 764
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78babc2c338ef614eb2943f6b6dbc861
+      internalID: 1165754645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 764
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe9c93f29d5e164e9bc4865ca307171
+      internalID: -63473209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 764
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf22eea44a502244a76260f2b5361de
+      internalID: 594863473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582ad6bcdcc5d0d4980e329a97c27d1b
+      internalID: 1298558056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1361e0cbd4deab34a95faee7e0496886
+      internalID: -1433193108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf4243c53f7065448e0efcdeceeb506
+      internalID: -1155395356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7732d9f915af30a4597ed2430c9e51c9
+      internalID: 257350811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749532ab6c548cd4590e83bc09b69d8b
+      internalID: -437402708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball_execute-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 1200
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427697e8e4864f24bbab1e0c5bfb1958
+      internalID: 678587232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Eyeball_execute-Sheet_0: 1588139985
+      Eyeball_execute-Sheet_1: -1741823124
+      Eyeball_execute-Sheet_10: -1199565284
+      Eyeball_execute-Sheet_11: 1654426468
+      Eyeball_execute-Sheet_12: -51187079
+      Eyeball_execute-Sheet_13: -1696401469
+      Eyeball_execute-Sheet_14: 535476858
+      Eyeball_execute-Sheet_15: 714255309
+      Eyeball_execute-Sheet_16: 21458327
+      Eyeball_execute-Sheet_17: 1980506643
+      Eyeball_execute-Sheet_18: 419276993
+      Eyeball_execute-Sheet_19: 1312958885
+      Eyeball_execute-Sheet_2: 1942291188
+      Eyeball_execute-Sheet_20: -1824476540
+      Eyeball_execute-Sheet_21: 1681826548
+      Eyeball_execute-Sheet_22: -2145731203
+      Eyeball_execute-Sheet_23: 1188400024
+      Eyeball_execute-Sheet_24: 1424893125
+      Eyeball_execute-Sheet_25: -1578581343
+      Eyeball_execute-Sheet_26: 1861880053
+      Eyeball_execute-Sheet_27: 1165754645
+      Eyeball_execute-Sheet_28: -63473209
+      Eyeball_execute-Sheet_29: 594863473
+      Eyeball_execute-Sheet_3: -384373519
+      Eyeball_execute-Sheet_30: 1298558056
+      Eyeball_execute-Sheet_31: -1433193108
+      Eyeball_execute-Sheet_32: -1155395356
+      Eyeball_execute-Sheet_33: 257350811
+      Eyeball_execute-Sheet_34: -437402708
+      Eyeball_execute-Sheet_35: 678587232
+      Eyeball_execute-Sheet_4: 673935119
+      Eyeball_execute-Sheet_5: -824982250
+      Eyeball_execute-Sheet_6: -605821832
+      Eyeball_execute-Sheet_7: -767421173
+      Eyeball_execute-Sheet_8: 63191476
+      Eyeball_execute-Sheet_9: 1109267697
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

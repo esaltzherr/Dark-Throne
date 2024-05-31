@@ -5,16 +5,16 @@ using UnityEngine;
 public class HealthCollectible : MonoBehaviour
 {
     [SerializeField]
-    private int healthBonus = 10; // value of health increase
+    private int healthBonus = 1; // value of health increase
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            PlayerHealth2 maxHearts = collision.gameObject.GetComponent<PlayerHealth2>();
+            if (maxHearts != null)
             {
-                playerHealth.CollectHealthItem(healthBonus); // manage health item collection
+                maxHearts.CollectHealthItem(healthBonus); // manage health item collection
                 Destroy(gameObject); // destroy collectable
             }
         }

@@ -40,7 +40,7 @@ public class EnemyBulletScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerHealth2>().TakeDamage(10);
+            other.gameObject.GetComponent<PlayerHealth2>().ChangeHealth(-1);
             Debug.Log("Bullet collided with player.");
             Destroy(gameObject);
         }

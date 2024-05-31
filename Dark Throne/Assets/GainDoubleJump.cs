@@ -22,6 +22,21 @@ public class GainDoubleJump : MonoBehaviour
             {
                 Debug.LogError("PlayerD_jump component not found on " + other.gameObject.name);
             }
+            Save();
+        }
+    }
+
+    private void Save()
+    {
+        // Find the SaveLoadJSONCheckpoints script in the scene
+        SaveLoadJSONPlayer saveLoadPlayerScript = FindObjectOfType<SaveLoadJSONPlayer>();
+        if (saveLoadPlayerScript != null)
+        {
+            saveLoadPlayerScript.SaveGame();
+        }
+        else
+        {
+            Debug.LogError("SaveLoadJSONPlayer script not found in the scene!");
         }
     }
 }
