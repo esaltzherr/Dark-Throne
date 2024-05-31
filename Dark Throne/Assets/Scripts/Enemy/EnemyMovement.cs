@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public float moveSpeed = 40f;
+    private float moveSpeed = 40f;
     public float detectionRange = 10f;
     public Transform targetPlayer;
     private Rigidbody2D rb;

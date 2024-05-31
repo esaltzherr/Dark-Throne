@@ -10,10 +10,10 @@ public class MeleeCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayer;
     public int attackDamage = 40;
-    public float attackRate = 2f;
+    private float attackRate = 2f;
     float nextAttackTime = 0f;
     public float detectionRange = 4f;
-    public float swipeAttackCD = 1f;
+    private float swipeAttackCD = 1f;
 
     public bool CanAttack = true;
     public GameObject indicatorprefab;
@@ -43,7 +43,7 @@ public class MeleeCombat : MonoBehaviour
             {
                 Swipe();
                 nextAttackTime = Time.time + 1f / swipeAttackCD;
-                nextSwipeTime = Time.time + 6f / swipeAttackCD;
+                nextSwipeTime = Time.time + 2f / swipeAttackCD;
 
             }
         }
