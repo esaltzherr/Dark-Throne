@@ -17944,6 +17944,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8d54d77983081448205e7fe3306eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InventoryMenu: {fileID: 0}
+  itemSlot: []
+  itemSOs: []
 --- !u!114 &253390981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22892,6 +22895,10 @@ PrefabInstance:
     - target: {fileID: 3227482613086510690, guid: 3c172e640c01d744d89ca3b369ac74ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026216573074964595, guid: 3c172e640c01d744d89ca3b369ac74ea, type: 3}
+      propertyPath: m_GravityScale
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6284892789624692542, guid: 3c172e640c01d744d89ca3b369ac74ea, type: 3}
       propertyPath: m_Name
