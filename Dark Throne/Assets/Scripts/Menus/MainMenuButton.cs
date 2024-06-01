@@ -24,12 +24,12 @@ public class MainMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        MoveRight();
+        // MoveRight();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        MoveLeft();
+        // MoveLeft();
     }
 
     public void MoveRight()

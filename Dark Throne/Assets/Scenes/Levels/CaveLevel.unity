@@ -362,7 +362,7 @@ RectTransform:
   m_Father: {fileID: 1297649531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1688,8 +1688,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Con, Assembly-CSharp
+      - m_Target: {fileID: 1849250488}
+        m_TargetAssemblyTypeName: LanguageChanger, Assembly-CSharp
         m_MethodName: ChangLang
         m_Mode: 3
         m_Arguments:
@@ -2886,16 +2886,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1077013999}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1849250486}
+        m_TargetAssemblyTypeName: Utility, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &703961949
@@ -91977,7 +91977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1077014000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92459,8 +92459,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Con, Assembly-CSharp
+      - m_Target: {fileID: 1849250488}
+        m_TargetAssemblyTypeName: LanguageChanger, Assembly-CSharp
         m_MethodName: ChangLang
         m_Mode: 3
         m_Arguments:
@@ -93104,6 +93104,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2021631685}
     m_Modifications:
+    - target: {fileID: 5071916693619250367, guid: ec52a686b2bf42d488dc42974278b24a, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 30243290615992320
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071916693619250367, guid: ec52a686b2bf42d488dc42974278b24a, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:6ccc42f47ddbdc94abfc502a6f4f3641
+      objectReference: {fileID: 0}
     - target: {fileID: 6242068055140841598, guid: ec52a686b2bf42d488dc42974278b24a, type: 3}
       propertyPath: m_text
       value: Master Volume
@@ -93162,7 +93170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8081767177018892803, guid: ec52a686b2bf42d488dc42974278b24a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 245
+      value: 512.29
       objectReference: {fileID: 0}
     - target: {fileID: 8081767177018892803, guid: ec52a686b2bf42d488dc42974278b24a, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -94636,8 +94644,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Paused
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9634c94fda551124db4ffb8117d8edde, type: 2}
-  m_sharedMaterial: {fileID: -6623747807993897299, guid: 9634c94fda551124db4ffb8117d8edde, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -94951,7 +94959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -864, y: 481.49}
+  m_AnchoredPosition: {x: -825, y: 459}
   m_SizeDelta: {x: 140, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610118621
@@ -95128,7 +95136,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -95311,8 +95319,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Con, Assembly-CSharp
+      - m_Target: {fileID: 1849250488}
+        m_TargetAssemblyTypeName: LanguageChanger, Assembly-CSharp
         m_MethodName: ChangLang
         m_Mode: 3
         m_Arguments:
@@ -95515,8 +95523,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1422273188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -95954,6 +95962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1849250487}
   - component: {fileID: 1849250486}
+  - component: {fileID: 1849250488}
   m_Layer: 0
   m_Name: Scene Scripts
   m_TagString: Untagged
@@ -95990,6 +95999,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1849250488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849250485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3df01ee9d4c7743849cb786ba5f4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1858060231 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2994737208894546460, guid: 5d7f693e406e7ad4b8e379dfbd11124e, type: 3}
@@ -96150,7 +96171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2021631685
 Transform:
   m_ObjectHideFlags: 0
@@ -96402,6 +96423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6f30ecea8afbf4da21ba9ee77f7387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _camera: {fileID: 0}
+  paralaxAmount: 0
 --- !u!212 &2076175013
 SpriteRenderer:
   m_ObjectHideFlags: 0

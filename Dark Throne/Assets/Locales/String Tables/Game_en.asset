@@ -108,6 +108,14 @@ MonoBehaviour:
     m_Localized: Exit
     m_Metadata:
       m_Items: []
+  - m_Id: 30241978297962496
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30243290615992320
+    m_Localized: Master Volume
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
