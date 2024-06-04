@@ -13,7 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
 
     // Add a jump key field to customize the jump input in the inspector
-    public KeyCode jumpKey = KeyCode.Space;
+    private KeyCode jumpKey = KeyCode.Space;
+    private KeyCode jumpKey2 = KeyCode.W;
+    private KeyCode jumpKey3 = KeyCode.UpArrow;
     public PlayerPowerUps playerPowerUps;
 
 
@@ -98,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        if (Input.GetKeyDown(jumpKey) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(jumpKey) || Input.GetKeyDown(jumpKey2) || Input.GetKeyDown(jumpKey3))
         {
             if (!GetComponent<PlayerWallInteraction>().IsWallJumping)
             {

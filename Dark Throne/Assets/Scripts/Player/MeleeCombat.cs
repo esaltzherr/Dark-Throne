@@ -24,12 +24,12 @@ public class MeleeCombat : MonoBehaviour
 
     private Vector2 enemyPosition;
 
-    public KeyCode executeKey = KeyCode.F;
+    private KeyCode executeKey = KeyCode.F;
 
     private float nextSwipeTime = 0f;
 
 
-    public KeyCode attackOneKey = KeyCode.Mouse0; // Left mouse button
+    private KeyCode attackOneKey = KeyCode.Mouse0; // Left mouse button
     private KeyCode attackTwoKey = KeyCode.Mouse1; // Right mouse button
 
 
