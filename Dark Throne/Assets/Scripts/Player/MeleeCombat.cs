@@ -29,17 +29,22 @@ public class MeleeCombat : MonoBehaviour
     private float nextSwipeTime = 0f;
 
 
+    public KeyCode attackOneKey = KeyCode.Mouse0; // Left mouse button
+    private KeyCode attackTwoKey = KeyCode.Mouse1; // Right mouse button
+
+
 
     // Update is called once per frame 
     void Update()
     {
-        if(Time.time >= nextAttackTime){
-            if (Input.GetKeyDown(KeyCode.Space))
+        if (Time.time >= nextAttackTime)
+        {
+            if (Input.GetKeyDown(attackOneKey))
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
-            if (Input.GetKeyDown(KeyCode.P) && CanAttack && (Time.time >= nextSwipeTime))
+            if (Input.GetKeyDown(attackTwoKey) && CanAttack && (Time.time >= nextSwipeTime))
             {
                 Swipe();
                 nextAttackTime = Time.time + 1f / swipeAttackCD;
@@ -59,7 +64,7 @@ public class MeleeCombat : MonoBehaviour
         }
         */
         findClosestEnemy();
-        if(closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
+        if (closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
         {
             this.GetComponent<PlayerHealth2>().Heal(1);
             this.GetComponent<PlayerInvulnerability>().ExecuteInvulnerability();
@@ -74,14 +79,14 @@ public class MeleeCombat : MonoBehaviour
             }
             enemyPosition = closestEnemy.transform.position;
             this.transform.position = enemyPosition;
-            
+
             this.GetComponent<PlayerMovement>().enabled = false;
             this.GetComponent<PlayerDash>().enabled = false;
             this.GetComponent<SpriteRenderer>().enabled = false;
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             StartCoroutine(enableMovement());
-            
+
         }
     }
 
@@ -134,7 +139,7 @@ public class MeleeCombat : MonoBehaviour
             }
         }
     }
-  
+
 
     void Attack()
     {
@@ -183,7 +188,7 @@ public class MeleeCombat : MonoBehaviour
     }
     private void OnDrawGizmosSelected()
     {
-        if(hitBox == null)
+        if (hitBox == null)
         {
             return;
         }
@@ -200,7 +205,7 @@ public class MeleeCombat : MonoBehaviour
     {
 
         yield return new WaitForSeconds(3.5f);
-        
+
         this.GetComponent<PlayerMovement>().enabled = true;
         this.GetComponent<PlayerDash>().enabled = true;
         this.GetComponent<SpriteRenderer>().enabled = true;
@@ -210,7 +215,7 @@ public class MeleeCombat : MonoBehaviour
 
         inExecuteAnimation = false;
     }
-    
+
     IEnumerator stabCD()
     {
         yield return new WaitForSeconds(0.5f);

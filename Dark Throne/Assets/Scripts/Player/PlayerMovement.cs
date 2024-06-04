@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
 
     // Add a jump key field to customize the jump input in the inspector
-    public KeyCode jumpKey = KeyCode.W;
+    public KeyCode jumpKey = KeyCode.Space;
     public PlayerPowerUps playerPowerUps;
 
 

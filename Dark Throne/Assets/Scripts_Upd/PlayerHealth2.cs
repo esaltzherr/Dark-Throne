@@ -84,6 +84,7 @@ public class PlayerHealth2 : MonoBehaviour
         {
             StartCoroutine(Die());
         }
+        UpdateHealthUI();
     }
 
     public void Heal(int healAmount)
