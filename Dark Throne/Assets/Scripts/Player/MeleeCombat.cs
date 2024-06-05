@@ -73,6 +73,10 @@ public class MeleeCombat : MonoBehaviour
             {
                 closestEnemy.GetComponent<EnemyHealth>().FlyingExecute();
             }
+            else if (closestEnemy.tag == "RangedEnemy")
+            {
+                closestEnemy.GetComponent<EnemyHealth>().RangedExecute();
+            }
             else
             {
                 closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
@@ -85,7 +89,14 @@ public class MeleeCombat : MonoBehaviour
             this.GetComponent<SpriteRenderer>().enabled = false;
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            StartCoroutine(enableMovement());
+            if (closestEnemy.tag != "RangedEnemy")
+            {
+                StartCoroutine(enableMovement());
+            }
+            else
+            {
+                StartCoroutine(enableRanged());
+            }
 
         }
     }
@@ -205,6 +216,21 @@ public class MeleeCombat : MonoBehaviour
     {
 
         yield return new WaitForSeconds(3.5f);
+
+        this.GetComponent<PlayerMovement>().enabled = true;
+        this.GetComponent<PlayerDash>().enabled = true;
+        this.GetComponent<SpriteRenderer>().enabled = true;
+        this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        inExecuteAnimation = false;
+    }
+
+    public IEnumerator enableRanged()
+    {
+
+        yield return new WaitForSeconds(1f);
 
         this.GetComponent<PlayerMovement>().enabled = true;
         this.GetComponent<PlayerDash>().enabled = true;
