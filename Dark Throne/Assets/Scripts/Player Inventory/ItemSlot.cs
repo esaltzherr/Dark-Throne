@@ -13,6 +13,7 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler
     public int quantity;
     public Sprite itemSprite;
     public bool isFull;
+    public string itemDescription;
 
     [SerializeField]
     private int maxNumberOfItems;
@@ -20,6 +21,10 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler
     //Item SLOT//
     [SerializeField]
     private TMP_Text quantityText;
+
+    //Item Description SLOT//
+    public TMP_Text ItemDescriptionNameText;
+    public TMP_Text ItemDescriptionText;
 
     [SerializeField]
     private Image itemImage;
@@ -34,7 +39,7 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler
         inventoryManager = GameObject.Find("inventory_canvas").GetComponent<InventoryManager>();
     }
 
-    public int AddItem(string itemName, int quantity, Sprite itemSprite)
+    public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         if(isFull){
             return quantity;
@@ -42,6 +47,9 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler
 
         //update the name
         this.itemName = itemName;
+
+        //update the description
+        this.itemDescription = itemDescription;
 
         //update the Image
         this.itemSprite = itemSprite;
@@ -97,6 +105,8 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler
             inventoryManager.DeselectAllSlots();
             selectedShader.SetActive(true);
             thisItemSelected = true;
+            ItemDescriptionNameText.text = itemName;
+            ItemDescriptionText.text = itemDescription;
         }
     }
 

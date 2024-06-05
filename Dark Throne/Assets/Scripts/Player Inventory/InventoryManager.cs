@@ -49,7 +49,7 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    public int AddItem(string itemName, int quantity, Sprite itemSprite)
+    public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
         for (int i = 0; i < itemSlot.Length; i++)
@@ -57,10 +57,10 @@ public class InventoryManager : MonoBehaviour
 
             if (itemSlot[i].isFull == false && itemSlot[i].name == name || itemSlot[i].quantity == 0)
             {
-                int leftOverItems = itemSlot[i].AddItem(itemName, quantity, itemSprite);
+                int leftOverItems = itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
                 if (leftOverItems > 0)
                 {
-                    leftOverItems = AddItem(itemName, leftOverItems, itemSprite);
+                    leftOverItems = AddItem(itemName, leftOverItems, itemSprite, itemDescription);
                     return leftOverItems;
                 }
                 return 0;
