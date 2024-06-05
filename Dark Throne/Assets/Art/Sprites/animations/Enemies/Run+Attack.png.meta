@@ -102,28 +102,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 104
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f305c8c3329e4db1a2f4e5f3233e8d1
-      internalID: 336942103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run+Attack_1
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 0
-        width: 125
+        width: 109
         height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -132,8 +111,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57448fa4810de4cf6a52aecc76719ac1
-      internalID: 1512717104
+      spriteID: 1121717b072b646b68ae143fd9207e81
+      internalID: -1338618594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run+Attack_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 133
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5592b5e72dd4e21921c6df126dd42f
+      internalID: 1775870385
       vertices: []
       indices: 
       edges: []
@@ -144,8 +144,8 @@ TextureImporter:
         serializedVersion: 2
         x: 245
         y: 0
-        width: 131
-        height: 126
+        width: 125
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46c0f3ec5a17446d29843b01bd94bd92
-      internalID: 441873272
+      spriteID: 10fb29913aa6a4863a7341f199d5ad73
+      internalID: -222613400
       vertices: []
       indices: 
       edges: []
@@ -163,10 +163,10 @@ TextureImporter:
       name: Run+Attack_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 379
         y: 0
-        width: 113
-        height: 123
+        width: 121
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1676c25ab19d046789123e789892df9a
-      internalID: 1277819047
+      spriteID: 43cb88e130c6744bd9d8d6374f6e687d
+      internalID: -305956902
       vertices: []
       indices: 
       edges: []
@@ -184,10 +184,10 @@ TextureImporter:
       name: Run+Attack_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 497
         y: 0
-        width: 113
-        height: 126
+        width: 142
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05c617fdaac8f44848780694e9bba8ce
-      internalID: -1089855520
+      spriteID: 334fffeb9537d431ba4e1b97b81f3f67
+      internalID: -1352184398
       vertices: []
       indices: 
       edges: []
@@ -205,10 +205,10 @@ TextureImporter:
       name: Run+Attack_5
       rect:
         serializedVersion: 2
-        x: 630
+        x: 636
         y: 0
-        width: 142
-        height: 126
+        width: 133
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b6c94eb51658471996c9f1dbd4934ab
-      internalID: -1977675470
+      spriteID: 7dc41de19368143378e9aac5e762264c
+      internalID: -1302233545
       vertices: []
       indices: 
       edges: []
@@ -226,9 +226,9 @@ TextureImporter:
       name: Run+Attack_6
       rect:
         serializedVersion: 2
-        x: 772
+        x: 763
         y: 0
-        width: 124
+        width: 131
         height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d04b66928cd04408f872d05c89a5831c
-      internalID: 296313698
+      spriteID: e9dc679465aa94a4c863323184a348f7
+      internalID: 1011905956
       vertices: []
       indices: 
       edges: []
@@ -254,13 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Run+Attack_0: 336942103
-      Run+Attack_1: 1512717104
-      Run+Attack_2: 441873272
-      Run+Attack_3: 1277819047
-      Run+Attack_4: -1089855520
-      Run+Attack_5: -1977675470
-      Run+Attack_6: 296313698
+      Run+Attack_0: -1338618594
+      Run+Attack_1: 1775870385
+      Run+Attack_2: -222613400
+      Run+Attack_3: -305956902
+      Run+Attack_4: -1352184398
+      Run+Attack_5: -1302233545
+      Run+Attack_6: 1011905956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

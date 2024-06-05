@@ -100,10 +100,10 @@ TextureImporter:
       name: Idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 116
-        height: 125
+        width: 117
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4aac9df31bdb4a619f7631df966c916
-      internalID: -1923970350
+      spriteID: e86a8a9d17a0b4397b60aa911149db11
+      internalID: 1877608109
       vertices: []
       indices: 
       edges: []
@@ -121,9 +121,9 @@ TextureImporter:
       name: Idle_1
       rect:
         serializedVersion: 2
-        x: 124
+        x: 126
         y: 0
-        width: 109
+        width: 107
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4f1be73d37184a99846fa16ae0a0441
-      internalID: 1856214025
+      spriteID: 4b886524cc89b49c49ce89bcc524f2f3
+      internalID: -2053093648
       vertices: []
       indices: 
       edges: []
@@ -142,10 +142,10 @@ TextureImporter:
       name: Idle_2
       rect:
         serializedVersion: 2
-        x: 233
+        x: 235
         y: 0
-        width: 126
-        height: 128
+        width: 132
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86efe8c983f5648e395968348d88d151
-      internalID: 481570463
+      spriteID: 61b23f174212f4e269a5eac4fc045417
+      internalID: -86600997
       vertices: []
       indices: 
       edges: []
@@ -165,7 +165,7 @@ TextureImporter:
         serializedVersion: 2
         x: 369
         y: 0
-        width: 127
+        width: 124
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a4b369746e094648bfa4a478860a3dd
-      internalID: -786883717
+      spriteID: 83626840669b644c280bf891c806e187
+      internalID: 1433819736
       vertices: []
       indices: 
       edges: []
@@ -184,10 +184,10 @@ TextureImporter:
       name: Idle_4
       rect:
         serializedVersion: 2
-        x: 506
+        x: 496
         y: 0
-        width: 109
-        height: 122
+        width: 131
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea68ab1a5e5a14ef888fe702cdfe10c0
-      internalID: -58871729
+      spriteID: efb276bed93cf4fe8ac601337121fe17
+      internalID: -2006117700
       vertices: []
       indices: 
       edges: []
@@ -205,10 +205,10 @@ TextureImporter:
       name: Idle_5
       rect:
         serializedVersion: 2
-        x: 627
+        x: 630
         y: 0
-        width: 129
-        height: 122
+        width: 138
+        height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1078c7361c55e4636b15ae213a9ce2d1
-      internalID: -1341003071
+      spriteID: c9d98027dffbe49abb9ba169a07ca2ff
+      internalID: 649578916
       vertices: []
       indices: 
       edges: []
@@ -233,12 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_0: -1923970350
-      Idle_1: 1856214025
-      Idle_2: 481570463
-      Idle_3: -786883717
-      Idle_4: -58871729
-      Idle_5: -1341003071
+      Idle_0: 1877608109
+      Idle_1: -2053093648
+      Idle_2: -86600997
+      Idle_3: 1433819736
+      Idle_4: -2006117700
+      Idle_5: 649578916
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

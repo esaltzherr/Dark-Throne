@@ -6,6 +6,7 @@ public class EnemyShooting : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletPos;
+    public Animator animator;
 
     private float timer = 1;
     private GameObject player;
@@ -28,10 +29,22 @@ public class EnemyShooting : MonoBehaviour
             if(timer > 2)
             {
                 timer = 0;
+                animator.SetTrigger("Attack");
                 shoot();
             }
         }
+        Flip();
     }
+
+    private void Flip()
+    {
+        if (transform.position.x > player.transform.position.x)
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        else
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+    }
+
+
 
     void shoot(){
         Instantiate(bullet, bulletPos.position, Quaternion.identity);

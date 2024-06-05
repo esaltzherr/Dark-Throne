@@ -20,7 +20,7 @@ public class SpikeHazard : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             GameObject player = collision.gameObject;
-            player.GetComponent<PlayerHealth2>().ChangeHealth(-10);
+            player.GetComponent<PlayerHealth2>().ChangeHealth(-3);
         }
     }
 

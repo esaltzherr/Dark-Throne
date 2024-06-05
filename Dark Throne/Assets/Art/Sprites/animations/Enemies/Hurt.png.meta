@@ -102,7 +102,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 114
+        width: 115
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60b4f2ceb15744b1db705423d0b5249e
-      internalID: 2001644913
+      spriteID: 9091e346dfc5844038cd844bc2df1285
+      internalID: 1750044483
       vertices: []
       indices: 
       edges: []
@@ -124,7 +124,7 @@ TextureImporter:
         x: 117
         y: 0
         width: 124
-        height: 126
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 055fee48e3fa948f48e99b87eaf79a1f
-      internalID: -1053620476
+      spriteID: a924bc69c889f414db44d99abf433b8a
+      internalID: -943887548
       vertices: []
       indices: 
       edges: []
@@ -142,9 +142,9 @@ TextureImporter:
       name: Hurt_2
       rect:
         serializedVersion: 2
-        x: 248
+        x: 241
         y: 0
-        width: 120
+        width: 129
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc17cce9812a4461ea18d6441bdb0da8
-      internalID: 1021835568
+      spriteID: 73e2ccc7d6c784958b12be919d771e1d
+      internalID: -1353101689
       vertices: []
       indices: 
       edges: []
@@ -163,9 +163,9 @@ TextureImporter:
       name: Hurt_3
       rect:
         serializedVersion: 2
-        x: 372
+        x: 373
         y: 0
-        width: 129
+        width: 139
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 473e3e7446640482686756d72b4e4667
-      internalID: 1652062716
+      spriteID: 2a43b45e3f4eb44ef9b7daaa5d94cd2f
+      internalID: 1054712823
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hurt_0: 2001644913
-      Hurt_1: -1053620476
-      Hurt_2: 1021835568
-      Hurt_3: 1652062716
+      Hurt_0: 1750044483
+      Hurt_1: -943887548
+      Hurt_2: -1353101689
+      Hurt_3: 1054712823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

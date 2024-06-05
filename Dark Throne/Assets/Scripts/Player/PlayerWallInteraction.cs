@@ -13,9 +13,11 @@ public class PlayerWallInteraction : MonoBehaviour
     private float wallJumpingDuration = 0.4f;
 
     private PlayerMovement playerMovement; // Reference to the PlayerMovement script
-    public KeyCode jumpKey = KeyCode.W;
-    public KeyCode jumpKey2 = KeyCode.UpArrow;
-    
+    private KeyCode jumpKey = KeyCode.W;
+    private KeyCode jumpKey2 = KeyCode.UpArrow;
+    private KeyCode jumpKey3 = KeyCode.Space;
+
+
 
     void Start()
     {
@@ -34,7 +36,8 @@ public class PlayerWallInteraction : MonoBehaviour
             Debug.LogError("PlayerMovement component not found on " + gameObject.name + ". Please attach a PlayerMovement component.", this);
         }
 
-        if (wallCheck == null){
+        if (wallCheck == null)
+        {
             wallCheck = transform.Find("WallCheck");
             if (wallCheck == null)
             {
@@ -81,8 +84,8 @@ public class PlayerWallInteraction : MonoBehaviour
     }
 
     private void WallJump()
-    {   
-        if (IsWallSliding && (Input.GetKeyDown(jumpKey) || Input.GetKeyDown(jumpKey2)))
+    {
+        if (IsWallSliding && (Input.GetKeyDown(jumpKey) || Input.GetKeyDown(jumpKey2) || Input.GetKeyDown(jumpKey3)))
         {
             this.GetComponent<SpriteRenderer>().flipX = false;
             float wallJumpingDirection = playerMovement.isFacingRight ? -1 : 1;
@@ -97,5 +100,5 @@ public class PlayerWallInteraction : MonoBehaviour
     {
         IsWallJumping = false;
     }
-    
+
 }

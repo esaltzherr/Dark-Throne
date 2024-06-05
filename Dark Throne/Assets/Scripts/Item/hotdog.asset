@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: hotdog
   stateToChange: 1
-  amountToChangeStat: 10
+  amountToChangeStat: 2
   attributeToChange: 0
   amountToChangeAttribute: 0

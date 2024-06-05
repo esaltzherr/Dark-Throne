@@ -13,6 +13,7 @@ TagManager:
   - FinalDoor
   - Indicator
   - Checkpoint
+  - RangedEnemy
   layers:
   - Default
   - TransparentFX
