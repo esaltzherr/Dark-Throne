@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6242068055140841598}
   - component: {fileID: 5071916693619250367}
   - component: {fileID: 6202913758967109255}
+  - component: {fileID: 2220668038235779616}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -173,6 +174,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2220668038235779616}
+        m_TargetAssemblyTypeName: MenuText, Assembly-CSharp
+        m_MethodName: UpdateFont
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   references:
     version: 2
     RefIds: []
@@ -220,6 +233,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2220668038235779616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891753419102406371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd79f03fba1e639458355a2731db0659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizeStringEvent: {fileID: 5071916693619250367}
+  tmpFontAssets:
+  - {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 11400000, guid: ea484cdb07a357c48a6d8fc3ab047758, type: 2}
+  - {fileID: 11400000, guid: 2b60454beed3067478d48f4a976c293e, type: 2}
 --- !u!1 &7649326531394789014
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +259,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6966633446642776261}
-  - component: {fileID: 6062483318377736930}
   m_Layer: 0
   m_Name: Menu Text Button
   m_TagString: Untagged
@@ -253,15 +282,3 @@ Transform:
   - {fileID: 8081767177018892803}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6062483318377736930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7649326531394789014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd79f03fba1e639458355a2731db0659, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

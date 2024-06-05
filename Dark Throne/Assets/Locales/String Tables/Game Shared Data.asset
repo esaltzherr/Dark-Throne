@@ -107,6 +107,10 @@ MonoBehaviour:
     m_Key: menu master volume
     m_Metadata:
       m_Items: []
+  - m_Id: 31778784332042240
+    m_Key: test
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
