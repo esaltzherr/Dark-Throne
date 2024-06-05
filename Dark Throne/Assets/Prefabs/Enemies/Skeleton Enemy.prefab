@@ -196,7 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2f5f2913e6144259c122c89efca26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
   detectionRange: 10
   targetPlayer: {fileID: 7608148993344696429, guid: 3948056275c833846a62229857bd879a, type: 3}
   animator: {fileID: 1312469581504702770}
