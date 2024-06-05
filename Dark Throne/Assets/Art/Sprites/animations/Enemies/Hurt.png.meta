@@ -102,10 +102,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 115
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +121,12 @@ TextureImporter:
       name: Hurt_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 117
         y: 0
-        width: 128
+        width: 124
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +142,12 @@ TextureImporter:
       name: Hurt_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 241
         y: 0
-        width: 128
+        width: 129
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,9 +163,9 @@ TextureImporter:
       name: Hurt_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 373
         y: 0
-        width: 128
+        width: 139
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
