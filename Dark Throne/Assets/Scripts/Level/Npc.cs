@@ -10,6 +10,9 @@ public class Npc : MonoBehaviour
     private GameObject[] dialogues;
     private GameObject interactButton;
     private NPCIcon npcIcon;
+    public bool abilityGiver = false;
+    public GameObject powerup;
+    private float unitsInFront = 3;
 
 
     private void Start()
@@ -119,13 +122,13 @@ public class Npc : MonoBehaviour
             if (!dialogues[0].activeInHierarchy)
             {
                 speechBubble.SetActive(false);
-                
+
                 // Disable the NPC icon once all dialogues are finished
                 if (npcIcon != null)
                 {
                     npcIcon.Disable();
                 }
-                
+
             }
             return;
         }
@@ -181,7 +184,26 @@ public class Npc : MonoBehaviour
                 {
                     npcIcon.Disable();
                 }
+                if (powerup != null && abilityGiver)
+                {
+                    SpawnPowerup();
+                }
             }
         }
     }
+
+
+    public void SpawnPowerup()
+    {
+
+        float direction = transform.localScale.x > 0 ? 1 : -1;
+
+        // Calculate the spawn position
+        Vector3 spawnPosition = transform.position + -transform.right * unitsInFront * direction;
+
+        // Instantiate the power-up at the calculated position
+        Instantiate(powerup, spawnPosition, Quaternion.identity);
+        abilityGiver = false;
+    }
+
 }
