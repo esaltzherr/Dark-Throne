@@ -306,7 +306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3819934778967197100, guid: 87a11dfbf924c9f4ca9c5e6a6dc056ea, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: 'Player '
       objectReference: {fileID: 0}
     - target: {fileID: 6338801720740438805, guid: 87a11dfbf924c9f4ca9c5e6a6dc056ea, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -119047,4 +119047,4 @@ SceneRoots:
   - {fileID: 424733394}
   - {fileID: 308521156}
   - {fileID: 1621305393}
-  - {fileID: 847172175}
+  - {fileID: 117065971}
