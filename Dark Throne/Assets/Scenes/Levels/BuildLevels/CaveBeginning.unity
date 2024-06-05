@@ -19517,9 +19517,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1174175373422869746, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: powerup
+      value: 
+      objectReference: {fileID: 8595580219502664332, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+    - target: {fileID: 1174175373422869746, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: abilityGiver
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4957065830908625925, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_Name
-      value: NPC (Reguide to Dash) (4)
+      value: NPC (Give the Dash Ability)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167475408888402526, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5167475408888402526, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_Sprite
@@ -23430,7 +23442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8543522122514431505, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8543522122514431505, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23462,17 +23474,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8628741510834344767, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.72
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 8628741510834344767, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.72
+      value: 2.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+--- !u!1001 &4894267962073304980
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7955213
+      objectReference: {fileID: 0}
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -60.93466
+      objectReference: {fileID: 0}
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672675885860369782, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129917642523532879, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: eee9249b8ca95c944b3d06fd4ebc709d, type: 2}
+    - target: {fileID: 8595580219502664332, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
+      propertyPath: m_Name
+      value: DashPowerup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4467143b262f8704f867c4f89287c0bb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -23540,3 +23613,4 @@ SceneRoots:
   - {fileID: 2005375314}
   - {fileID: 960152904}
   - {fileID: 1091246222}
+  - {fileID: 4894267962073304980}
