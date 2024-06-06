@@ -4,6 +4,7 @@ public class Checkpoint : MonoBehaviour
 {
     public bool isAcquired = false;
     public string id = "123456789";
+    public Animator animator;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,6 +25,7 @@ public class Checkpoint : MonoBehaviour
 
                 Debug.Log("Checkpoint acquired at: " + transform.position);
                 SaveCheckpoint();
+
             }
             // Set the recent ID
             SaveID();
@@ -51,6 +53,7 @@ public class Checkpoint : MonoBehaviour
 
     public void Activate()
     {
+        animator.enabled = true;
         isAcquired = true;
 
         // Find the child with the CheckpointButton script

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b60c2ca26847e648884ef611d4bd1ce
+guid: 7f1e1e11402f2914284845ac865f20d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPC_Mushroom_0
+      name: NPC_Robot_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa0bc66c36f1f1a4d91ece9393e395b7
-      internalID: -2061888855
+      spriteID: ca77d089465a2144081e8a3d426813fb
+      internalID: -1241871556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC_Mushroom_1
+      name: NPC_Robot_1
       rect:
         serializedVersion: 2
         x: 72
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d59a1d034d49ef428aa26bfa4a7a19a
-      internalID: -1455047391
+      spriteID: 8337527e8a027ad4fa4097b8225e7b32
+      internalID: -939868367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC_Mushroom_2
+      name: NPC_Robot_2
       rect:
         serializedVersion: 2
         x: 144
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0edff43b43478142a132b521a01d750
-      internalID: -1715869825
+      spriteID: 0af18f4ea9bcce041b15ad945aeea3eb
+      internalID: 2005550530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC_Mushroom_3
+      name: NPC_Robot_3
       rect:
         serializedVersion: 2
         x: 216
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3d560e09d66ebc40b453c920b63c9f2
-      internalID: 1293962403
+      spriteID: 02cfbcdf6e7cd7443b2853b6f7045e85
+      internalID: -1599747354
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NPC_Mushroom_0: -2061888855
-      NPC_Mushroom_1: -1455047391
-      NPC_Mushroom_2: -1715869825
-      NPC_Mushroom_3: 1293962403
+      NPC_Robot_0: -1241871556
+      NPC_Robot_1: -939868367
+      NPC_Robot_2: 2005550530
+      NPC_Robot_3: -1599747354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

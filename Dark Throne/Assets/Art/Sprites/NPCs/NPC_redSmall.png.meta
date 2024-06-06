@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b60c2ca26847e648884ef611d4bd1ce
+guid: 81fd1475d2eb0fd42a4c0e8587db03fb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPC_Mushroom_0
+      name: NPC_redSmall_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 72
-        height: 72
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa0bc66c36f1f1a4d91ece9393e395b7
-      internalID: -2061888855
+      spriteID: 4a522a1557a8dd9418182b4c4ed520d3
+      internalID: -225208744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC_Mushroom_1
+      name: NPC_redSmall_1
       rect:
         serializedVersion: 2
-        x: 72
+        x: 32
         y: 0
-        width: 72
-        height: 72
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d59a1d034d49ef428aa26bfa4a7a19a
-      internalID: -1455047391
+      spriteID: fe9dfeefcb6e24f42a921d055b18bc97
+      internalID: 1690298312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC_Mushroom_2
+      name: NPC_redSmall_2
       rect:
         serializedVersion: 2
-        x: 144
+        x: 64
         y: 0
-        width: 72
-        height: 72
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0edff43b43478142a132b521a01d750
-      internalID: -1715869825
+      spriteID: a987caa0336d5f64fa967dfb45a271e9
+      internalID: 1615301902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC_Mushroom_3
+      name: NPC_redSmall_3
       rect:
         serializedVersion: 2
-        x: 216
+        x: 96
         y: 0
-        width: 72
-        height: 72
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3d560e09d66ebc40b453c920b63c9f2
-      internalID: 1293962403
+      spriteID: 4b1af869745a5c645bc1d176f8ce3d90
+      internalID: -354323707
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NPC_Mushroom_0: -2061888855
-      NPC_Mushroom_1: -1455047391
-      NPC_Mushroom_2: -1715869825
-      NPC_Mushroom_3: 1293962403
+      NPC_redSmall_0: -225208744
+      NPC_redSmall_1: 1690298312
+      NPC_redSmall_2: 1615301902
+      NPC_redSmall_3: -354323707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
