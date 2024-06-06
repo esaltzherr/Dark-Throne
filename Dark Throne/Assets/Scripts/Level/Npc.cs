@@ -62,10 +62,7 @@ public class Npc : MonoBehaviour
         // Check if the player is in range and the 'E' key is pressed
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            if (interactButton != null)
-            {
-                interactButton.SetActive(false);
-            }
+
             speechBubble.SetActive(true);
             DisplayNextDialogue();
         }
@@ -187,6 +184,10 @@ public class Npc : MonoBehaviour
                 if (powerup != null && abilityGiver)
                 {
                     SpawnPowerup();
+                }
+                if (interactButton != null)
+                {
+                    interactButton.SetActive(false);
                 }
             }
         }
