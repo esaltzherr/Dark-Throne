@@ -99,6 +99,18 @@ MonoBehaviour:
     m_Key: menu_exit
     m_Metadata:
       m_Items: []
+  - m_Id: 30241978297962496
+    m_Key: menu credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30243290615992320
+    m_Key: menu master volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31778784332042240
+    m_Key: test
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

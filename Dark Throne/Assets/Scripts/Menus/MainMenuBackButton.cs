@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MainMenuBackButton : MonoBehaviour
 {
-    public GameObject HideMe { get; set; }
-    public GameObject ShowMe { get; set; }
+    public GameObject ObjectToHide { get; set; }
+    public GameObject ObjectToShow { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class MainMenuBackButton : MonoBehaviour
 
     public void GoBack()
     {
-        HideMe.SetActive(false);
-        ShowMe.SetActive(true);
+        ObjectToHide.SetActive(false);
+        ObjectToShow.SetActive(true);
     }
 }
