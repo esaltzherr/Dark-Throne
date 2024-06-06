@@ -290,7 +290,7 @@ public class MeleeCombat : MonoBehaviour
             enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
             Vector2 movePos = this.transform.position - enemy.transform.position;
             enemy.GetComponent<Rigidbody2D>().AddForce(movePos.normalized * -500f, ForceMode2D.Impulse);
-            if (enemy.tag != "FlyingEnemy")
+            if (enemy.tag != "FlyingEnemy" && enemy.tag != "RangedEnemy")
             {
                 enemy.GetComponent<EnemyFollow>().enabled = false;
                 StartCoroutine(enableEnemyMovement(enemy.gameObject));
