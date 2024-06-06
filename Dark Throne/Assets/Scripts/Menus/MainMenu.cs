@@ -63,7 +63,7 @@ public class MainMenu : MonoBehaviour
     public void PlaySFX(AudioSource audioSource)
     {
         Debug.Log(audioSource);
-        audioSource.Play();
+        // audioSource.Play();
     }
 
     public void ExitGame()
