@@ -1607,7 +1607,7 @@ GameObject:
   - component: {fileID: 677319796}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84565,7 +84565,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 677319792}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 75e928d6ab2a33e43b74683b1e33852c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

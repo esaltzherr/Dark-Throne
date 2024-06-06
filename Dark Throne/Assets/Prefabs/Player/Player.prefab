@@ -901,8 +901,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.003608942, y: 0.012648463}
-  m_Size: {x: 0.14989488, y: 0.3195023}
+  m_Offset: {x: -0.003608942, y: -0.0008301735}
+  m_Size: {x: 0.14989488, y: 0.29254502}
   m_Direction: 0
 --- !u!96 &2118677192911604150
 TrailRenderer:
@@ -1036,11 +1036,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackDamage: 40
-  attackRate: 2
   detectionRange: 4
+  CanAttack: 1
   indicatorprefab: {fileID: 764510978100320412, guid: 6d499342ae147d846b71ad1fc08f5923, type: 3}
   inExecuteAnimation: 0
-  executeKey: 102
 --- !u!114 &4279511149665514516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,7 +1112,6 @@ MonoBehaviour:
   speed: 8
   jumpingPower: 15
   isFacingRight: 1
-  jumpKey: 119
   playerPowerUps: {fileID: 0}
 --- !u!114 &1077483425871786168
 MonoBehaviour:
@@ -1129,8 +1127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   wallCheck: {fileID: 0}
-  jumpKey: 119
-  jumpKey2: 273
 --- !u!114 &7170992119827856244
 MonoBehaviour:
   m_ObjectHideFlags: 0
