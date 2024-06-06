@@ -183,6 +183,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
     }
     public void useCheckpoint()
     {
+        Debug.Log("TELEOPRTING TO id" + playerData.ID);
         // SpawnManager.SetId("GettingRidOfID");
         SpawnManager.SetId(playerData.ID);
         SceneManager.LoadScene(playerData.sceneName);

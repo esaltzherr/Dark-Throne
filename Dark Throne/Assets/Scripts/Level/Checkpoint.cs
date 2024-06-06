@@ -71,6 +71,7 @@ public class Checkpoint : MonoBehaviour
 
     private void SaveID()
     {
+        Debug.Log("HFJDHFKJDSHL FKK JFDSH FKJDS HFKJSD H" + id);
         // Find the SaveLoadJSONCheckpoints script in the scene
         SaveLoadJSONPlayer saveLoadPlayerScript = FindObjectOfType<SaveLoadJSONPlayer>();
         if (saveLoadPlayerScript != null)
