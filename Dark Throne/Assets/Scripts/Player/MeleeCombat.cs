@@ -30,6 +30,7 @@ public class MeleeCombat : MonoBehaviour
 
 
     private KeyCode attackOneKey = KeyCode.Mouse0; // Left mouse button
+    private KeyCode attackOneKey2 = KeyCode.P; // Left mouse button
     private KeyCode attackTwoKey = KeyCode.Mouse1; // Right mouse button
 
 
@@ -39,7 +40,7 @@ public class MeleeCombat : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(attackOneKey))
+            if (Input.GetKeyDown(attackOneKey) || Input.GetKeyDown(attackOneKey2))
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
