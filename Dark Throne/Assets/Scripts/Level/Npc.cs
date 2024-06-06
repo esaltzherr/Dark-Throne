@@ -170,7 +170,6 @@ public class Npc : MonoBehaviour
         {
             if (speechBubble != null)
             {
-                Debug.Log("JKFJID KD: SAJ KD:   sa");
                 speechBubble.SetActive(false);
                 foreach (GameObject dialogue in dialogues)
                 {
