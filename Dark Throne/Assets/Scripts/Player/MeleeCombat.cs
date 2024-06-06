@@ -116,6 +116,10 @@ public class MeleeCombat : MonoBehaviour
                 closestDistance = distanceToEnemy;
                 closestEnemy = enemy;
             }
+            if(closestEnemy.tag == "Boss")
+            {
+                continue;
+            }
             if (closestEnemy != null && closestEnemy.GetComponent<EnemyHealth>().isStaggering)
             {
                 if (indicatorInstance == null)

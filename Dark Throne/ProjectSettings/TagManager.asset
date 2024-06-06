@@ -14,6 +14,7 @@ TagManager:
   - Indicator
   - Checkpoint
   - RangedEnemy
+  - Boss
   layers:
   - Default
   - TransparentFX
