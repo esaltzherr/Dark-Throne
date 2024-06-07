@@ -27,7 +27,6 @@ public class BossHealthBar : MonoBehaviour
         }
         if (Input.GetKeyDown(SpawnHP))
         {
-            Debug.Log("fuck");
             bossCanvas.gameObject.SetActive(true);
         }
     }
@@ -46,6 +45,7 @@ public class BossHealthBar : MonoBehaviour
     void Die()
     {
         // add boss death logic here
+        bossCanvas.gameObject.SetActive(false);
         Debug.Log("Boss died!");
     }
 }

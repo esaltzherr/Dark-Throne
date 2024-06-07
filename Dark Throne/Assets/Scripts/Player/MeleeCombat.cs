@@ -50,7 +50,7 @@ public class MeleeCombat : MonoBehaviour
             {
                 Swipe();
                 nextAttackTime = Time.time + 1f / swipeAttackCD;
-                nextSwipeTime = Time.time + 2f / swipeAttackCD;
+                nextSwipeTime = Time.time + 1f / swipeAttackCD;
 
             }
         }
@@ -250,7 +250,7 @@ public class MeleeCombat : MonoBehaviour
 
     IEnumerator stabCD()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         CanAttack = true;
     }
     IEnumerator swipeCD()
@@ -269,7 +269,7 @@ public class MeleeCombat : MonoBehaviour
 
     IEnumerator spawnStabHitbox()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.08f);
         Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(hitBox.position, attackRange, enemyLayer);
 
         foreach (Collider2D enemy in enemiesHit)
