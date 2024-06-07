@@ -111772,6 +111772,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5621443916664821002, guid: 47bc0931a1f7a4a449c6d3c20c2731b1, type: 3}
+      propertyPath: m_Size.x
+      value: 36.8556
+      objectReference: {fileID: 0}
+    - target: {fileID: 5621443916664821002, guid: 47bc0931a1f7a4a449c6d3c20c2731b1, type: 3}
+      propertyPath: m_Size.y
+      value: 12.715297
+      objectReference: {fileID: 0}
+    - target: {fileID: 5621443916664821002, guid: 47bc0931a1f7a4a449c6d3c20c2731b1, type: 3}
+      propertyPath: m_Offset.x
+      value: 2.1864548
+      objectReference: {fileID: 0}
+    - target: {fileID: 5621443916664821002, guid: 47bc0931a1f7a4a449c6d3c20c2731b1, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.4607425
+      objectReference: {fileID: 0}
     - target: {fileID: 6174488634691482115, guid: 47bc0931a1f7a4a449c6d3c20c2731b1, type: 3}
       propertyPath: m_Name
       value: Checkpoint (Invisible Start)
@@ -117695,6 +117711,14 @@ PrefabInstance:
     - target: {fileID: 586466501033204642, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 634914131160466789, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058952931256636967, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5651995714336387833, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
       propertyPath: m_Name
