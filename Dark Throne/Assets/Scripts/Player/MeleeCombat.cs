@@ -93,6 +93,19 @@ public class MeleeCombat : MonoBehaviour
             this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             if (closestEnemy.tag != "RangedEnemy")
             {
+                if(closestEnemy.GetComponent<EnemyHealth>().SkelExecute2) 
+                {
+                    StartCoroutine(EnableSkel2());
+                }
+                else if (closestEnemy.GetComponent<EnemyHealth>().FlyingExecute2)
+                {
+                    StartCoroutine(EnableFlying2());
+                }
+                else
+                {
+                    StartCoroutine(enableMovement());
+
+                }
                 StartCoroutine(enableMovement());
             }
             else
@@ -222,6 +235,36 @@ public class MeleeCombat : MonoBehaviour
     {
 
         yield return new WaitForSeconds(3.5f);
+
+        this.GetComponent<PlayerMovement>().enabled = true;
+        this.GetComponent<PlayerDash>().enabled = true;
+        this.GetComponent<SpriteRenderer>().enabled = true;
+        this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        inExecuteAnimation = false;
+    }
+
+    public IEnumerator EnableSkel2()
+    {
+
+        yield return new WaitForSeconds(2.33f);
+
+        this.GetComponent<PlayerMovement>().enabled = true;
+        this.GetComponent<PlayerDash>().enabled = true;
+        this.GetComponent<SpriteRenderer>().enabled = true;
+        this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        inExecuteAnimation = false;
+    }
+
+    public IEnumerator EnableFlying2()
+    {
+
+        yield return new WaitForSeconds(2.5f);
 
         this.GetComponent<PlayerMovement>().enabled = true;
         this.GetComponent<PlayerDash>().enabled = true;
