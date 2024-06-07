@@ -142343,6 +142343,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 66.1631
       objectReference: {fileID: 0}
+    - target: {fileID: 4842351342265068173, guid: 6a89c67466f08ec41a5110e6e0363f3d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842351342265068173, guid: 6a89c67466f08ec41a5110e6e0363f3d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4947246989802789921, guid: 6a89c67466f08ec41a5110e6e0363f3d, type: 3}
       propertyPath: sceneToLoad
       value: CaveBeginning
