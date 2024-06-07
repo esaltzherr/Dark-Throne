@@ -12,6 +12,7 @@ public class FlagBoss : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Player entered");
             Tilemap.SetActive(true);
         }
     }
