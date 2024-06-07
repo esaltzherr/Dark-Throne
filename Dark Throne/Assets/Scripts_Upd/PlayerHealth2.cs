@@ -16,6 +16,9 @@ public class PlayerHealth2 : MonoBehaviour
     public int currentHearts = MaxHearts;
     public Image[] hearts;
 
+    public AudioManager audiomanager;
+
+
     private bool recentlyHealed = false;
     private int heartHealed;
 
@@ -49,6 +52,11 @@ public class PlayerHealth2 : MonoBehaviour
     void Update()
     {
         UpdateHealthUI();
+        //audio
+        if (audiomanager == null)
+        {
+            audiomanager = FindObjectOfType<AudioManager>();
+        }
 
     }
 
@@ -67,6 +75,7 @@ public class PlayerHealth2 : MonoBehaviour
             else if (num < 0)
             {
                 TakeDamage(-num);
+                audiomanager.playerhit();
             }
         }
     }

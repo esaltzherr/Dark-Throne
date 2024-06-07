@@ -7,6 +7,12 @@ public class PlayerDash : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private Animator animator;
 
+    //Audio
+    public AudioManager audiomanager;
+    
+    // private void Awake(){
+    //     audiomanager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    // }
 
     public bool IsDashing { get; private set; }
     private bool dashAquired = false;
@@ -17,6 +23,13 @@ public class PlayerDash : MonoBehaviour
 
     void Start()
     {
+
+        //audio
+        if (audiomanager == null)
+        {
+            audiomanager = FindObjectOfType<AudioManager>();
+        }
+
         if (rb == null)
         {
             rb = GetComponent<Rigidbody2D>();
@@ -51,6 +64,9 @@ public class PlayerDash : MonoBehaviour
         {
 
             StartCoroutine(Dash());
+            
+            // Play dash sound
+            audiomanager.Player_Dash();
         }
         if (Input.GetKeyDown(KeyCode.M)){
             toggleDash();
