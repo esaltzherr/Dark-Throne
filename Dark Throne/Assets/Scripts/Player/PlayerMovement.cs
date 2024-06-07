@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isFacingRight = true;
     private float horizontal;
 
+    public AudioManager audiomanager;
+
     // Add a jump key field to customize the jump input in the inspector
     private KeyCode jumpKey = KeyCode.Space;
     private KeyCode jumpKey2 = KeyCode.W;
@@ -50,8 +52,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-
-
 
         playerPowerUps = GetComponent<PlayerPowerUps>();
         // Ensure Rigidbody2D is assigned
@@ -97,6 +97,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
+        //audio
+        if (audiomanager == null)
+        {
+            audiomanager = FindObjectOfType<AudioManager>();
+        }
+
         horizontal = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
@@ -149,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (collider.CompareTag("Ground"))
             {
+                //audiomanager.playerwalk();
                 return true;
             }
         }

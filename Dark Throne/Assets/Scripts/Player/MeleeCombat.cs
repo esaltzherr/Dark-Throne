@@ -15,6 +15,8 @@ public class MeleeCombat : MonoBehaviour
     public float detectionRange = 4f;
     private float swipeAttackCD = 1f;
 
+    public AudioManager audiomanager;
+
     public bool CanAttack = true;
     public GameObject indicatorprefab;
     private GameObject indicatorInstance;
@@ -39,16 +41,24 @@ public class MeleeCombat : MonoBehaviour
     // Update is called once per frame 
     void Update()
     {
+        //audio
+        if (audiomanager == null)
+        {
+            audiomanager = FindObjectOfType<AudioManager>();
+        }
+
         if (Time.time >= nextAttackTime)
         {
             if (Input.GetKeyDown(attackOneKey) || Input.GetKeyDown(attackOneKey2))
             {
                 Attack();
+                audiomanager.heavyhit();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
             if ((Input.GetKeyDown(attackTwoKey) || Input.GetKeyDown(attackTwoKey2)) && CanAttack && (Time.time >= nextSwipeTime))
             {
                 Swipe();
+                audiomanager.heavyhit2();
                 nextAttackTime = Time.time + 1f / swipeAttackCD;
                 nextSwipeTime = Time.time + 1f / swipeAttackCD;
 
