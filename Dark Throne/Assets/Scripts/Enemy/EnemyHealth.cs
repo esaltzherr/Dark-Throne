@@ -15,6 +15,9 @@ public class EnemyHealth : MonoBehaviour
     public AudioManager audiomanager;
 
     public bool detected = false;
+
+    public bool FlyingExecute2 = false;
+    public bool SkelExecute2 = false;
     void Start()
     {
         currentHealth = maxHealth;
@@ -83,8 +86,23 @@ public class EnemyHealth : MonoBehaviour
         }
         this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+<<<<<<< HEAD
         animator.SetBool("Executed", true);
         audiomanager.enemy_execute();
+=======
+        int random = Random.Range(0, 2);
+        if(random == 0)
+        {
+            animator.SetBool("Executed", true);
+            Destroy(this.gameObject, 3.5f);
+        }
+        else
+        {
+            animator.SetBool("Executed2", true);
+            Destroy(this.gameObject, 2.33f);
+            SkelExecute2 = true;
+        }
+>>>>>>> 078cca02baff212667ac6ecd356fdd66d3c1bfac
         
         // save this event, so we can see how many people do it
         if (AnalyticsManager.Instance != null)
@@ -97,7 +115,6 @@ public class EnemyHealth : MonoBehaviour
         }
 
         //add any item drops or effects on execute here
-        Destroy(this.gameObject, 3.5f);
 
     }
 
@@ -125,8 +142,21 @@ public class EnemyHealth : MonoBehaviour
         this.GetComponent<SpriteRenderer>().flipX = false;
         this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+<<<<<<< HEAD
         animator.SetBool("Executed", true);
         audiomanager.enemy_execute();
+=======
+        int random = Random.Range(0, 2);
+        if (random == 0)
+        {
+            animator.SetBool("Executed", true);
+        }
+        else
+        {
+            animator.SetBool("Executed2", true);
+            FlyingExecute2 = true;
+        }
+>>>>>>> 078cca02baff212667ac6ecd356fdd66d3c1bfac
 
         // save this event, so we can see how many people do it
         if (AnalyticsManager.Instance != null)
