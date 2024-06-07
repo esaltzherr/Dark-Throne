@@ -112991,6 +112991,10 @@ MonoBehaviour:
   player_hit: {fileID: 8300000, guid: 8263cf143ca97f84695a82576e74e80c, type: 3}
   power_up: {fileID: 8300000, guid: 2f4e256c15c39e742806c6c01dd199d5, type: 3}
   stab: {fileID: 8300000, guid: a8fe3d6a0dfe90242b3da062b6778b68, type: 3}
+  enemydie: {fileID: 8300000, guid: b312361720d4ce84f85cb965f74aec04, type: 3}
+  execute: {fileID: 8300000, guid: 15c4a783eb9035f45be28e0209fd99d4, type: 3}
+  playerwalking: {fileID: 8300000, guid: 9511ca5242320e84e8ccec93ca6879d2, type: 3}
+  jump: {fileID: 8300000, guid: e9e9eaa7ef85fed4d91201d82756a658, type: 3}
 --- !u!4 &617004761
 Transform:
   m_ObjectHideFlags: 0

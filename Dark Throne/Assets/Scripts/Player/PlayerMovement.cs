@@ -109,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(jumpKey) || Input.GetKeyDown(jumpKey2) || Input.GetKeyDown(jumpKey3))
         {
+            audiomanager.playerjump();
             if (!GetComponent<PlayerWallInteraction>().IsWallJumping)
             {
                 if (IsGrounded())

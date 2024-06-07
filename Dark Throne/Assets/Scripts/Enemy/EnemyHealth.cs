@@ -12,6 +12,8 @@ public class EnemyHealth : MonoBehaviour
     public Transform targetPlayer;
     public int executeDirection = -1;
 
+    public AudioManager audiomanager;
+
     public bool detected = false;
     void Start()
     {
@@ -37,6 +39,12 @@ public class EnemyHealth : MonoBehaviour
     }
     void Update()
     {
+
+        //audio
+        if (audiomanager == null)
+        {
+            audiomanager = FindObjectOfType<AudioManager>();
+        }
         //detected = false;
         //detection();
     }
@@ -76,6 +84,7 @@ public class EnemyHealth : MonoBehaviour
         this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetBool("Executed", true);
+        audiomanager.enemy_execute();
         
         // save this event, so we can see how many people do it
         if (AnalyticsManager.Instance != null)
@@ -117,6 +126,7 @@ public class EnemyHealth : MonoBehaviour
         this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetBool("Executed", true);
+        audiomanager.enemy_execute();
 
         // save this event, so we can see how many people do it
         if (AnalyticsManager.Instance != null)
@@ -187,6 +197,7 @@ public class EnemyHealth : MonoBehaviour
             if (currentHealth <= 0)
             {
                 animator.SetBool("Stagger", true);
+                audiomanager.enemuydie();
                 isStaggering = true;
                 this.gameObject.GetComponent<flying_enemy>().enabled = false;
                 this.gameObject.GetComponent<EnemyAttack>().enabled = false;
@@ -200,6 +211,7 @@ public class EnemyHealth : MonoBehaviour
             if (currentHealth <= 0)
             {
                 animator.SetBool("Stagger", true);
+                audiomanager.enemuydie();
                 isStaggering = true;
                 this.gameObject.GetComponent<EnemyShooting>().enabled = false;
                 StartCoroutine(StaggerDeath());
@@ -209,6 +221,7 @@ public class EnemyHealth : MonoBehaviour
         {
             currentHealth -= damage;
             animator.SetTrigger("Is_Hit");
+            audiomanager.enemuydie();
             if (currentHealth <= 0)
             {
                 animator.SetBool("Stagger", true);

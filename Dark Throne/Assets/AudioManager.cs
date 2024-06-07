@@ -17,6 +17,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip player_hit;
     public AudioClip power_up;
     public AudioClip stab;
+    public AudioClip enemydie;
+    public AudioClip execute;
+    public AudioClip playerwalking;
+    public AudioClip jump;
 
     void Start()
     {
@@ -48,7 +52,22 @@ public class AudioManager : MonoBehaviour
 
     public void playerwalk()
     {
-        SFXSource.PlayOneShot(footstep_1);
+        SFXSource.PlayOneShot(playerwalking);
+    }
+
+    public void playerjump()
+    {
+        SFXSource.PlayOneShot(jump);
+    }
+
+    public void enemuydie()
+    {
+        SFXSource.PlayOneShot(enemydie);
+    }
+
+    public void enemy_execute()
+    {
+        SFXSource.PlayOneShot(execute);
     }
 
 }
