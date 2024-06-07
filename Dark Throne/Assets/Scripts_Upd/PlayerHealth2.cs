@@ -149,6 +149,7 @@ public class PlayerHealth2 : MonoBehaviour
         // SceneManager.LoadScene(SpawnManager.lastLevelScene);
 
         Heal(MaxHearts);
+        this.animator.SetBool("Dead", false);
 
         // Find the SaveLoadJSONCheckpoints script in the scene
         SaveLoadJSONPlayer saveLoadPlayerScript = FindObjectOfType<SaveLoadJSONPlayer>();
