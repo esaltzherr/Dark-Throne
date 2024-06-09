@@ -15,9 +15,14 @@ public class FlagBoss : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Debug.Log("Entered Boss Room");
+        EnemyHealth.SetKills(0);
+    }
     private void Update()
     {
-        if(EnemyHealth.GetKills() > 3)
+        if(EnemyHealth.GetKills() >= 3)
         {
             Tilemap.SetActive(false);
         }
