@@ -18,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
     public bool SkelExecute2 = false;
 
     public AudioManager audiomanager;
+    public static int kills = 0;
     void Start()
     {
         currentHealth = maxHealth;
@@ -219,6 +220,7 @@ public class EnemyHealth : MonoBehaviour
             animator.SetTrigger("Is_Hit");
             if (currentHealth <= 0)
             {
+                kills++;
                 animator.SetBool("Stagger", true);
                 isStaggering = true;
                 this.gameObject.GetComponent<flying_enemy>().enabled = false;
@@ -232,6 +234,7 @@ public class EnemyHealth : MonoBehaviour
             animator.SetTrigger("Is_Hit");
             if (currentHealth <= 0)
             {
+                kills++;
                 animator.SetBool("Stagger", true);
                 isStaggering = true;
                 this.gameObject.GetComponent<EnemyShooting>().enabled = false;
@@ -244,6 +247,7 @@ public class EnemyHealth : MonoBehaviour
             animator.SetTrigger("Is_Hit");
             if (currentHealth <= 0)
             {
+                kills++;
                 animator.SetBool("Stagger", true);
                 isStaggering = true;
                 this.gameObject.GetComponent<EnemyFollow>().enabled = false;
@@ -308,6 +312,16 @@ public class EnemyHealth : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public static int GetKills()
+    {
+        return kills;
+    }
+
+    public static void SetKills(int newKills)
+    {
+        kills = newKills;
     }
 }
 
