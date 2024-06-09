@@ -10,26 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Assets-Shared
+  m_Name: Localization-Asset-Tables-Chinese (Simplified) (zh-Hans)
   m_EditorClassIdentifier: 
-  m_GroupName: Localization-Assets-Shared
+  m_GroupName: Localization-Asset-Tables-Chinese (Simplified) (zh-Hans)
   m_Data:
     m_SerializedData: []
-  m_GUID: 56adeb1b0dc5dcb49a35ad99fed6e37a
+  m_GUID: 7311acb211fc4a4488897c8427c877bf
   m_SerializeEntries:
-  - m_GUID: 6ccc42f47ddbdc94abfc502a6f4f3641
-    m_Address: Assets/Game_name Shared Data.asset
+  - m_GUID: fcee94b3de3898a48b5144aa34fb27a0
+    m_Address: AssetTable_zh-Hans
     m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a1e9093485201ef4e84144aeab9252c9
-    m_Address: Assets/AssetTable Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Locale-zh-Hans
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a05fa34dc4ed3a4e8d92b02da6cb8e8, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: f9c7e1b4ddf1d854e9ee9880301a1e06, type: 2}
-    - {fileID: 11400000, guid: e22080ea6a50f28439fc194cf6d7588c, type: 2}
+    - {fileID: 11400000, guid: dd01d7a3588c0d7448a18472be005614, type: 2}
+    - {fileID: 11400000, guid: ce20721880360ef4e87c1751c8f3ba97, type: 2}
