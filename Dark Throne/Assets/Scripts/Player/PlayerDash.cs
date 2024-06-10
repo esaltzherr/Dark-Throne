@@ -104,6 +104,7 @@ public class PlayerDash : MonoBehaviour
 
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+        
     }
 
     public void gainDash(){

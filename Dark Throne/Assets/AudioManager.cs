@@ -28,15 +28,18 @@ public class AudioManager : MonoBehaviour
         {
             SFXSource = GetComponent<AudioSource>();
         }
+        Debug.Log("Restarted");
     }
 
     public void Player_Dash()
     {
+        Debug.Log(dashing_sound + "-----" + SFXSource);
         SFXSource.PlayOneShot(dashing_sound);
     }
 
     public void heavyhit()
     {
+        Debug.Log("" + SFXSource);
         SFXSource.PlayOneShot(heavy_hit);
     }
 
