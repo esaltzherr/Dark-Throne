@@ -5,6 +5,7 @@ public class CheckpointButton : MonoBehaviour
 {
 
     public GameObject mapPanel; // This will hold the reference to the map panel
+    public InventoryManager inventoryScript;
     public void PrintParents()
     {
         // Access the grandparent GameObject
@@ -32,6 +33,7 @@ public class CheckpointButton : MonoBehaviour
     void Start()
     {
         FindMapPanel();
+        FindInventoryManager();
     }
     public void Teleport()
     {
@@ -40,6 +42,10 @@ public class CheckpointButton : MonoBehaviour
         if (mapPanel == null)
         {
             FindMapPanel();
+        }
+        if (inventoryScript == null)
+        {
+            inventoryScript = GetComponent<InventoryManager>();
         }
         if (mapPanel != null && mapPanel.activeSelf == true)
         {
@@ -57,6 +63,11 @@ public class CheckpointButton : MonoBehaviour
                 Debug.LogError("Script not found on grandparent!");
             }
             disableMap();
+            // disable inventory
+            if (inventoryScript != null){
+                inventoryScript.disableInventory();
+            }
+
         }
 
     }
@@ -75,7 +86,7 @@ public class CheckpointButton : MonoBehaviour
                 }
                 {
                     Debug.LogError("MapCheckpoints: Failed to find WorldCamera");
-                    Debug.Log(""+ parentCanvas.name);
+                    Debug.Log("" + parentCanvas.name);
                 }
             }
 
@@ -85,6 +96,16 @@ public class CheckpointButton : MonoBehaviour
             }
         }
     }
+
+    private void FindInventoryManager()
+    {
+        inventoryScript = FindObjectOfType<InventoryManager>();
+        if (inventoryScript == null)
+        {
+            Debug.LogError("InventoryManager script not found in the scene.");
+        }
+    }
+
 
 
     private void disableMap()

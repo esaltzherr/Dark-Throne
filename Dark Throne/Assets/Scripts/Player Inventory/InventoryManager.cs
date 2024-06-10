@@ -23,8 +23,7 @@ public class InventoryManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && menuActivated)
         {
             //Time.timeScale = 1;
-            InventoryMenu.SetActive(false);
-            menuActivated = false;
+            disableInventory();
         }
 
         else if (Input.GetKeyDown(KeyCode.Tab) && !menuActivated)
@@ -33,6 +32,12 @@ public class InventoryManager : MonoBehaviour
             InventoryMenu.SetActive(true);
             menuActivated = true;
         }
+    }
+
+    public void disableInventory()
+    {
+        InventoryMenu.SetActive(false);
+        menuActivated = false;
     }
 
     public bool UseItem(string itemName)
