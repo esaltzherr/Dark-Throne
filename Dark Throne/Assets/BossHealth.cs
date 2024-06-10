@@ -10,7 +10,7 @@ public class BossHealthBar : MonoBehaviour
     private KeyCode SpawnHP = KeyCode.Y;
     public Canvas bossCanvas;
     public Animator animator;
-
+    public static bool isKilled = false;
 
     void Start()
     {
@@ -40,7 +40,7 @@ public class BossHealthBar : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            
+            isKilled = true;
             this.animator.SetBool("Dead", true);
             this.animator.SetTrigger("Is_Hit");
             Die();
@@ -49,6 +49,7 @@ public class BossHealthBar : MonoBehaviour
 
     void Die()
     {
+
         // add boss death logic here
         this.gameObject.GetComponent<BossMovement>().enabled = false;
         this.gameObject.GetComponent<BossAttack>().enabled = false;
@@ -61,5 +62,12 @@ public class BossHealthBar : MonoBehaviour
         bossCanvas.gameObject.SetActive(false);
         Debug.Log("Boss died!");
     }
+
+    public static bool GetIsKilled()
+    {
+        return isKilled;
+    }
+
+
 }
 
