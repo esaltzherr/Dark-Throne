@@ -22,24 +22,36 @@ public class AudioManager : MonoBehaviour
     public AudioClip playerwalking;
     public AudioClip jump;
 
-    void Start()
+    private static AudioManager instance;
+
+    void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         if (SFXSource == null)
         {
             SFXSource = GetComponent<AudioSource>();
         }
-        Debug.Log("Restarted");
+
+        Debug.Log("AudioManager Initialized");
     }
 
     public void Player_Dash()
     {
-        Debug.Log(dashing_sound + "-----" + SFXSource);
         SFXSource.PlayOneShot(dashing_sound);
     }
 
     public void heavyhit()
     {
-        Debug.Log("" + SFXSource);
         SFXSource.PlayOneShot(heavy_hit);
     }
 

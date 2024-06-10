@@ -30,7 +30,10 @@ public class SaveLoadJSONPlayer : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player"); // Make sure your player is tagged correctly
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player"); // Make sure your player is tagged correctly
+        }
 
         getScripts();
 
@@ -45,29 +48,29 @@ public class SaveLoadJSONPlayer : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.J))
-            StartCoroutine(SaveGame());
+            SaveGame();
 
         if (Input.GetKeyDown(KeyCode.K))
-            StartCoroutine(LoadGame());
+            LoadGame();
 
         if (Input.GetKeyDown(KeyCode.L))
             DeleteSaveFile();
     }
 
-    public IEnumerator SaveGame()
+    public void SaveGame()
     {
-        yield return new WaitForSeconds(0.5f); // Add delay
 
+        Debug.Log("1");
         getData();
+        Debug.Log("2");
         string savePlayerData = JsonUtility.ToJson(playerData);
         File.WriteAllText(saveFilePath, savePlayerData);
-
+        Debug.Log("3");
         Debug.Log("Save file created at: " + saveFilePath);
     }
 
-    public IEnumerator LoadGame()
+    public void LoadGame()
     {
-        yield return new WaitForSeconds(0.5f); // Add delay
 
         if (File.Exists(saveFilePath))
         {
@@ -145,13 +148,50 @@ public class SaveLoadJSONPlayer : MonoBehaviour
 
     public void getData()
     {
+        // if (player == null)
+        // {
+        //     player = GameObject.FindGameObjectWithTag("Player"); // Make sure your player is tagged correctly
+
+        //     if (player == null)
+        //     {
+        //         Debug.LogWarning("Player object is null!");
+        //         return;
+        //     }
+        // }
+
         playerData.sceneName = SceneManager.GetActiveScene().name;
         playerData.position = player.transform.position;
-        playerData.hearts = playerHealthScript.getHearts();
-        playerData.maxHearts = playerHealthScript.getMaxHearts();
-        playerData.dashAquired = playerDashScript.dashGained();
-        playerData.doubleJumpAquired = playerPowerUpsScript.doubleJumpGained();
+
+        if (playerHealthScript != null)
+        {
+            playerData.hearts = playerHealthScript.getHearts();
+            playerData.maxHearts = playerHealthScript.getMaxHearts();
+        }
+        else
+        {
+            Debug.LogWarning("PlayerHealth2 script is null!");
+        }
+
+        if (playerDashScript != null)
+        {
+            playerData.dashAquired = playerDashScript.dashGained();
+        }
+        else
+        {
+            Debug.LogWarning("PlayerDash script is null!");
+        }
+
+        if (playerPowerUpsScript != null)
+        {
+            playerData.doubleJumpAquired = playerPowerUpsScript.doubleJumpGained();
+        }
+        else
+        {
+            Debug.LogWarning("PlayerPowerUps script is null!");
+        }
+
         playerData.ID = SpawnManager.GetId();
+        Debug.Log("Player ID: " + playerData.ID);
     }
 
     public void useData()

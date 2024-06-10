@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class Checkpoint : MonoBehaviour
 {
     public bool isAcquired = false;
@@ -10,6 +10,8 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            // Set the recent ID
+            SaveID();
             if (!isAcquired)
             {
                 Activate();
@@ -25,14 +27,8 @@ public class Checkpoint : MonoBehaviour
 
                 Debug.Log("Checkpoint acquired at: " + transform.position);
                 SaveCheckpoint();
-
             }
-            // Set the recent ID
-            SaveID();
         }
-
-
-
     }
 
     private void SaveCheckpoint()
@@ -69,21 +65,24 @@ public class Checkpoint : MonoBehaviour
     }
 
 
-    private void SaveID()
+    public void SaveID()
     {
-        Debug.Log("HFJDHFKJDSHL FKK JFDSH FKJDS HFKJSD H" + id);
-        // Find the SaveLoadJSONCheckpoints script in the scene
+        Debug.Log("Saved Checkpoint ID: " + id);
         SaveLoadJSONPlayer saveLoadPlayerScript = FindObjectOfType<SaveLoadJSONPlayer>();
         if (saveLoadPlayerScript != null)
         {
             SpawnManager.SetId(id);
-            saveLoadPlayerScript.SaveGame();
+            Debug.Log("Saving game:" + saveLoadPlayerScript);
+            saveLoadPlayerScript.SaveGame(); // Call SaveGame as a coroutine
+            Debug.Log("Saved game:" + saveLoadPlayerScript);
         }
         else
         {
             Debug.LogError("SaveLoadJSONPlayer script not found in the scene!");
         }
     }
+
+
 
 
     public void useCheckpoint(string name)
