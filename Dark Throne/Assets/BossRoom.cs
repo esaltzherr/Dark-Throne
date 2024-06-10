@@ -24,6 +24,9 @@ public class BossRoom : MonoBehaviour
         if (BossHealthBar.GetIsKilled())
         {
             tm.SetActive(false);
+            boss.GetComponent<BossMovement>().enabled = false;
+            bossCanvas.gameObject.SetActive(false);
+
         }
     }
 }
