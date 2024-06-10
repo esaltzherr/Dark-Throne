@@ -10,26 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Assets-Shared
+  m_Name: Localization-Asset-Tables-Japanese (ja)
   m_EditorClassIdentifier: 
-  m_GroupName: Localization-Assets-Shared
+  m_GroupName: Localization-Asset-Tables-Japanese (ja)
   m_Data:
     m_SerializedData: []
-  m_GUID: 56adeb1b0dc5dcb49a35ad99fed6e37a
+  m_GUID: cf52fe1b2515c1a44b8575d386a4374c
   m_SerializeEntries:
-  - m_GUID: 6ccc42f47ddbdc94abfc502a6f4f3641
-    m_Address: Assets/Game_name Shared Data.asset
+  - m_GUID: 3f2d554f824676441a30b40e5eada9dd
+    m_Address: AssetTable_ja
     m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a1e9093485201ef4e84144aeab9252c9
-    m_Address: Assets/AssetTable Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Locale-ja
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a05fa34dc4ed3a4e8d92b02da6cb8e8, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: f9c7e1b4ddf1d854e9ee9880301a1e06, type: 2}
-    - {fileID: 11400000, guid: e22080ea6a50f28439fc194cf6d7588c, type: 2}
+    - {fileID: 11400000, guid: 30008131cd8d7cd46b09a4cbb05ad660, type: 2}
+    - {fileID: 11400000, guid: 173f5f00b8ac641478ac496306e0ed2c, type: 2}
