@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/BuildLevels/CaveAreaTwoPT2.unity
     guid: 3003473211ac3b540ab05ecc216f8443
+  - enabled: 1
+    path: Assets/Scenes/Levels/BuildLevels/BossLevel.unity
+    guid: 70d4fd143eceb4948bdac6ff2d2f20e7
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 7a0d4f6746f1fb64eab4b2b1d9cd5aa3, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: c6dbecb6df731b74d9c252776822c87b, type: 2}
