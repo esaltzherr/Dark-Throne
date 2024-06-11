@@ -40,5 +40,13 @@ public class menu_audiomanager : MonoBehaviour
             musicSource.Play();
         }
     }
+
+    public void ToggleMusic(){
+        musicSource.mute = !musicSource.mute;
+    }
+
+    public void MusicVolumn(float volume){
+        musicSource.volume = volume;
+    }
 }
 
