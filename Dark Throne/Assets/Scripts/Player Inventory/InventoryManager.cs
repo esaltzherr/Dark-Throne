@@ -22,13 +22,13 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab) && menuActivated)
         {
-            //Time.timeScale = 1;
+            Time.timeScale = 1;
             disableInventory();
         }
 
         else if (Input.GetKeyDown(KeyCode.Tab) && !menuActivated)
         {
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;
         }
