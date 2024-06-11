@@ -36,6 +36,7 @@ public class BossMovement : MonoBehaviour
 
     void Update()
     {
+        animator.SetBool("Moving", false);
         if (targetPlayer != null)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.position);
@@ -51,6 +52,7 @@ public class BossMovement : MonoBehaviour
                 transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
             }
             // moving boss
+            animator.SetBool("Moving", true);
             float speed = distanceToPlayer > closeRange ? runSpeed : walkSpeed;
             Vector2 newPosition = rb.position + moveDirection * speed * Time.deltaTime;
             rb.MovePosition(newPosition);

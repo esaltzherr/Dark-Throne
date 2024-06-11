@@ -112408,7 +112408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When it gets dizzy from your attacks press F to take a bit of its life
+  m_text: If an enemy is staggering, press F to execute them and restore HP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -113281,7 +113281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I know he is around here somewhere, if you find him let me know
+  m_text: He should be around here somewhere...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -114069,7 +114069,7 @@ PrefabInstance:
       objectReference: {fileID: 1723547554, guid: a3be951609b2b854abd656b623e1fae6, type: 3}
     - target: {fileID: 8055849836863333500, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
-      value: Its unfortunate that you have been sent to his dungeon
+      value: Another Exile... maybe you'll have what it takes to overcome this place
       objectReference: {fileID: 0}
     - target: {fileID: 8543522122514431505, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -114573,7 +114573,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1047040203982105865, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
-      value: Walk around with A and D, Jump with W or Space
+      value: If you don't want to end up like the rest you should proceed with caution...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288492766188710584, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2806812844425184483, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: id
@@ -114645,7 +114649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8055849836863333500, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
-      value: Welcome to the dungeon
+      value: 'Ah... Another exile.... '
       objectReference: {fileID: 0}
     - target: {fileID: 8543522122514431505, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -116315,7 +116319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good luck surviving, you will need it
+  m_text: Use Arrow keys or WASD to move and Space to jump.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -116817,7 +116821,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1047040203982105865, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
-      value: You can attack it with Right and Left Mouse clicks, or O and P
+      value: Use O or left click for a quick attack, and P or right click for a heavy
+        attack
       objectReference: {fileID: 0}
     - target: {fileID: 4594353395149129897, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -116837,7 +116842,7 @@ PrefabInstance:
       objectReference: {fileID: -1241871556, guid: 7f1e1e11402f2914284845ac865f20d7, type: 3}
     - target: {fileID: 8055849836863333500, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
-      value: AHHHH, Look out for that scary skeleton
+      value: Fellow exile... You will need to know the basics of combat to survive
       objectReference: {fileID: 0}
     - target: {fileID: 8543522122514431505, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -117065,7 +117070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cool aint it, I dont know how it works though
+  m_text: These can act as Fast Travel points where you can revisit areas quickly
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -117375,7 +117380,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1047040203982105865, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
-      value: Im just not strong enough to jump off the wall. maybe you are!
+      value: Press a jump key while sliding on a wall to perform a wall jump
       objectReference: {fileID: 0}
     - target: {fileID: 4594353395149129897, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -117395,7 +117400,8 @@ PrefabInstance:
       objectReference: {fileID: 1826461108, guid: 1d916481b5beca24b91fc4bf7b351535, type: 3}
     - target: {fileID: 8055849836863333500, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
-      value: This place seems hard to get past
+      value: The others used to jump off the walls... You seem strong enough to do
+        the same...
       objectReference: {fileID: 0}
     - target: {fileID: 8543522122514431505, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x

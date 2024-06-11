@@ -28,7 +28,6 @@ public class BossAttack : MonoBehaviour
     {
         if (CanAttack)
         {
-            Debug.Log("inside canattack");
             attacknumber = Random.Range(0, 3);
             ChooseAttack(attacknumber);
             CanAttack = false;
