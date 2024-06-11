@@ -79,8 +79,9 @@ public class SaveLoadJSONPlayer : MonoBehaviour
                 // Instantiate a new player if not found
                 GameObject playerPrefab = Resources.Load<GameObject>("Player"); // Assumes a player prefab named "PlayerPrefab" is in a Resources folder
                 if (playerPrefab != null)
-                {
-                    player = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+                {   
+                    Vector3 spawnPosition = new Vector3(-10, -61,0);
+                    player = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
                     player.tag = "Player"; // Ensure the instantiated player has the correct tag
                 }
                 else
@@ -108,7 +109,6 @@ public class SaveLoadJSONPlayer : MonoBehaviour
             Debug.Log("There is no save files to load! (Player)");
         }
     }
-
 
     public void Respawn()
     {

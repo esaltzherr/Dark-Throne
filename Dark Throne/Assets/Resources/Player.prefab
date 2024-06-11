@@ -751,7 +751,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3819934778967197100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
@@ -766,7 +766,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 178.3, y: 47}
+  m_AnchoredPosition: {x: -970.22, y: -601.4}
   m_SizeDelta: {x: 0.2, y: 0.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &3152404582066244349
@@ -1037,6 +1037,7 @@ MonoBehaviour:
     m_Bits: 64
   attackDamage: 40
   detectionRange: 4
+  audiomanager: {fileID: 0}
   CanAttack: 1
   indicatorprefab: {fileID: 764510978100320412, guid: 6d499342ae147d846b71ad1fc08f5923, type: 3}
   inExecuteAnimation: 0
@@ -1069,6 +1070,7 @@ MonoBehaviour:
   rb: {fileID: 749141495511107371}
   tr: {fileID: 0}
   animator: {fileID: 0}
+  audiomanager: {fileID: 0}
 --- !u!114 &6809288259511434775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,6 +1095,7 @@ MonoBehaviour:
   - {fileID: 8964581071634225295}
   - {fileID: 4634256927588627209}
   - {fileID: 218064585482547145}
+  audiomanager: {fileID: 0}
 --- !u!114 &4254020631155554362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,6 +1115,7 @@ MonoBehaviour:
   speed: 8
   jumpingPower: 15
   isFacingRight: 1
+  audiomanager: {fileID: 0}
   playerPowerUps: {fileID: 0}
 --- !u!114 &1077483425871786168
 MonoBehaviour:

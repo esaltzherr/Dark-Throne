@@ -3123,6 +3123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3263157989993827997}
   - component: {fileID: 5703502598981528566}
+  - component: {fileID: 6041153481800479055}
   m_Layer: 5
   m_Name: Master Volume Slider
   m_TagString: Untagged
@@ -3215,3 +3216,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6041153481800479055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724099661421385385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0164e2113f9e742b93f5ab4039a96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 5703502598981528566}

@@ -35,6 +35,7 @@ public class SceneToMenu : MonoBehaviour
     {
         // Find the player GameObject and destroy it
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log("AHFUDJS:" + player);
         if (player != null)
         {
             Destroy(player);
