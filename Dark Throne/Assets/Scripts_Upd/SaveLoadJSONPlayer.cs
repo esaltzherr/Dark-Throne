@@ -34,13 +34,16 @@ public class SaveLoadJSONPlayer : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player"); // Make sure your player is tagged correctly
         }
-
-        getScripts();
+        if (player != null)
+        {
+            getScripts();
+        }
+        // getScripts();
 
         // place the data into the object
         playerData = new PlayerData();
 
-        getData();
+        // getData();
         // save it
         saveFilePath = Application.persistentDataPath + "/PlayerData.json";
     }
@@ -60,17 +63,34 @@ public class SaveLoadJSONPlayer : MonoBehaviour
     public void SaveGame()
     {
 
-        Debug.Log("1");
         getData();
-        Debug.Log("2");
         string savePlayerData = JsonUtility.ToJson(playerData);
         File.WriteAllText(saveFilePath, savePlayerData);
-        Debug.Log("3");
         Debug.Log("Save file created at: " + saveFilePath);
     }
 
     public void LoadGame()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            if (player == null)
+            {
+                // Instantiate a new player if not found
+                GameObject playerPrefab = Resources.Load<GameObject>("Player"); // Assumes a player prefab named "PlayerPrefab" is in a Resources folder
+                if (playerPrefab != null)
+                {
+                    player = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+                    player.tag = "Player"; // Ensure the instantiated player has the correct tag
+                }
+                else
+                {
+                    Debug.LogError("PlayerPrefab not found in Resources!");
+                    return;
+                }
+            }
+            getScripts();
+        }
 
         if (File.Exists(saveFilePath))
         {
@@ -88,6 +108,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
             Debug.Log("There is no save files to load! (Player)");
         }
     }
+
 
     public void Respawn()
     {
@@ -158,6 +179,13 @@ public class SaveLoadJSONPlayer : MonoBehaviour
         //         return;
         //     }
         // }
+        Debug.Log("Thing:" + SceneManager.GetActiveScene().name);
+
+        if (playerData == null)
+        {
+            Debug.LogWarning("WENT INTO");
+            playerData = new PlayerData();
+        }
 
         playerData.sceneName = SceneManager.GetActiveScene().name;
         playerData.position = player.transform.position;

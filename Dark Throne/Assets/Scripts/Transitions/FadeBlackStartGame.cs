@@ -13,11 +13,14 @@ public class StartGameFadeTransition : MonoBehaviour
     public string nextScene;
     private float timer;
 
+    public SaveLoadJSONPlayer playerJsonScript;
+
     // Start is called before the first frame update
 
     void Start()
     {
         timer = 0f;
+
     }
     IEnumerator FadeRoutine(string sceneName)
     {
@@ -32,9 +35,12 @@ public class StartGameFadeTransition : MonoBehaviour
         }
 
         SceneManager.LoadScene(sceneName);
+        LoadData();
+
+
 
         timer = 0f;
-        while(timer < fadeDuration)
+        while (timer < fadeDuration)
         {
             timer += Time.deltaTime;
             color.a = 1f - Mathf.Clamp01(timer / fadeDuration);
@@ -43,11 +49,29 @@ public class StartGameFadeTransition : MonoBehaviour
 
         }
 
-        fadeImage.gameObject.SetActive(false); 
+        fadeImage.gameObject.SetActive(false);
+
     }
 
     public void OnPointerClick()
     {
+
+
         StartCoroutine(FadeRoutine(nextScene));
+    }
+
+    public void LoadData()
+    {
+        playerJsonScript = FindObjectOfType<SaveLoadJSONPlayer>();
+
+        if (playerJsonScript != null)
+        {
+            playerJsonScript.LoadGame(); // Load the game data
+        }
+        else
+        {
+            Debug.LogError("SaveLoadJSONPlayer script is not assigned!");
+        }
+
     }
 }

@@ -29,7 +29,6 @@ public class SpawnManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH " + id);
         lastLevelScene = SceneManager.GetActiveScene().name;
 
         // Attempt to find a spawn point with a matching ID.
@@ -77,7 +76,7 @@ public class SpawnManager : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
             {
-                player.transform.position = targetSpawnPointTransform.position;
+                player.transform.position = targetSpawnPointTransform.position + new Vector3(0,3,0);
             }
         }
     }
