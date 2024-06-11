@@ -253,7 +253,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         player.transform.position = position;
     }
-    public void hasSaveData(){
+    public bool hasSaveData(){
         if (File.Exists(saveFilePath))
         {
             return true;
