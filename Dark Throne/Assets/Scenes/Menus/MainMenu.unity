@@ -244,6 +244,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &109625650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2781861421974006460, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
+  m_PrefabInstance: {fileID: 3199496061007814740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &109625652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109625650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0164e2113f9e742b93f5ab4039a96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 109625653}
+--- !u!114 &109625653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 886078923640925545, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
+  m_PrefabInstance: {fileID: 3199496061007814740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109625650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,9 +1392,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 886078923640925545, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886078923640925545, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 886078923640925545, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 850871072}
+      objectReference: {fileID: 0}
+    - target: {fileID: 886078923640925545, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 886078923640925545, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 886078923640925545, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIcontroller, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2708600706751235604, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
       propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1518,13 +1567,17 @@ PrefabInstance:
       propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 850871070}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2882238358339269377, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8734714363540797950, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
       insertIndex: 3
       addedObject: {fileID: 1221287110}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2781861421974006460, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 109625652}
   m_SourcePrefab: {fileID: 100100000, guid: 0680e113bb5fd8947b528cdb98eeb543, type: 3}
 --- !u!1001 &7258323506385420706
 PrefabInstance:
@@ -1580,7 +1633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4302735145985161344, guid: de9c5a5217e83484783d452e1c5387d2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
