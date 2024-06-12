@@ -76,57 +76,57 @@ public class MeleeCombat : MonoBehaviour
         }
         */
         findClosestEnemy();
-        if (closestEnemy.tag != "Boss")
+
+
+
+        if (closestEnemy != null && closestEnemy.tag != "Boss" && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
         {
-
-            if (closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
+            this.GetComponent<PlayerHealth2>().Heal(1);
+            this.GetComponent<PlayerInvulnerability>().ExecuteInvulnerability();
+            inExecuteAnimation = true;
+            if (closestEnemy.tag == "FlyingEnemy")
             {
-                this.GetComponent<PlayerHealth2>().Heal(1);
-                this.GetComponent<PlayerInvulnerability>().ExecuteInvulnerability();
-                inExecuteAnimation = true;
-                if (closestEnemy.tag == "FlyingEnemy")
-                {
-                    closestEnemy.GetComponent<EnemyHealth>().FlyingExecute();
-                }
-                else if (closestEnemy.tag == "RangedEnemy")
-                {
-                    closestEnemy.GetComponent<EnemyHealth>().RangedExecute();
-                }
-                else
-                {
-                    closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
-                }
-                enemyPosition = closestEnemy.transform.position;
-                this.transform.position = enemyPosition;
-
-                this.GetComponent<PlayerMovement>().enabled = false;
-                this.GetComponent<PlayerDash>().enabled = false;
-                this.GetComponent<SpriteRenderer>().enabled = false;
-                this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-                this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-                if (closestEnemy.tag != "RangedEnemy")
-                {
-                    if (closestEnemy.GetComponent<EnemyHealth>().SkelExecute2)
-                    {
-                        StartCoroutine(EnableSkel2());
-                    }
-                    else if (closestEnemy.GetComponent<EnemyHealth>().FlyingExecute2)
-                    {
-                        StartCoroutine(EnableFlying2());
-                    }
-                    else
-                    {
-                        StartCoroutine(enableMovement());
-
-                    }
-                    StartCoroutine(enableMovement());
-                }
-                else
-                {
-                    StartCoroutine(enableRanged());
-                }
-
+                closestEnemy.GetComponent<EnemyHealth>().FlyingExecute();
             }
+            else if (closestEnemy.tag == "RangedEnemy")
+            {
+                closestEnemy.GetComponent<EnemyHealth>().RangedExecute();
+            }
+            else
+            {
+                closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
+            }
+            enemyPosition = closestEnemy.transform.position;
+            this.transform.position = enemyPosition;
+
+            this.GetComponent<PlayerMovement>().enabled = false;
+            this.GetComponent<PlayerDash>().enabled = false;
+            this.GetComponent<SpriteRenderer>().enabled = false;
+            this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            if (closestEnemy.tag != "RangedEnemy")
+            {
+                if (closestEnemy.GetComponent<EnemyHealth>().SkelExecute2)
+                {
+                    StartCoroutine(EnableSkel2());
+                }
+                else if (closestEnemy.GetComponent<EnemyHealth>().FlyingExecute2)
+                {
+                    StartCoroutine(EnableFlying2());
+                }
+                else
+                {
+                    StartCoroutine(enableMovement());
+
+                }
+                StartCoroutine(enableMovement());
+            }
+            else
+            {
+                StartCoroutine(enableRanged());
+            }
+
+
         }
     }
 
@@ -144,7 +144,7 @@ public class MeleeCombat : MonoBehaviour
                 closestDistance = distanceToEnemy;
                 closestEnemy = enemy;
             }
-            if(closestEnemy.tag == "Boss")
+            if (closestEnemy.tag == "Boss")
             {
                 continue;
             }
@@ -333,12 +333,12 @@ public class MeleeCombat : MonoBehaviour
         {
 
             Debug.Log("Enemy Hit: " + enemy.name);
-            if(enemy.tag != "Boss")
+            if (enemy.tag != "Boss")
             {
                 enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
 
             }
-            if(enemy.tag == "Boss")
+            if (enemy.tag == "Boss")
             {
                 enemy.GetComponent<BossHealthBar>().TakeDamage(attackDamage);
             }
@@ -357,7 +357,7 @@ public class MeleeCombat : MonoBehaviour
         {
 
             Debug.Log("Enemy Hit: " + enemy.name);
-            if(enemy.tag != "Boss")
+            if (enemy.tag != "Boss")
             {
                 enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
                 Vector2 movePos = this.transform.position - enemy.transform.position;
@@ -368,7 +368,7 @@ public class MeleeCombat : MonoBehaviour
                     StartCoroutine(enableEnemyMovement(enemy.gameObject));
                 }
             }
-            if(enemy.tag == "Boss")
+            if (enemy.tag == "Boss")
             {
                 enemy.GetComponent<BossHealthBar>().TakeDamage(attackDamage + 10);
             }
