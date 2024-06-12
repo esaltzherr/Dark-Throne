@@ -87541,6 +87541,10 @@ PrefabInstance:
       value: This will allow you to double jump... hopefully you can use it better
         than me
       objectReference: {fileID: 0}
+    - target: {fileID: 2806812844425184483, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: id
+      value: 301
+      objectReference: {fileID: 0}
     - target: {fileID: 4957065830908625925, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_Name
       value: NPC (Reguide to Dash)

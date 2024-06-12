@@ -114087,6 +114087,10 @@ PrefabInstance:
       propertyPath: abilityGiver
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2806812844425184483, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: id
+      value: 106
+      objectReference: {fileID: 0}
     - target: {fileID: 4594353395149129897, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.19
@@ -115786,6 +115790,10 @@ PrefabInstance:
       propertyPath: m_text
       value: There are also some cool Skulls on sticks around the place
       objectReference: {fileID: 0}
+    - target: {fileID: 2806812844425184483, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: id
+      value: 103
+      objectReference: {fileID: 0}
     - target: {fileID: 4594353395149129897, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -117122,6 +117130,10 @@ PrefabInstance:
     - target: {fileID: 1047040203982105865, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_fontSizeBase
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806812844425184483, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: id
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 4594353395149129897, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -118865,6 +118877,10 @@ PrefabInstance:
     - target: {fileID: 1047040203982105865, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
       value: Ive heard there is a wizard to grant immense bursts of speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806812844425184483, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: id
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 4957065830908625925, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_Name
