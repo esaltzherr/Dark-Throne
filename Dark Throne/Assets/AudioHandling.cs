@@ -9,6 +9,7 @@ public class AudioHandling : MonoBehaviour
 
     private void Start()
     {
+        AudioListener.volume = 0.5f;
         volumeSlider.value = AudioListener.volume;
 
     }
