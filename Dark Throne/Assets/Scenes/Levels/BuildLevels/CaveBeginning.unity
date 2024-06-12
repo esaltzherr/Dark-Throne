@@ -113082,7 +113082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Greater Health Potion
   quantity: 1
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ec8a537cedf11e1429ad7658c8d9dbc8, type: 3}
   itemDescription: Potent health potion that restores 2 health
 --- !u!50 &701830774
 Rigidbody2D:
@@ -113146,8 +113146,8 @@ BoxCollider2D:
   m_Offset: {x: -0.060892105, y: 0.20517695}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0666667, y: 1.0666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -113197,8 +113197,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0.97120583, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ec8a537cedf11e1429ad7658c8d9dbc8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

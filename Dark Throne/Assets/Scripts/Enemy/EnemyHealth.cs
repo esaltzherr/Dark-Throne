@@ -149,11 +149,14 @@ public class EnemyHealth : MonoBehaviour
         {
             animator.SetBool("Executed", true);
             audiomanager.enemy_execute();
+            Destroy(this.gameObject, 3.5f);
+
         }
         else
         {
             animator.SetBool("Executed2", true);
             audiomanager.enemy_execute();
+            Destroy(this.gameObject, 2.5f);
             FlyingExecute2 = true;
         }
 
@@ -168,7 +171,6 @@ public class EnemyHealth : MonoBehaviour
         }
 
         //add any item drops or effects on execute here
-        Destroy(this.gameObject, 3.5f);
 
     }
     public void RangedExecute()

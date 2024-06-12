@@ -144,6 +144,7 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
         this.quantity = 0;
 
         this.itemSprite = null;
+        this.itemImage.sprite = null;
 
         //update the quantity text
         quantityText.text = "";
