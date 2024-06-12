@@ -39,11 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3193337957609472
-    m_Localized: You Win!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3193377996435456
-    m_Localized: You have made it to the end of the vertical slice
+    m_Localized: Thanks For Playing
     m_Metadata:
       m_Items: []
   - m_Id: 3193468203331584

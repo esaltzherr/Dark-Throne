@@ -39,10 +39,6 @@ MonoBehaviour:
     m_Key: win
     m_Metadata:
       m_Items: []
-  - m_Id: 3193377996435456
-    m_Key: VertSlice
-    m_Metadata:
-      m_Items: []
   - m_Id: 3193468203331584
     m_Key: win_return
     m_Metadata:
