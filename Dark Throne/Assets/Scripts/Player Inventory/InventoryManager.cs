@@ -44,7 +44,7 @@ public class InventoryManager : MonoBehaviour
     {
         for (int x = 0; x < itemSOs.Length; x++)
         {
-            Debug.Log("-------------" + itemSOs[x].itemName + "___ " + itemName);
+            // Debug.Log("-------------" + itemSOs[x].itemName + "___ " + itemName);
             if (itemSOs[x].itemName == itemName)
             {
                 bool usable = itemSOs[x].UseItem();

@@ -88,13 +88,14 @@ public class EnemyHealth : MonoBehaviour
         this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         int random = Random.Range(0, 2);
+        if (audiomanager == null)
+        {
+            audiomanager = FindObjectOfType<AudioManager>();
+        }
         if (random == 0)
         {
             animator.SetBool("Executed", true);
-            if (audiomanager == null)
-            {
-                audiomanager = FindObjectOfType<AudioManager>();
-            }
+
             audiomanager.enemy_execute();
             Destroy(this.gameObject, 3.5f);
         }
@@ -145,6 +146,10 @@ public class EnemyHealth : MonoBehaviour
         this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         int random = Random.Range(0, 2);
+        if (audiomanager == null)
+        {
+            audiomanager = FindObjectOfType<AudioManager>();
+        }
         if (random == 0)
         {
             animator.SetBool("Executed", true);
@@ -198,6 +203,10 @@ public class EnemyHealth : MonoBehaviour
         this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetBool("Executed", true);
+        if (audiomanager == null)
+        {
+            audiomanager = FindObjectOfType<AudioManager>();
+        }
         audiomanager.enemy_execute();
 
         // save this event, so we can see how many people do it
@@ -268,6 +277,10 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         animator.SetBool("Dead", true);
+        if (audiomanager == null)
+        {
+            audiomanager = FindObjectOfType<AudioManager>();
+        }
         audiomanager.enemuydie();
         if (this.tag == "FlyingEnemy")
         {
