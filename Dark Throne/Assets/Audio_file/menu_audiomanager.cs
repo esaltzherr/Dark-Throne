@@ -10,18 +10,18 @@ public class menu_audiomanager : MonoBehaviour
     public sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSources;
 
-    private void Awake()
-    {
-        if(Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    // private void Awake()
+    // {
+    //     if(Instance == null)
+    //     {
+    //         Instance = this;
+    //         DontDestroyOnLoad(gameObject);
+    //     }
+    //     else
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
 
     private void Start()
     {

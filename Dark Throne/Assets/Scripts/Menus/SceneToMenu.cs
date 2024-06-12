@@ -9,30 +9,12 @@ public class SceneToMenu : MonoBehaviour
 
     void Start()
     {
-        // Find the SaveLoadJSONPlayer script in the scene
-        playerJsonScript = FindObjectOfType<SaveLoadJSONPlayer>();
-        if (playerJsonScript == null)
-        {
-            Debug.LogError("SaveLoadJSONPlayer script not found in the scene!");
-        }
-
-        // Find the SaveLoadJSONNPC script in the scene
-        npcJsonScript = FindObjectOfType<SaveLoadJSONNpc>();
-        if (npcJsonScript == null)
-        {
-            Debug.LogError("SaveLoadJSONNpc script not found in the scene!");
-        }
-
-        // Find the SaveLoadJSONCheckpoints script in the scene
-        checkpointsJsonScript = FindObjectOfType<SaveLoadJSONCheckpoints>();
-        if (checkpointsJsonScript == null)
-        {
-            Debug.LogError("SaveLoadJSONCheckpoints script not found in the scene!");
-        }
+        findJSONs();
     }
 
     public void GoToMain()
     {
+        Time.timeScale = 1;
         // Find the player GameObject and destroy it
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Debug.Log("AHFUDJS:" + player);
@@ -57,17 +39,20 @@ public class SceneToMenu : MonoBehaviour
 
         // Go to "MainMenu" scene
         SceneManager.LoadScene("MainMenu");
+
+
     }
 
     public void deleteData()
     {
+        findJSONs();
         if (playerJsonScript != null)
         {
             playerJsonScript.DeleteSaveFile(); // Delete the player save data
         }
         else
         {
-            Debug.LogError("SaveLoadJSONPlayer script is not assigned!");
+            Debug.LogWarning("SaveLoadJSONPlayer script is not assigned!");
         }
 
         if (npcJsonScript != null)
@@ -76,7 +61,7 @@ public class SceneToMenu : MonoBehaviour
         }
         else
         {
-            Debug.LogError("SaveLoadJSONNPC script is not assigned!");
+            Debug.LogWarning("SaveLoadJSONNPC script is not assigned!");
         }
 
         if (checkpointsJsonScript != null)
@@ -85,7 +70,40 @@ public class SceneToMenu : MonoBehaviour
         }
         else
         {
-            Debug.LogError("SaveLoadJSONCheckpoints script is not assigned!");
+            Debug.LogWarning("SaveLoadJSONCheckpoints script is not assigned!");
         }
     }
+
+    public void findJSONs()
+    {
+        if (playerJsonScript == null)
+        {
+            // Find the SaveLoadJSONPlayer script in the scene
+            playerJsonScript = FindObjectOfType<SaveLoadJSONPlayer>();
+            if (playerJsonScript == null)
+            {
+                Debug.LogError("SaveLoadJSONPlayer script not found in the scene!");
+            }
+        }
+        if (npcJsonScript == null)
+        {
+            // Find the SaveLoadJSONNPC script in the scene
+            npcJsonScript = FindObjectOfType<SaveLoadJSONNpc>();
+            if (npcJsonScript == null)
+            {
+                Debug.LogError("SaveLoadJSONNpc script not found in the scene!");
+            }
+        }
+        // Find the SaveLoadJSONCheckpoints script in the scene
+        if (checkpointsJsonScript == null)
+        {
+            checkpointsJsonScript = FindObjectOfType<SaveLoadJSONCheckpoints>();
+            if (checkpointsJsonScript == null)
+            {
+                Debug.LogError("SaveLoadJSONCheckpoints script not found in the scene!");
+            }
+        }
+    }
+
+
 }

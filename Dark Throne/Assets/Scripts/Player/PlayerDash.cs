@@ -9,7 +9,7 @@ public class PlayerDash : MonoBehaviour
 
     //Audio
     public AudioManager audiomanager;
-    
+
     // private void Awake(){
     //     audiomanager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     // }
@@ -64,11 +64,16 @@ public class PlayerDash : MonoBehaviour
         {
 
             StartCoroutine(Dash());
-            
+
             // Play dash sound
+            if (audiomanager == null)
+            {
+                audiomanager = FindObjectOfType<AudioManager>();
+            }
             audiomanager.Player_Dash();
         }
-        if (Input.GetKeyDown(KeyCode.M)){
+        if (Input.GetKeyDown(KeyCode.M))
+        {
             toggleDash();
         }
     }
@@ -104,29 +109,36 @@ public class PlayerDash : MonoBehaviour
 
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-        
+
     }
 
-    public void gainDash(){
+    public void gainDash()
+    {
         dashAquired = true;
     }
 
-    public void loseDash(){
+    public void loseDash()
+    {
         dashAquired = false;
     }
 
-    public void toggleDash(){
-        if (dashAquired){
+    public void toggleDash()
+    {
+        if (dashAquired)
+        {
             loseDash();
         }
-        else{
+        else
+        {
             gainDash();
         }
     }
-    public bool dashGained(){
+    public bool dashGained()
+    {
         return dashAquired;
     }
-    public void setDashGained(bool aquired){
+    public void setDashGained(bool aquired)
+    {
         dashAquired = aquired;
     }
 }

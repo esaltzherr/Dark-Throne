@@ -50,7 +50,7 @@ public class StartGameFadeTransition : MonoBehaviour
         }
 
         fadeImage.gameObject.SetActive(false);
-
+        timer = 0f;
     }
 
     public void OnPointerClick()

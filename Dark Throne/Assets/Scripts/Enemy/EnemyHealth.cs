@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
         {
             audiomanager = FindObjectOfType<AudioManager>();
         }
-        
+
     }
 
 
@@ -91,6 +91,10 @@ public class EnemyHealth : MonoBehaviour
         if (random == 0)
         {
             animator.SetBool("Executed", true);
+            if (audiomanager == null)
+            {
+                audiomanager = FindObjectOfType<AudioManager>();
+            }
             audiomanager.enemy_execute();
             Destroy(this.gameObject, 3.5f);
         }

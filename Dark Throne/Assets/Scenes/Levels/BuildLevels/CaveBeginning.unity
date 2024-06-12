@@ -111592,6 +111592,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47bc0931a1f7a4a449c6d3c20c2731b1, type: 3}
+--- !u!1 &394055350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1483100411409335136, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
+  m_PrefabInstance: {fileID: 1878011267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &394055355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394055350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07c6f3ff9f45d447b28229a5fa5853c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &404027426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4741216739754450278, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
@@ -117150,6 +117167,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4454465159708868757, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454465159708868757, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 394055355}
+    - target: {fileID: 4454465159708868757, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454465159708868757, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneToMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5247799639551368822, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -117205,7 +117238,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1483100411409335136, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 394055355}
   m_SourcePrefab: {fileID: 100100000, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
 --- !u!1 &1883320135
 GameObject:
