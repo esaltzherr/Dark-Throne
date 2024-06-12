@@ -5,13 +5,16 @@ using UnityEngine;
 public class FlagBoss : MonoBehaviour
 {
     public GameObject Tilemap;
-    
+    public MapDisplay mapDisplayScript;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Player entered");
             Tilemap.SetActive(true);
+            // disable the map
+            mapDisplayScript.enabled = false;
         }
     }
 
@@ -22,9 +25,11 @@ public class FlagBoss : MonoBehaviour
     }
     private void Update()
     {
-        if(EnemyHealth.GetKills() >= 3)
+        if (EnemyHealth.GetKills() >= 3)
         {
             Tilemap.SetActive(false);
+            // Enable the map
+            mapDisplayScript.enabled = true;
         }
     }
 }
