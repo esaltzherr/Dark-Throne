@@ -132,6 +132,31 @@ public class Itemslot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 
     private void EmptySlot()
     {
+        this.itemName = "";
+
+        //update the description
+        this.itemDescription = "";
+
+        //update the Image
+    
+
+        //update the quantity
+        this.quantity = 0;
+
+        this.itemSprite = null;
+
+        //update the quantity text
+        quantityText.text = "";
+        quantityText.enabled = true;
+
+        
+
+
+
+
+
+
+
         quantityText.enabled = false;
     }
 
