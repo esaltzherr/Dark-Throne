@@ -10,14 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
-  m_Name: AssetTable_zh-Hans
+  m_Name: Asset Table_zh-Hans
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: zh-Hans
   m_SharedData: {fileID: 11400000, guid: a1e9093485201ef4e84144aeab9252c9, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 2731445072252928
+    m_Localized: ea484cdb07a357c48a6d8fc3ab047758
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2737567661379584
+    m_Localized: ea484cdb07a357c48a6d8fc3ab047758[NotoSansSC-Regular SDF Material]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2760281772085248
+    m_Localized: ea484cdb07a357c48a6d8fc3ab047758
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2760312277258240
+    m_Localized: ea484cdb07a357c48a6d8fc3ab047758[NotoSansSC-Regular SDF Material]
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

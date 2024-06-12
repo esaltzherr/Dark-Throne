@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 6d1e711c6514c1143ab62ad53e534697
   m_SerializeEntries:
   - m_GUID: 24ccf84a59e0e4b4886023606757fc02
-    m_Address: Game_zh-Hans
+    m_Address: String Table_zh-Hans
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-zh-Hans
