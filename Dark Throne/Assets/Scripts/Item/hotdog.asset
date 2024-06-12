@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbc031c7b77c31429a307328086e3b3, type: 3}
   m_Name: hotdog
   m_EditorClassIdentifier: 
-  itemName: hotdog
+  itemName: Greater Health Potion
   stateToChange: 1
   amountToChangeStat: 2
   attributeToChange: 0
