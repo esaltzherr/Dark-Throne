@@ -113063,10 +113063,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823acbb8d420eb943b2cb26d09c65f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: hotdog
+  itemName: Greater Health Potion
   quantity: 1
   sprite: {fileID: 0}
-  itemDescription: It's Tasty hotdog. Enjoy! Restore 2 heath
+  itemDescription: Potent health potion that restores 2 health
 --- !u!50 &701830774
 Rigidbody2D:
   serializedVersion: 4
@@ -113547,10 +113547,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823acbb8d420eb943b2cb26d09c65f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: coffee
-  quantity: 9
-  sprite: {fileID: 0}
-  itemDescription: It's Cold Coffee. Enjoy! Restore 1 heath!
+  itemName: Lesser Health Potion
+  quantity: 1
+  sprite: {fileID: -1362961460, guid: ce27bc484c8f0de42b9dfa1660bc86c5, type: 3}
+  itemDescription: Poorly made potion that restores a measly 1 health
 --- !u!50 &811631786
 Rigidbody2D:
   serializedVersion: 4
@@ -113613,8 +113613,8 @@ BoxCollider2D:
   m_Offset: {x: -0.026096344, y: 0.2225796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.9142857, y: 0.9142857}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -113664,7 +113664,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -1362961460, guid: ce27bc484c8f0de42b9dfa1660bc86c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118630,6 +118630,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: inventory_canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2176696066285596853, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 695.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 2176696066285596853, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 347.83002
+      objectReference: {fileID: 0}
     - target: {fileID: 2203323988145354782, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -118653,6 +118661,14 @@ PrefabInstance:
     - target: {fileID: 2203323988145354782, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234702872532007157, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 292.5641
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234702872532007157, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 4841692640611843206, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: m_AnchorMax.y
@@ -118809,6 +118825,10 @@ PrefabInstance:
     - target: {fileID: 7373487047914965775, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7610199457516003723, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
+      propertyPath: m_margin.w
+      value: 292.07767
       objectReference: {fileID: 0}
     - target: {fileID: 8354523974423409742, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: m_AnchorMax.y
