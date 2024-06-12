@@ -115807,6 +115807,10 @@ PrefabInstance:
       value: NPC (Reguide to Dash) (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5167475408888402526, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167475408888402526, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2061888855, guid: 1b60c2ca26847e648884ef611d4bd1ce, type: 3}
@@ -116000,7 +116004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1371474650
 MonoBehaviour:
   m_ObjectHideFlags: 0
