@@ -76,53 +76,57 @@ public class MeleeCombat : MonoBehaviour
         }
         */
         findClosestEnemy();
-        if (closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
+        if (closestEnemy.tag != "Boss")
         {
-            this.GetComponent<PlayerHealth2>().Heal(1);
-            this.GetComponent<PlayerInvulnerability>().ExecuteInvulnerability();
-            inExecuteAnimation = true;
-            if (closestEnemy.tag == "FlyingEnemy")
-            {
-                closestEnemy.GetComponent<EnemyHealth>().FlyingExecute();
-            }
-            else if (closestEnemy.tag == "RangedEnemy")
-            {
-                closestEnemy.GetComponent<EnemyHealth>().RangedExecute();
-            }
-            else
-            {
-                closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
-            }
-            enemyPosition = closestEnemy.transform.position;
-            this.transform.position = enemyPosition;
 
-            this.GetComponent<PlayerMovement>().enabled = false;
-            this.GetComponent<PlayerDash>().enabled = false;
-            this.GetComponent<SpriteRenderer>().enabled = false;
-            this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            if (closestEnemy.tag != "RangedEnemy")
+            if (closestEnemy != null && Input.GetKeyDown(executeKey) && closestEnemy.GetComponent<EnemyHealth>().isStaggering && !inExecuteAnimation)
             {
-                if(closestEnemy.GetComponent<EnemyHealth>().SkelExecute2) 
+                this.GetComponent<PlayerHealth2>().Heal(1);
+                this.GetComponent<PlayerInvulnerability>().ExecuteInvulnerability();
+                inExecuteAnimation = true;
+                if (closestEnemy.tag == "FlyingEnemy")
                 {
-                    StartCoroutine(EnableSkel2());
+                    closestEnemy.GetComponent<EnemyHealth>().FlyingExecute();
                 }
-                else if (closestEnemy.GetComponent<EnemyHealth>().FlyingExecute2)
+                else if (closestEnemy.tag == "RangedEnemy")
                 {
-                    StartCoroutine(EnableFlying2());
+                    closestEnemy.GetComponent<EnemyHealth>().RangedExecute();
                 }
                 else
                 {
-                    StartCoroutine(enableMovement());
-
+                    closestEnemy.GetComponent<EnemyHealth>().SkeletonExecute();
                 }
-                StartCoroutine(enableMovement());
-            }
-            else
-            {
-                StartCoroutine(enableRanged());
-            }
+                enemyPosition = closestEnemy.transform.position;
+                this.transform.position = enemyPosition;
 
+                this.GetComponent<PlayerMovement>().enabled = false;
+                this.GetComponent<PlayerDash>().enabled = false;
+                this.GetComponent<SpriteRenderer>().enabled = false;
+                this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                if (closestEnemy.tag != "RangedEnemy")
+                {
+                    if (closestEnemy.GetComponent<EnemyHealth>().SkelExecute2)
+                    {
+                        StartCoroutine(EnableSkel2());
+                    }
+                    else if (closestEnemy.GetComponent<EnemyHealth>().FlyingExecute2)
+                    {
+                        StartCoroutine(EnableFlying2());
+                    }
+                    else
+                    {
+                        StartCoroutine(enableMovement());
+
+                    }
+                    StartCoroutine(enableMovement());
+                }
+                else
+                {
+                    StartCoroutine(enableRanged());
+                }
+
+            }
         }
     }
 
