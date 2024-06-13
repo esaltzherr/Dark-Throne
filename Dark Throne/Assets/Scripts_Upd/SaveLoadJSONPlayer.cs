@@ -268,7 +268,8 @@ public class SaveLoadJSONPlayer : MonoBehaviour
         player.transform.position = position;
     }
     public bool hasSaveData()
-    {
+    {  
+        saveFilePath = Application.persistentDataPath + "/PlayerData.json";
         if (File.Exists(saveFilePath))
         {
             return true;
