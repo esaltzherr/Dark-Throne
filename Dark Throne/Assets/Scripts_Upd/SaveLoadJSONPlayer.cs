@@ -61,7 +61,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
             DeleteSaveFile();
         */
     }
-       
+
 
     public void SaveGame()
     {
@@ -82,8 +82,8 @@ public class SaveLoadJSONPlayer : MonoBehaviour
                 // Instantiate a new player if not found
                 GameObject playerPrefab = Resources.Load<GameObject>("Player"); // Assumes a player prefab named "PlayerPrefab" is in a Resources folder
                 if (playerPrefab != null)
-                {   
-                    Vector3 spawnPosition = new Vector3(-10, -61,0);
+                {
+                    Vector3 spawnPosition = new Vector3(-10, -61, 0);
                     player = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
                     player.tag = "Player"; // Ensure the instantiated player has the correct tag
                 }
@@ -192,7 +192,17 @@ public class SaveLoadJSONPlayer : MonoBehaviour
         }
 
         playerData.sceneName = SceneManager.GetActiveScene().name;
-        playerData.position = player.transform.position;
+
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player"); // Make sure your player is tagged correctly
+            if (player != null)
+            {
+                playerData.position = player.transform.position;
+            }
+        }
+
+
 
         if (playerHealthScript != null)
         {
@@ -257,7 +267,8 @@ public class SaveLoadJSONPlayer : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         player.transform.position = position;
     }
-    public bool hasSaveData(){
+    public bool hasSaveData()
+    {
         if (File.Exists(saveFilePath))
         {
             return true;
