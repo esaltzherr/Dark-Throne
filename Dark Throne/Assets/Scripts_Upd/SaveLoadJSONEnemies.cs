@@ -207,6 +207,7 @@ public class SaveLoadJSONEnemies : MonoBehaviour
 
     public void DeleteSaveFile()
     {
+        enemyData = new AllScenesEnemies();
         if (File.Exists(saveFilePath))
         {
             File.Delete(saveFilePath);

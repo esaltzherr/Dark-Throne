@@ -79,7 +79,7 @@ public class SaveLoadJSONNpc : MonoBehaviour
     {
         LoadNPCIcons();
     }
-    
+
     public void LoadNPCIcons()
     {
         GetDataFromFile();
@@ -89,6 +89,31 @@ public class SaveLoadJSONNpc : MonoBehaviour
         {
             List<NPCIconData> savedNPCIcons = npcIconData.allScenes[currentSceneName];
             NPCIcon[] npcIcons = FindObjectsOfType<NPCIcon>();
+
+
+
+
+
+
+            // Debug log to print savedNPCIcons list
+            Debug.Log("Saved NPC Icons Count: " + savedNPCIcons.Count);
+            foreach (var icon in savedNPCIcons)
+            {
+                Debug.Log("Saved NPC Icon ID: " + icon.ID);
+            }
+
+            // Debug log to print npcIcons array
+            Debug.Log("NPC Icons Count in Scene: " + npcIcons.Length);
+            foreach (var npcIcon in npcIcons)
+            {
+                Debug.Log("NPC Icon ID in Scene: " + npcIcon.id);
+            }
+
+
+
+
+
+
 
             foreach (NPCIcon npcIconScript in npcIcons)
             {
@@ -111,6 +136,7 @@ public class SaveLoadJSONNpc : MonoBehaviour
 
     public void DeleteSaveFile()
     {
+        npcIconData = new AllScenesNPCIcons();
         if (File.Exists(saveFilePath))
         {
             File.Delete(saveFilePath);

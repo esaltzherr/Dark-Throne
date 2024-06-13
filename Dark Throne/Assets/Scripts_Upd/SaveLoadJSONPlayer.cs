@@ -143,6 +143,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
 
     public void DeleteSaveFile()
     {
+        playerData = new PlayerData();
         if (File.Exists(saveFilePath))
         {
             File.Delete(saveFilePath);

@@ -165,6 +165,7 @@ public class SaveLoadJSONCheckpoints : MonoBehaviour
 
     public void DeleteSaveFile()
     {
+        checkpointData = new AllScenesCheckpoints();
         if (File.Exists(saveFilePath))
         {
             File.Delete(saveFilePath);

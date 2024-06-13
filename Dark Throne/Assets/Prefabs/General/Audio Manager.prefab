@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1012495080209579056}
   SFXSource: {fileID: 487549745711874440}
-  dashing_sound: {fileID: 8300000, guid: 68f8293458b34f4448d9f040b234c67e, type: 3}
+  dashing_sound: {fileID: 8300000, guid: 7a276dbdfe2d2824084dfad51f1b443c, type: 3}
   deep: {fileID: 8300000, guid: 68f1006e1ce7bc54bb84e50050415f89, type: 3}
   Boss: {fileID: 8300000, guid: 4e6d61c539389834ebf3a9ca0409ede2, type: 3}
   footstep_1: {fileID: 8300000, guid: dc5153c5d2be8f94a8c78944f943074f, type: 3}
@@ -317,4 +317,4 @@ MonoBehaviour:
   enemydie: {fileID: 8300000, guid: b312361720d4ce84f85cb965f74aec04, type: 3}
   execute: {fileID: 8300000, guid: 15c4a783eb9035f45be28e0209fd99d4, type: 3}
   playerwalking: {fileID: 8300000, guid: 9511ca5242320e84e8ccec93ca6879d2, type: 3}
-  jump: {fileID: 8300000, guid: e9e9eaa7ef85fed4d91201d82756a658, type: 3}
+  jump: {fileID: 8300000, guid: 2cb7d885e59294649b6314870503c52a, type: 3}

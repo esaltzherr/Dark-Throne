@@ -6,6 +6,7 @@ public class NPCIcon : MonoBehaviour
 
     public void Disable()
     {
+        
         // Set the game object to inactive
         gameObject.SetActive(false);
 
