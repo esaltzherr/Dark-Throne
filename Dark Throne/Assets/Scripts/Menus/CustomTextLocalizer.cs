@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -25,7 +26,7 @@ public class CustomTextLocalizer : MonoBehaviour
     {
         // todo: make it so the font changes when a localization event occurs.
         // localizeStringEvent.OnUpdateString.AddListener(OnStringChanged);
-        OnStringChanged("a");
+        UpdateString();
     }
 
     // Update is called once per frame
@@ -34,7 +35,13 @@ public class CustomTextLocalizer : MonoBehaviour
         
     }
 
-    void OnStringChanged(string s)
+    void Awake()
+    {
+        Debug.Log("woooot");
+        UpdateString();
+    }
+
+    public void UpdateString()
     {
         // Debug.Log("current lang: " + LocalizationSettings.SelectedLocale.name);
         // Debug.Log("current lang: " + LocalizationSettings.SelectedLocale.LocaleName);
@@ -42,6 +49,7 @@ public class CustomTextLocalizer : MonoBehaviour
         // Debug.Log("current lang: " + LocalizationSettings.SelectedLocale.Formatter);
         // Debug.Log(stringTableCollection.GetTable(LocalizationSettings.SelectedLocale.Identifier));
         // var table = LocalizationSettings.StringDatabase.GetTable(tableReference);
+        Debug.Log(playerJSONData.hasSaveData());
         if (playerJSONData.hasSaveData())
         {
             gameObject.GetComponent<LocalizeStringEvent>().StringReference.SetReference(loadGameStrID.TableReference, loadGameStrID.TableEntryReference);
