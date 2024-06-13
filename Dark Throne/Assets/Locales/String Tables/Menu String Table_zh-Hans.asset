@@ -122,14 +122,6 @@ MonoBehaviour:
     m_Localized: "\u73B0\u5728\u6211\u6709\u51B0\u6DC7\u6DCB"
     m_Metadata:
       m_Items: []
-  - m_Id: 34636743751847936
-    m_Localized: chinese placeholder
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34638130007068672
-    m_Localized: chinese placeholder
-    m_Metadata:
-      m_Items: []
   references:
     version: 2
     RefIds: []

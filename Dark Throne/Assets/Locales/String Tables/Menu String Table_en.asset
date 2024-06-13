@@ -120,12 +120,16 @@ MonoBehaviour:
     m_Localized: This jump seems kinda far, maybe with a DASH you can make it.
     m_Metadata:
       m_Items: []
-  - m_Id: 34636743751847936
-    m_Localized: Use Arrow keys or WASD to move and Space to jump.
+  - m_Id: 34685938961567744
+    m_Localized: Exit to Menu
     m_Metadata:
       m_Items: []
-  - m_Id: 34638130007068672
-    m_Localized: 'Ah... Another exile.... '
+  - m_Id: 34685632265670656
+    m_Localized: Paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34694225245327360
+    m_Localized: Delete Save Data
     m_Metadata:
       m_Items: []
   references:

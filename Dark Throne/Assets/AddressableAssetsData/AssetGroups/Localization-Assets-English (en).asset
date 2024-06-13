@@ -17,14 +17,14 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 74b979df03d37644ba0a65cdc9fe7143
   m_SerializeEntries:
-  - m_GUID: 8f586378b4e144a9851e7b34d9b748ee
-    m_Address: LiberationSans SDF
+  - m_GUID: 8a89fa14b10d46a99122fd4f73fca9a2
+    m_Address: Anton SDF
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8a89fa14b10d46a99122fd4f73fca9a2
-    m_Address: Anton SDF
+  - m_GUID: 8f586378b4e144a9851e7b34d9b748ee
+    m_Address: LiberationSans SDF
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

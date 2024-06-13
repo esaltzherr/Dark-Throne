@@ -15,48 +15,20 @@ MonoBehaviour:
   m_TableCollectionName: Menu String Table
   m_TableCollectionNameGuidString: 6ccc42f47ddbdc94abfc502a6f4f3641
   m_Entries:
-  - m_Id: 257927074906112
-    m_Key: menu_startgame
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1069493156413440
-    m_Key: menu_lang
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3186138313158656
-    m_Key: gameover
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3191110765408256
-    m_Key: continue
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3191436075626496
-    m_Key: GameOver_Button
-    m_Metadata:
-      m_Items: []
   - m_Id: 3193337957609472
     m_Key: win
     m_Metadata:
       m_Items: []
-  - m_Id: 3193468203331584
-    m_Key: win_return
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3193522502791168
-    m_Key: credits
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3193541939195904
-    m_Key: team
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3196533010624512
-    m_Key: tutorial
-    m_Metadata:
-      m_Items: []
   - m_Id: 3196615349006336
     m_Key: tutorial_walljump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3197298978615296
+    m_Key: tutorial_playbutton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3198509358280704
+    m_Key: tutorial_move
     m_Metadata:
       m_Items: []
   - m_Id: 3196688531222528
@@ -67,56 +39,88 @@ MonoBehaviour:
     m_Key: tutorial_cont
     m_Metadata:
       m_Items: []
-  - m_Id: 3197298978615296
-    m_Key: tutorial_playbutton
-    m_Metadata:
-      m_Items: []
   - m_Id: 3197329701892096
     m_Key: tutorial_attack
     m_Metadata:
       m_Items: []
-  - m_Id: 3198509358280704
-    m_Key: tutorial_move
-    m_Metadata:
-      m_Items: []
-  - m_Id: 18336542619684864
-    m_Key: menu_settings
-    m_Metadata:
-      m_Items: []
-  - m_Id: 18338524801617920
-    m_Key: menu_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23125242885001216
-    m_Key: menu_back
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23125361646718976
-    m_Key: menu_exit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 30241978297962496
-    m_Key: menu credits
-    m_Metadata:
-      m_Items: []
-  - m_Id: 30243290615992320
-    m_Key: menu master volume
+  - m_Id: 3196533010624512
+    m_Key: tutorial
     m_Metadata:
       m_Items: []
   - m_Id: 31778784332042240
     m_Key: test
     m_Metadata:
       m_Items: []
+  - m_Id: 3193541939195904
+    m_Key: team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193468203331584
+    m_Key: return to main
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18338524801617920
+    m_Key: menu_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18336542619684864
+    m_Key: menu_settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23125361646718976
+    m_Key: menu_exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23125242885001216
+    m_Key: menu_back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 257927074906112
+    m_Key: menu startgame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34685632265670656
+    m_Key: menu paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30243290615992320
+    m_Key: menu master volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1069493156413440
+    m_Key: menu lang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30241978297962496
+    m_Key: menu credits
+    m_Metadata:
+      m_Items: []
   - m_Id: 34634531541700608
     m_Key: guide to dash npc
     m_Metadata:
       m_Items: []
-  - m_Id: 34636743751847936
-    m_Key: cave level 1 npc 1 2
+  - m_Id: 3191436075626496
+    m_Key: gameover button
     m_Metadata:
       m_Items: []
-  - m_Id: 34638130007068672
-    m_Key: cave level 1 npc 1 1
+  - m_Id: 3186138313158656
+    m_Key: gameover
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34685938961567744
+    m_Key: exit to menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3193522502791168
+    m_Key: credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3191110765408256
+    m_Key: continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34694225245327360
+    m_Key: menu delete save
     m_Metadata:
       m_Items: []
   m_Metadata:
