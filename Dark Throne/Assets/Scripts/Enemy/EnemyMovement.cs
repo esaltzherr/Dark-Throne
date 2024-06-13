@@ -62,7 +62,7 @@ public class EnemyFollow : MonoBehaviour
                     transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                     executeDirection = 1;
                 }
-
+                animator.SetBool("Moving", true);
                 shouldMove = true;
 
                 if (distanceToPlayer <= 2 && Time.time >= nextAttackTime)
@@ -87,7 +87,6 @@ public class EnemyFollow : MonoBehaviour
         if (shouldMove)
         {
             Vector2 newPosition = rb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
-            animator.SetBool("Moving", true);
             rb.MovePosition(newPosition);
         }
     }
