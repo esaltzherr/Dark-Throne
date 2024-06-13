@@ -6,8 +6,6 @@ public class BossHealthBar : MonoBehaviour
     public Slider healthSlider;
     public int maxHealth = 600;
     private int currentHealth;
-    private KeyCode Button = KeyCode.H; // Left mouse button
-    private KeyCode SpawnHP = KeyCode.Y;
     public Canvas bossCanvas;
     public Animator animator;
     public static bool isKilled = false;
@@ -22,6 +20,7 @@ public class BossHealthBar : MonoBehaviour
     private void Update()
     {
         healthSlider.value = currentHealth;
+        /*
         if (Input.GetKeyDown(Button))
         {
             TakeDamage(20);
@@ -30,6 +29,7 @@ public class BossHealthBar : MonoBehaviour
         {
             bossCanvas.gameObject.SetActive(true);
         }
+        */
     }
 
     public void TakeDamage(int damage)

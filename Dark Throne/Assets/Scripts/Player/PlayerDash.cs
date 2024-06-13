@@ -72,10 +72,12 @@ public class PlayerDash : MonoBehaviour
             }
             audiomanager.Player_Dash();
         }
+        /*
         if (Input.GetKeyDown(KeyCode.M))
         {
             toggleDash();
         }
+        */
     }
 
     private IEnumerator Dash()

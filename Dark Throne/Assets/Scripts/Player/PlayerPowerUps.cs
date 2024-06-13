@@ -7,9 +7,10 @@ public class PlayerPowerUps : MonoBehaviour
     private float jumps = maxJumps;
 
     void Update(){
-        if (Input.GetKeyDown(KeyCode.N)){
+        /*if (Input.GetKeyDown(KeyCode.N)){
             toggleDoubleJump();
         }
+        */
     }
 
     public bool CanDoubleJump() 

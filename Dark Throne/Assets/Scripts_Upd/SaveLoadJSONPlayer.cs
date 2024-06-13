@@ -50,6 +50,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
 
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.J))
             SaveGame();
 
@@ -58,7 +59,9 @@ public class SaveLoadJSONPlayer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
             DeleteSaveFile();
+        */
     }
+       
 
     public void SaveGame()
     {
