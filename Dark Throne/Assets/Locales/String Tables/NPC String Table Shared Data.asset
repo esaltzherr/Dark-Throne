@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: NPC String Table Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: NPC String Table
+  m_TableCollectionNameGuidString: 22672622b397dc447b6dc0e995930366
+  m_Entries:
+  - m_Id: 10155513171968
+    m_Key: cave level 1 npc 1 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16062334717952
+    m_Key: cave level 1 npc 1 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15580497268736
+    m_Key: cave level 1 npc 1 dialogue 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5771448320
+    m_Key: cave level 1 npc 2 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7075988066304
+    m_Key: cave level 1 npc 2 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631393832960
+    m_Key: cave level 1 npc 2 dialogue 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6584537272320
+    m_Key: cave level 1 npc 3 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18748702543872
+    m_Key: cave level 1 npc 3 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19531330310144
+    m_Key: cave level 1 npc 3 dialogue 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19631880359936
+    m_Key: cave level 1 npc 3 dialogue 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19650272382976
+    m_Key: cave level 1 npc 3 dialogue 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22617985732608
+    m_Key: cave level 1 npc 4 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22692044558336
+    m_Key: cave level 1 npc 4 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22996546834432
+    m_Key: cave level 1 npc 5 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036484997120
+    m_Key: cave level 1 npc 5 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23045888626688
+    m_Key: cave level 1 npc 5 dialogue 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23063555035136
+    m_Key: cave level 1 npc 5 dialogue 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23143666241536
+    m_Key: cave level 1 npc 6 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23172514664448
+    m_Key: cave level 1 npc 6 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23181725356032
+    m_Key: cave level 1 npc 6 dialogue 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23190118158336
+    m_Key: cave level 1 npc 6 dialogue 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23198787784704
+    m_Key: cave level 1 npc 6 dialogue 5
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4385873008111648803
+  references:
+    version: 2
+    RefIds:
+    - rid: 4385873008111648803
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1718230911161
