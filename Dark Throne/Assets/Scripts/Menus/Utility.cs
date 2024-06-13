@@ -42,9 +42,9 @@ public class Utility : MonoBehaviour
         AnalyticsService.Instance.Flush();
     }
 
-    public void ChangeScene(string sceneName)
+    public void ChangeScene(string sceneNameToLoad)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneNameToLoad);
     }
 
     public void ToggleActive(GameObject otherGameObject)

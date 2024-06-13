@@ -34,7 +34,7 @@ public class StartGameFadeTransition : MonoBehaviour
             yield return null;
         }
 
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadSceneAsync(sceneName);
         LoadData();
 
 

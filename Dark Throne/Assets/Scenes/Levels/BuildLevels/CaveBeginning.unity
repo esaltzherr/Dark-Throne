@@ -111137,6 +111137,18 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8307931708716226672, guid: 87a11dfbf924c9f4ca9c5e6a6dc056ea, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 949452001}
+    - target: {fileID: 8307931708716226672, guid: 87a11dfbf924c9f4ca9c5e6a6dc056ea, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307931708716226672, guid: 87a11dfbf924c9f4ca9c5e6a6dc056ea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307931708716226672, guid: 87a11dfbf924c9f4ca9c5e6a6dc056ea, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
@@ -117291,7 +117303,7 @@ Canvas:
   m_GameObject: {fileID: 1371474649}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -118873,6 +118885,10 @@ PrefabInstance:
     - target: {fileID: 747331043082052103, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058952931256636967, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4454465159708868757, guid: 6c4d853046f757345a68d8f6269a2bbd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
