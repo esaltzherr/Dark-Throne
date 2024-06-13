@@ -151,6 +151,18 @@ MonoBehaviour:
     m_Key: djump npc 2 d 2
     m_Metadata:
       m_Items: []
+  - m_Id: 314971980386304
+    m_Key: cave level 2 npc 2 d 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 315225077272576
+    m_Key: cave level 2 npc 3 d 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 315243079225344
+    m_Key: cave level 2 npc 3 d 2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
