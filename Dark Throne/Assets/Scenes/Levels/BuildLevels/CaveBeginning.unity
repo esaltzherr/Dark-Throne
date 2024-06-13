@@ -229,7 +229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_margin.w
@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -518,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontStyle
@@ -542,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -111283,7 +111283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontStyle
@@ -111307,7 +111307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -111676,7 +111676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontStyle
@@ -111700,7 +111700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -114023,7 +114023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontStyle
@@ -114047,7 +114047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -114697,6 +114697,14 @@ PrefabInstance:
     - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
       value: Another Exile... maybe you'll have what it takes to overcome this place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_fontSize
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4594353395149129897, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -117832,7 +117840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontStyle
@@ -117856,7 +117864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -118671,6 +118679,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Fellow exile... You will need to know the basics of combat to survive
       objectReference: {fileID: 0}
+    - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_fontSize
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4594353395149129897, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.33
@@ -119236,7 +119252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_margin.w
@@ -119276,7 +119292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -119464,7 +119480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontStyle
@@ -119488,7 +119504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -119585,6 +119601,14 @@ PrefabInstance:
       propertyPath: m_text
       value: The others used to jump off the walls... You seem strong enough to do
         the same...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_fontSize
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4594353395149129897, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -120359,7 +120383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontStyle
@@ -120383,7 +120407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6481658629138992157, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -120735,6 +120759,14 @@ PrefabInstance:
     - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_text
       value: Ive gotten pretty far up here, but cant seem to get across this jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_fontSize
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954431961144514611, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4711871116143734174, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
