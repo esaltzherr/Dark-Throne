@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class BossMovement : MonoBehaviour
 {
-    private float runSpeed = 40f;
+    private float runSpeed = 7f;
     private float walkSpeed = 10f;
     public float detectionRange = 10f;
     public float closeRange = 3f;
     public Transform targetPlayer;
     private Rigidbody2D rb;
     public Animator animator;
+    private Vector2 moveDirection;
+    private float speed;
+    private bool shouldMove = false;
 
     void Start()
     {
@@ -40,9 +43,9 @@ public class BossMovement : MonoBehaviour
         if (targetPlayer != null)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.position);
-            Vector2 moveDirection = (targetPlayer.position - transform.position).normalized;
+            moveDirection = (targetPlayer.position - transform.position).normalized;
 
-            // flip the boss to face the player
+            // Flip the boss to face the player
             if (moveDirection.x > 0)
             {
                 transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
@@ -51,10 +54,23 @@ public class BossMovement : MonoBehaviour
             {
                 transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
             }
-            // moving boss
+
+            // Determine speed and whether the boss should move
+            speed = distanceToPlayer > closeRange ? runSpeed : walkSpeed;
+            shouldMove = true;
             animator.SetBool("Moving", true);
-            float speed = distanceToPlayer > closeRange ? runSpeed : walkSpeed;
-            Vector2 newPosition = rb.position + moveDirection * speed * Time.deltaTime;
+        }
+        else
+        {
+            shouldMove = false;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (shouldMove)
+        {
+            Vector2 newPosition = rb.position + moveDirection * speed * Time.fixedDeltaTime;
             rb.MovePosition(newPosition);
         }
     }
@@ -63,8 +79,7 @@ public class BossMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            // take damage
+            // Take damage
         }
     }
 }
-

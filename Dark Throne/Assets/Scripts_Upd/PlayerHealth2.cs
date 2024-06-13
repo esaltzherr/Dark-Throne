@@ -152,7 +152,7 @@ public class PlayerHealth2 : MonoBehaviour
 
         this.GetComponent<PlayerMovement>().enabled = true;
         this.GetComponent<PlayerHealth2>().enabled = true;
-        
+        this.GetComponent<MeleeCombat>().enabled = true;
 
         // // Load the GameOver scene.
         // SceneManager.LoadScene(SpawnManager.lastLevelScene);
@@ -189,6 +189,8 @@ public class PlayerHealth2 : MonoBehaviour
         this.animator.SetBool("Dead", true);
         this.GetComponent<PlayerMovement>().enabled = false;
         this.GetComponent<PlayerHealth2>().enabled = false;
+        this.GetComponent<MeleeCombat>().enabled = false;
+
 
         yield return new WaitForSeconds(1.5f); // TODO: Needs to be replaced with death animation
         Death();

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class BossHealthBar : MonoBehaviour
 {
     public Slider healthSlider;
-    public int maxHealth = 600;
+    public int maxHealth = 2000;
     private int currentHealth;
     public Canvas bossCanvas;
     public Animator animator;
