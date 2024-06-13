@@ -148,6 +148,24 @@ MonoBehaviour:
     m_Localized: No one has managed to get past him....
     m_Metadata:
       m_Items: []
+  - m_Id: 106668520198144
+    m_Localized: My Brother and I have scoured this entire area...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106951530860544
+    m_Localized: Though we have not found anything of value...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107203788886016
+    m_Localized: I got this far only to find nothing. You might be better off heading
+      back.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107208863993856
+    m_Localized: I hope my sister is doing ok, but I'm too tired to get up at this
+      point
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

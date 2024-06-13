@@ -135,6 +135,22 @@ MonoBehaviour:
     m_Key: boss level npc 2 dialogue 2
     m_Metadata:
       m_Items: []
+  - m_Id: 106668520198144
+    m_Key: djump npc 1 d 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106951530860544
+    m_Key: djump npc 1 d 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107203788886016
+    m_Key: djump npc 2 d 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107208863993856
+    m_Key: djump npc 2 d 2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
