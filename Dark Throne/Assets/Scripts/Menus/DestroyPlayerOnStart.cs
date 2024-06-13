@@ -12,7 +12,7 @@ public class DestroyPlayerOnStart : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Player object not found!");
+            Debug.LogWarning("Player object not found!");
         }
     }
 }
