@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    private float moveSpeed = 40f;
+    private float moveSpeed = 5f;
     public float detectionRange = 10f;
     public Transform targetPlayer;
     private Rigidbody2D rb;
@@ -13,7 +13,8 @@ public class EnemyFollow : MonoBehaviour
     public Transform hitBox;
     public float attackRate = 4f;
     float nextAttackTime = 0f;
-
+    private Vector2 moveDirection;
+    private bool shouldMove = false;
 
     //execute animation is by default backwards
     public int executeDirection = -1;
@@ -39,16 +40,16 @@ public class EnemyFollow : MonoBehaviour
             }
         }
     }
+
     void Update()
     {
-
         animator.SetBool("Moving", false);
-        if (targetPlayer != null  && !shouldStopFollowing || !targetPlayer.GetComponent<MeleeCombat>().inExecuteAnimation)
+        if (targetPlayer != null && !shouldStopFollowing && !targetPlayer.GetComponent<MeleeCombat>().inExecuteAnimation)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.position);
             if (distanceToPlayer <= detectionRange)
             {
-                Vector2 moveDirection = (targetPlayer.position - transform.position).normalized;
+                moveDirection = (targetPlayer.position - transform.position).normalized;
 
                 // Flip the enemy to face the player
                 if (moveDirection.x > 0)
@@ -62,45 +63,42 @@ public class EnemyFollow : MonoBehaviour
                     executeDirection = 1;
                 }
 
+                shouldMove = true;
 
-                if(distanceToPlayer <= 2)
+                if (distanceToPlayer <= 2 && Time.time >= nextAttackTime)
                 {
-
-                    if (Time.time >= nextAttackTime)
-                    {
-
-                        Attack();
-                        nextAttackTime = Time.time + 1f / attackRate;
-
-
-                    }
-
+                    Attack();
+                    nextAttackTime = Time.time + 1f / attackRate;
                 }
-                Vector2 newPosition = rb.position + moveDirection * moveSpeed * Time.deltaTime;
-                animator.SetBool("Moving", true);
-                rb.MovePosition(newPosition);
+            }
+            else
+            {
+                shouldMove = false;
             }
         }
+        else
+        {
+            shouldMove = false;
+        }
     }
-    
+
+    void FixedUpdate()
+    {
+        if (shouldMove)
+        {
+            Vector2 newPosition = rb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
+            animator.SetBool("Moving", true);
+            rb.MovePosition(newPosition);
+        }
+    }
+
     private void Attack()
     {
         if (!targetPlayer.GetComponent<MeleeCombat>().inExecuteAnimation)
         {
             animator.SetTrigger("Attack");
             StartCoroutine(attackHitbox());
-            /*Collider2D[] playerHit = Physics2D.OverlapCircleAll(hitBox.position, attackrange);
-            foreach (Collider2D collider in playerHit)
-            {
-                if (collider.CompareTag("Player"))
-                {
-                    GameObject player = collider.gameObject;
-                    player.GetComponent<PlayerHealth2>().ChangeHealth(-10);
-                }
-            }
-            */
         }
-
     }
 
     IEnumerator attackHitbox()
@@ -132,6 +130,7 @@ public class EnemyFollow : MonoBehaviour
             shouldStopFollowing = false;
         }
     }
+
     private void OnDrawGizmosSelected()
     {
         if (hitBox == null)

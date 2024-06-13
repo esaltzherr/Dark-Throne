@@ -120975,14 +120975,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: inventory_canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2176696066285596853, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 695.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 2176696066285596853, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 347.83002
-      objectReference: {fileID: 0}
     - target: {fileID: 2203323988145354782, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -121006,14 +120998,6 @@ PrefabInstance:
     - target: {fileID: 2203323988145354782, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3234702872532007157, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 292.5641
-      objectReference: {fileID: 0}
-    - target: {fileID: 3234702872532007157, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 3804229493418875032, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: itemSOs.Array.data[0]
@@ -121170,14 +121154,6 @@ PrefabInstance:
     - target: {fileID: 7093471621640941495, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7373487047914965775, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7610199457516003723, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
-      propertyPath: m_margin.w
-      value: 292.07767
       objectReference: {fileID: 0}
     - target: {fileID: 8354523974423409742, guid: 4a4ec6465895d6844ba15076bc359d76, type: 3}
       propertyPath: m_AnchorMax.y

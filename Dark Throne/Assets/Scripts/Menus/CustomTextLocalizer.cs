@@ -9,7 +9,7 @@ using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.Tables;
 using UnityEngine.Serialization;
-
+namespace UnityEditor.Localization{}
 
 public class CustomTextLocalizer : MonoBehaviour
 {
