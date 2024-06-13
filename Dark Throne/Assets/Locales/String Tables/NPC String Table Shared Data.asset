@@ -103,6 +103,38 @@ MonoBehaviour:
     m_Key: cave level 1 npc 6 dialogue 5
     m_Metadata:
       m_Items: []
+  - m_Id: 30882652049408
+    m_Key: cave level 2 npc 1 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30943242964992
+    m_Key: cave level 2 npc 1 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32166981488640
+    m_Key: cave level 3 npc 1 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32174275383296
+    m_Key: cave level 3 npc 1 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34438889164800
+    m_Key: boss level npc 1 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34576256815104
+    m_Key: boss level npc 1 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34785858768896
+    m_Key: boss level npc 2 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34808432513024
+    m_Key: boss level npc 2 dialogue 2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

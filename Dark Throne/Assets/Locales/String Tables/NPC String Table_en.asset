@@ -115,6 +115,39 @@ MonoBehaviour:
       to jump twice
     m_Metadata:
       m_Items: []
+  - m_Id: 30882652049408
+    m_Localized: I got stuck here and I can't dash across these platforms
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30943242964992
+    m_Localized: I'd be careful for those spikes below if I was you...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32166981488640
+    m_Localized: Exile.. I gave up my ability to move to create that spell...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32174275383296
+    m_Localized: This will allow you to double jump... hopefully you can use it better
+      than me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34438889164800
+    m_Localized: .... Beware of the room ahead.....
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34576256815104
+    m_Localized: Doors closed up ahead on my comrades and I lost them...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34785858768896
+    m_Localized: The guardian of the Cave of the Exiles lies ahead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34808432513024
+    m_Localized: No one has managed to get past him....
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
