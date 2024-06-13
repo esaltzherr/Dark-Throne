@@ -36,8 +36,8 @@ public class SaveLoadJSONNpc : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-            DeleteSaveFile();
+        // if (Input.GetKeyDown(KeyCode.B))
+        //     DeleteSaveFile();
     }
 
     public void SaveNPCIcon(string id)

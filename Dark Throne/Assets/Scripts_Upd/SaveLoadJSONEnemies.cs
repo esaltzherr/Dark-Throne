@@ -47,14 +47,14 @@ public class SaveLoadJSONEnemies : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-            SaveGame();
+        // if (Input.GetKeyDown(KeyCode.Z))
+        //     SaveGame();
 
-        if (Input.GetKeyDown(KeyCode.X))
-            LoadGame();
+        // if (Input.GetKeyDown(KeyCode.X))
+        //     LoadGame();
 
-        if (Input.GetKeyDown(KeyCode.C))
-            DeleteSaveFile();
+        // if (Input.GetKeyDown(KeyCode.C))
+        //     DeleteSaveFile();
     }
 
     public void SaveGame()
