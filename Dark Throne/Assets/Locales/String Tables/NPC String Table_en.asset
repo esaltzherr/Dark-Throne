@@ -166,6 +166,19 @@ MonoBehaviour:
       point
     m_Metadata:
       m_Items: []
+  - m_Id: 314971980386304
+    m_Localized: I found some extra potions here. I drank some and it made me feel
+      alive again!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 315225077272576
+    m_Localized: That jump seems too high for a single jump...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 315243079225344
+    m_Localized: Come back later if you want to get up there.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

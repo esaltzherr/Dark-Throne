@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Npc : MonoBehaviour
 {
     // Private variables
-    private GameObject speechBubble;
+    private GameObject dialogue;
     private bool isPlayerInRange = false;
     private int currentDialogueIndex = 0;
     private GameObject[] dialogues;
@@ -14,25 +14,28 @@ public class Npc : MonoBehaviour
     public GameObject powerup;
     private float unitsInFront = 3;
 
+    private GameObject speechBubbleSprite;
 
     private void Start()
     {
         // Find the Speech Bubble child by its name
-        speechBubble = transform.Find("SpeechBubble").gameObject;
+        dialogue = transform.Find("Dialogue").gameObject;
+        speechBubbleSprite = transform.Find("SpeechBubbleSprite").gameObject;
+        speechBubbleSprite.SetActive(false);
 
         // Check if the Speech Bubble was found
-        if (speechBubble != null)
+        if (dialogue != null)
         {
             // Get all children of the Speech Bubble and store them in an array
-            dialogues = new GameObject[speechBubble.transform.childCount];
-            for (int i = 0; i < speechBubble.transform.childCount; i++)
+            dialogues = new GameObject[dialogue.transform.childCount];
+            for (int i = 0; i < dialogue.transform.childCount; i++)
             {
-                dialogues[i] = speechBubble.transform.GetChild(i).gameObject;
+                dialogues[i] = dialogue.transform.GetChild(i).gameObject;
                 dialogues[i].SetActive(false); // Disable all dialogue children initially
             }
 
             // Ensure the Speech Bubble itself is disabled
-            speechBubble.SetActive(false);
+            dialogue.SetActive(false);
         }
         else
         {
@@ -62,8 +65,8 @@ public class Npc : MonoBehaviour
         // Check if the player is in range and the 'E' key is pressed
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
-
-            speechBubble.SetActive(true);
+            speechBubbleSprite.SetActive(true);
+            dialogue.SetActive(true);
             DisplayNextDialogue();
         }
     }
@@ -90,9 +93,10 @@ public class Npc : MonoBehaviour
             isPlayerInRange = false;
 
             // Disable the speech bubble and all dialogues
-            if (speechBubble != null)
+            if (dialogue != null)
             {
-                speechBubble.SetActive(false);
+                speechBubbleSprite.SetActive(false);
+                dialogue.SetActive(false);
                 foreach (GameObject dialogue in dialogues)
                 {
                     dialogue.SetActive(false);
@@ -118,7 +122,8 @@ public class Npc : MonoBehaviour
             // Hide the speech bubble if the dialogue is hidden
             if (!dialogues[0].activeInHierarchy)
             {
-                speechBubble.SetActive(false);
+                speechBubbleSprite.SetActive(false);
+                dialogue.SetActive(false);
 
                 // Disable the NPC icon once all dialogues are finished
                 if (npcIcon != null)
@@ -168,9 +173,10 @@ public class Npc : MonoBehaviour
         }
         else
         {
-            if (speechBubble != null)
+            if (dialogue != null)
             {
-                speechBubble.SetActive(false);
+                speechBubbleSprite.SetActive(false);
+                dialogue.SetActive(false);
                 foreach (GameObject dialogue in dialogues)
                 {
                     dialogue.SetActive(false);
