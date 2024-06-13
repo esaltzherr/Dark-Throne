@@ -123,6 +123,10 @@ MonoBehaviour:
     m_Key: menu delete save
     m_Metadata:
       m_Items: []
+  - m_Id: 34936793195433984
+    m_Key: menu load game
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

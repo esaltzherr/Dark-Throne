@@ -132,6 +132,10 @@ MonoBehaviour:
     m_Localized: Delete Save Data
     m_Metadata:
       m_Items: []
+  - m_Id: 34936793195433984
+    m_Localized: Continue Game
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
