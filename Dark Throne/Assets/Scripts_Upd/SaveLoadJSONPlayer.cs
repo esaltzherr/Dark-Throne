@@ -200,6 +200,9 @@ public class SaveLoadJSONPlayer : MonoBehaviour
             {
                 playerData.position = player.transform.position;
             }
+            else{
+                playerData.position = Vector3.zero;
+            }
         }
 
 
