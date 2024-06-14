@@ -163,6 +163,30 @@ MonoBehaviour:
     m_Key: cave level 2 npc 3 d 2
     m_Metadata:
       m_Items: []
+  - m_Id: 381974117904384
+    m_Key: Lesser Potion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382052282953728
+    m_Key: Greater Potion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382699900268544
+    m_Key: Lesser Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382745442021376
+    m_Key: Greater Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 393180933287936
+    m_Key: Npc3 new text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 393445845528576
+    m_Key: Npc3 next text2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

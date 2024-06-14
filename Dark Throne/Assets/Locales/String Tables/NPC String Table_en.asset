@@ -179,6 +179,30 @@ MonoBehaviour:
     m_Localized: Come back later if you want to get up there.
     m_Metadata:
       m_Items: []
+  - m_Id: 381974117904384
+    m_Localized: Lesser Health Potion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382052282953728
+    m_Localized: Greater Health Potion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382699900268544
+    m_Localized: Poorly made potion that restores a measly 1 health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382745442021376
+    m_Localized: Potent health potion that restores 2 health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 393180933287936
+    m_Localized: However, note that only your body will be transferred
+    m_Metadata:
+      m_Items: []
+  - m_Id: 393445845528576
+    m_Localized: All of your inventory items will be lost when fast traveling
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
