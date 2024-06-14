@@ -154,7 +154,11 @@ public class SaveLoadJSONPlayer : MonoBehaviour
             Debug.Log("Save file deleted!");
         }
         else
+        {
             Debug.Log("There is nothing to delete!");
+        }
+        SpawnManager.SetId("000000000000000000");
+        
     }
 
     public void getScripts()
@@ -201,6 +205,7 @@ public class SaveLoadJSONPlayer : MonoBehaviour
                 playerData.position = player.transform.position;
             }
             else{
+                Debug.Log("Zero");
                 playerData.position = Vector3.zero;
             }
         }
