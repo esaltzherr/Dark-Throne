@@ -15,6 +15,22 @@ MonoBehaviour:
   m_TableCollectionName: NPC String Table
   m_TableCollectionNameGuidString: 22672622b397dc447b6dc0e995930366
   m_Entries:
+  - m_Id: 34438889164800
+    m_Key: boss level npc 1 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34576256815104
+    m_Key: boss level npc 1 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34785858768896
+    m_Key: boss level npc 2 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34808432513024
+    m_Key: boss level npc 2 dialogue 2
+    m_Metadata:
+      m_Items: []
   - m_Id: 10155513171968
     m_Key: cave level 1 npc 1 dialogue 1
     m_Metadata:
@@ -55,8 +71,16 @@ MonoBehaviour:
     m_Key: cave level 1 npc 3 dialogue 4
     m_Metadata:
       m_Items: []
-  - m_Id: 19650272382976
+  - m_Id: 393180933287936
     m_Key: cave level 1 npc 3 dialogue 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 393445845528576
+    m_Key: cave level 1 npc 3 dialogue 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19650272382976
+    m_Key: cave level 1 npc 3 dialogue 7
     m_Metadata:
       m_Items: []
   - m_Id: 22617985732608
@@ -103,6 +127,22 @@ MonoBehaviour:
     m_Key: cave level 1 npc 6 dialogue 5
     m_Metadata:
       m_Items: []
+  - m_Id: 422898384850944
+    m_Key: cave level 1 npc 7 dialogue 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 423038759817216
+    m_Key: cave level 1 npc 7 dialogue 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 423589354491904
+    m_Key: cave level 1 npc 7 dialogue 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 423627401023488
+    m_Key: cave level 1 npc 7 dialogue 4
+    m_Metadata:
+      m_Items: []
   - m_Id: 30882652049408
     m_Key: cave level 2 npc 1 dialogue 1
     m_Metadata:
@@ -111,28 +151,24 @@ MonoBehaviour:
     m_Key: cave level 2 npc 1 dialogue 2
     m_Metadata:
       m_Items: []
+  - m_Id: 314971980386304
+    m_Key: cave level 2 npc 2 d 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 315225077272576
+    m_Key: cave level 2 npc 3 d 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 315243079225344
+    m_Key: cave level 2 npc 3 d 2
+    m_Metadata:
+      m_Items: []
   - m_Id: 32166981488640
     m_Key: cave level 3 npc 1 dialogue 1
     m_Metadata:
       m_Items: []
   - m_Id: 32174275383296
     m_Key: cave level 3 npc 1 dialogue 2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34438889164800
-    m_Key: boss level npc 1 dialogue 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34576256815104
-    m_Key: boss level npc 1 dialogue 2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34785858768896
-    m_Key: boss level npc 2 dialogue 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34808432513024
-    m_Key: boss level npc 2 dialogue 2
     m_Metadata:
       m_Items: []
   - m_Id: 106668520198144
@@ -151,20 +187,8 @@ MonoBehaviour:
     m_Key: djump npc 2 d 2
     m_Metadata:
       m_Items: []
-  - m_Id: 314971980386304
-    m_Key: cave level 2 npc 2 d 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 315225077272576
-    m_Key: cave level 2 npc 3 d 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 315243079225344
-    m_Key: cave level 2 npc 3 d 2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 381974117904384
-    m_Key: Lesser Potion
+  - m_Id: 382745442021376
+    m_Key: Greater Description
     m_Metadata:
       m_Items: []
   - m_Id: 382052282953728
@@ -175,16 +199,12 @@ MonoBehaviour:
     m_Key: Lesser Description
     m_Metadata:
       m_Items: []
-  - m_Id: 382745442021376
-    m_Key: Greater Description
+  - m_Id: 381974117904384
+    m_Key: Lesser Potion
     m_Metadata:
       m_Items: []
-  - m_Id: 393180933287936
-    m_Key: Npc3 new text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 393445845528576
-    m_Key: Npc3 next text2
+  - m_Id: 423643893026816
+    m_Key: cave level 1 npc 7 dialogue 5
     m_Metadata:
       m_Items: []
   m_Metadata:

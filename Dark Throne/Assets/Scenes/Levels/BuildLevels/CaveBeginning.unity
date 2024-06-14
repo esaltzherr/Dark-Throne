@@ -114038,6 +114038,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Exile.....
       objectReference: {fileID: 0}
+    - target: {fileID: 4711871116143734174, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 422898384850944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711871116143734174, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:22672622b397dc447b6dc0e995930366
+      objectReference: {fileID: 0}
     - target: {fileID: 4957065830908625925, guid: dd9f4f414eca6e24eaacde9d4b1ab81f, type: 3}
       propertyPath: m_Name
       value: NPC (Reguide to Dash) (4)
@@ -114132,6 +114140,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 664908552}
     m_Modifications:
+    - target: {fileID: 3571591764891613616, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 423038759817216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571591764891613616, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:22672622b397dc447b6dc0e995930366
+      objectReference: {fileID: 0}
     - target: {fileID: 4149451591507940007, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -114925,6 +114941,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 384730168}
     m_Modifications:
+    - target: {fileID: 3571591764891613616, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 423589354491904
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571591764891613616, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:22672622b397dc447b6dc0e995930366
+      objectReference: {fileID: 0}
     - target: {fileID: 4149451591507940007, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -117719,6 +117743,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 490917244}
     m_Modifications:
+    - target: {fileID: 3571591764891613616, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 423627401023488
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571591764891613616, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:22672622b397dc447b6dc0e995930366
+      objectReference: {fileID: 0}
     - target: {fileID: 4149451591507940007, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -119970,6 +120002,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 449791425}
     m_Modifications:
+    - target: {fileID: 3571591764891613616, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 423643893026816
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571591764891613616, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:22672622b397dc447b6dc0e995930366
+      objectReference: {fileID: 0}
     - target: {fileID: 4149451591507940007, guid: 01127520db35de94b90f8c78d98c901d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -122871,6 +122911,6 @@ SceneRoots:
   - {fileID: 2005375314}
   - {fileID: 960152904}
   - {fileID: 1091246222}
+  - {fileID: 665214131}
   - {fileID: 1748383725609154965}
   - {fileID: 98395644}
-  - {fileID: 665214131}
