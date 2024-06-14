@@ -144,7 +144,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 30882652049408
-    m_Key: cave level 2 npc 1 dialogue 1
+    m_Key: 'cave level 2 npc 1 dialogue '
     m_Metadata:
       m_Items: []
   - m_Id: 30943242964992
